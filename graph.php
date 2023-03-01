@@ -120,7 +120,7 @@ $result3=mysqli_query($conn,$query3);
     <link href="style.css" rel="stylesheet" />
   </head>
   <body>
-    <img src="Website Header Strip.png"  width="100%">
+    <img src="./Images/Website Header Strip.png"  width="100%">
     
     <table>
       <tr>

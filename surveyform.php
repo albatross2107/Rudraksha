@@ -69,75 +69,118 @@ if(isset($_POST["submit"])){
 </head>
 
 <body>
-  <header>
-    <section class="section-1 ">
-      <img src="Website Header Strip.png" alt="" style="align-items: center; width: 100%;">
-
-    </section>
-    <img src="vision statement .jpg" alt="" class="img-fluid">
-    <nav class="navbar navbar-expand-sm navbar-dark bg-dark mb-0">
-      <div class="container-fluid">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
-          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="nav1">
+<header>
+      <section class="section-1">
+        <img src="./Images/Website Header Strip.png" alt="" style="align-items: center; width: 100%;">
+        
+      </section>
+      <center><video height="100%" width="100%" autoplay loop muted>
+        <source src="VISION STATEMENT ANIMATION.mp4" type="video/mp4">  
+      </video></center>
+      <nav
+        class="navbar navbar-expand-sm navbar-dark bg-dark mb-0"  
+      >
+        <div class="container-fluid">
+          <button
+            class="navbar-toggler"
+            type="button"            
+            data-toggle="collapse"
+            data-target="#navbarNavDropdown"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
           <div class="collapse navbar-collapse" id="navbarNavDropdown">
-            <ul class="navbar-nav ">
-              <div class="ps-3 ">
+            <ul class="navbar-nav">
+              <div class="ps-3">
                 <li class="nav-item">
-                  <a class="nav-link" href="index.html" style="
-                          font-family: 'Open Sans', sans-serif;
-                          color: white;
-                        ">Home</a>
-                </li>
-              </div>
-              <div class="ps-3 ">
-                <li class="nav-item">
-                  <a class="nav-link" href="agenda.html" style="
-                          font-family: 'Open Sans', sans-serif;                     
-                          color: white;">Agenda</a>
+                  <a class="nav-link"      
+                    href="index.html"
+                    style="
+                      font-family: 'Open Sans', sans-serif;
+                      color: white;
+                    ">Home</a>
                 </li>
               </div>
               <div class="ps-3">
                 <li class="nav-item">
-                  <a class="nav-link" href="aboutus.html" style="
-                          font-family: 'Open Sans', sans-serif;
-                          
-                          color: white;
-                        ">About Us</a>
+                  <a class="nav-link"
+                    href="agenda.html"                                       
+                    style="
+                      font-family: 'Open Sans', sans-serif;                     
+                      color: white;"
+                    >Agenda</a
+                  >
                 </li>
               </div>
               <div class="ps-3">
                 <li class="nav-item">
-                  <a class="nav-link" href="vision.html" style="
-                          font-family: 'Open Sans', sans-serif;
-                          color: white;
-                        ">Vision</a>
+                  <a
+                    class="nav-link"
+                    href="aboutus.html"                   
+                    style="
+                      font-family: 'Open Sans', sans-serif;
+                      
+                      color: white;
+                    "
+                    >About Us</a
+                  >
                 </li>
               </div>
               <div class="ps-3">
                 <li class="nav-item">
-                  <a class="nav-link" href="corevalues.html" style="
-                          font-family: 'Open Sans', sans-serif;                      
-                          color: white;
-                        ">Core Values</a>
+                  <a
+                    class="nav-link"                    
+                    href="vision.html"                   
+                    style="
+                      font-family: 'Open Sans', sans-serif;
+                      color: white;
+                    "
+                    >Vision</a
+                  >
                 </li>
               </div>
               <div class="ps-3">
                 <li class="nav-item">
-                  <a class="nav-link" href="mission.html" style="
-                          font-family: 'Open Sans', sans-serif;
-                          color: white;
-                        ">Mission</a>
+                  <a
+                    class="nav-link"                   
+                    href="corevalues.html"                    
+                    style="
+                      font-family: 'Open Sans', sans-serif;                      
+                      color: white;
+                    "
+                    >Core Values</a
+                  >
+                </li>
+              </div>
+              <div class="ps-3">
+                <li class="nav-item">
+                  <a
+                    class="nav-link"
+                    href="mission.html"              
+                    style="
+                      font-family: 'Open Sans', sans-serif;
+                      color: white;
+                    "
+                    >Mission</a
+                  >
                 </li>
               </div>
               <div class="ps-3">
                 <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-bs-toggle="dropdown"
-                    role="button" aria-expanded="false" style="                      
-                          font-family: 'Open Sans', sans-serif;  
-                          color: white;">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    href="#"
+                    id="navbarDropdownMenuLink"                   
+                    data-bs-toggle="dropdown"
+                    role="button"                   
+                    aria-expanded="false"
+                    style="                      
+                      font-family: 'Open Sans', sans-serif;  
+                      color: white;"
+                  >
                     Projects
                   </a>
                   <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
@@ -163,41 +206,63 @@ if(isset($_POST["submit"])){
                       <a class="dropdown-item" href="pr7.html">7. Human Rights</a>
                     </li>
                     <li>
-                      <a class="dropdown-item" href="pr8.html">8. Old Age, Orphanage & Blind Home</a>
+                      <a class="dropdown-item" href="pr8.html"
+                        >8. Old Age, Orphanage & Blind Home</a
+                      >
                     </li>
                     <li>
-                      <a class="dropdown-item" href="pr9.html">9. Sports Training Support</a>
+                      <a class="dropdown-item" href="pr9.html"
+                        >9. Sports Training Support</a
+                      >
                     </li>
                     <li>
-                      <a class="dropdown-item" href="pr10.html">10. True Eternal Warriors</a>
+                      <a class="dropdown-item" href="pr10.html"
+                        >10. True Eternal Warriors</a
+                      >
                     </li>
                     <li>
-                      <a class="dropdown-item" href="pr11.html">11. Training & Skill Enhancement</a>
+                      <a class="dropdown-item" href="pr11.html"
+                        >11. Training & Skill Enhancement</a
+                      >
                     </li>
                     <li>
-                      <a class="dropdown-item" href="pr12.html">12. True Wisdom Devotees</a>
+                      <a class="dropdown-item" href="pr12.html"
+                        >12. True Wisdom Devotees</a
+                      >
                     </li>
                     <li>
-                      <a class="dropdown-item" href="pr13.html">13. Vigour and Vitality</a>
+                      <a class="dropdown-item" href="pr13.html"
+                        >13. Vigour and Vitality</a
+                      >
                     </li>
                     <li>
-                      <a class="dropdown-item" href="pr14.html">14. Voiceless Souls Protectin</a>
+                      <a class="dropdown-item" href="pr14.html"
+                        >14. Voiceless Souls Protectin</a
+                      >
                     </li>
                     <li>
-                      <a class="dropdown-item" href="pr15.html">15. Women Empowerment</a>
+                      <a class="dropdown-item" href="pr15.html"
+                        >15. Women Empowerment</a
+                      >
                     </li>
                   </ul>
                 </li>
               </div>
               <div class="ps-3">
                 <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                    aria-expanded="false" style="
-                          
-                          font-family: 'Open Sans', sans-serif;
-                          
-                          color: white;
-                        ">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    href="#"                   
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                    style="
+                      
+                      font-family: 'Open Sans', sans-serif;
+                      
+                      color: white;
+                    "
+                  >
                     Orniogram
                   </a>
                   <ul class="dropdown-menu">
@@ -211,13 +276,20 @@ if(isset($_POST["submit"])){
               </div>
               <div class="ps-3">
                 <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                    aria-expanded="false" style="
-                         
-                          font-family: 'Open Sans', sans-serif;
-                          
-                          color: white;
-                        ">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    href="#"
+                    
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                    style="
+                     
+                      font-family: 'Open Sans', sans-serif;
+                      
+                      color: white;
+                    "
+                  >
                     Career
                   </a>
                   <ul class="dropdown-menu">
@@ -231,13 +303,19 @@ if(isset($_POST["submit"])){
               </div>
               <div class="ps-3">
                 <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                    aria-expanded="false" style="
-                          
-                          font-family: 'Open Sans', sans-serif;
-                          
-                          color: white;
-                        ">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    href="#"                   
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                    style="
+                      
+                      font-family: 'Open Sans', sans-serif;
+                      
+                      color: white;
+                    "
+                  >
                     Login
                   </a>
                   <ul class="dropdown-menu">
@@ -249,55 +327,79 @@ if(isset($_POST["submit"])){
               </div>
               <div class="ps-3">
                 <li class="nav-item">
-                  <a class="nav-link" href="refundpolicy.html" style="
-                          font-family: 'Open Sans', sans-serif;
-                          
-                          color: white;
-                          
-                        ">Refund Policy</a>
+                  <a
+                    class="nav-link"
+                    href="refundpolicy.html"                                      
+                    style="
+                      font-family: 'Open Sans', sans-serif;
+                      
+                      color: white;
+                      
+                    "
+                    >Refund Policy</a
+                  >
                 </li>
               </div>
               <div class="ps-3">
                 <li class="nav-item">
-                  <a class="nav-link" href="crm.html" style="
-                          font-family: 'Open Sans', sans-serif;                     
-                          color: white;
-                        ">CRM</a>
+                  <a
+                    class="nav-link"
+                    href="crm.php"                                      
+                    style="
+                      font-family: 'Open Sans', sans-serif;                     
+                      color: white;
+                    "
+                    >CRM</a
+                  >
                 </li>
               </div>
               <div class="ps-3">
                 <li class="nav-item">
-                  <a class="nav-link" href="faq.html" style="
-                          font-family: 'Open Sans', sans-serif;                     
-                          color: white;
-                        ">FAQ</a>
+                  <a
+                    class="nav-link"
+                    href="faq.html"                   
+                    style="
+                      font-family: 'Open Sans', sans-serif;                     
+                      color: white;
+                    "
+                    >FAQ</a
+                  >
                 </li>
               </div>
               <div class="ps-3">
                 <li class="nav-item">
-                  <a class="nav-link" href="#" style="
-                          font-family: 'Open Sans', sans-serif;                                          
-                          color: white;
-                        ">Contact Us</a>
+                  <a
+                    class="nav-link"                  
+                    href="#"                   
+                    style="
+                      font-family: 'Open Sans', sans-serif;                                          
+                      color: white;
+                    "
+                    >Contact Us</a
+                  >
                 </li>
               </div>
               <div class="ps-3">
                 <li class="nav-item">
-                  <a class="nav-link" href="survey.html" style="
-                          font-family: 'Open Sans', sans-serif;
-                          color: white;
-                        ">Survey</a>
+                  <a
+                    class="nav-link"              
+                    href="survey.html"
+                    style="
+                      font-family: 'Open Sans', sans-serif;
+                      color: white;
+                    "
+                    >Survey</a
+                  >
                 </li>
               </div>
             </ul>
           </div>
         </div>
-      </div>
-    </nav>
-  </header>
+      </nav>
+    </header>
 
 
-  <img src="survey-subbanner.jpg" class="surveyimg">
+  <img src="./Images/survey-subbanner.jpg" class="surveyimg">
   <div class="projects survey">
     <div class="survey-heading"> <h2>YOUR TEA TASTE SURVEY FORM</h2></div>
     

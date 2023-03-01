@@ -69,332 +69,334 @@ if(isset($_POST["submit"])){
   </head>
 
   <body>
-    <header>
-        <section class="section-1">
-          <img src="Website Header Strip.png" alt="" style="align-items: center; width: 100%;">
-          
-        </section>
-        <img src="vision statement .jpg" alt="" class="img-fluid">
-        <nav
-          class="navbar navbar-expand-sm navbar-dark bg-dark mb-0"
-        >
-          <div class="container-fluid">
-            <button
-              class="navbar-toggler"
-              type="button"            
-              data-toggle="collapse"
-              data-target="#navbarNavDropdown"
-              aria-controls="navbarSupportedContent"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-            >
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavDropdown">
-              <ul class="navbar-nav">
-                <div class="ps-3">
-                  <li class="nav-item">
-                    <a class="nav-link"      
-                      href="index.html"
-                      style="
-                        font-family: 'Open Sans', sans-serif;
-                        color: white;
-                      ">Home</a>
-                  </li>
-                </div>
-                <div class="ps-3">
-                  <li class="nav-item">
-                    <a class="nav-link"
-                      href="agenda.html"                                       
-                      style="
-                        font-family: 'Open Sans', sans-serif;                     
-                        color: white;"
-                      >Agenda</a
-                    >
-                  </li>
-                </div>
-                <div class="ps-3">
-                  <li class="nav-item">
-                    <a
-                      class="nav-link"
-                      href="aboutus.html"                   
-                      style="
-                        font-family: 'Open Sans', sans-serif;
-                        
-                        color: white;
-                      "
-                      >About Us</a
-                    >
-                  </li>
-                </div>
-                <div class="ps-3">
-                  <li class="nav-item">
-                    <a
-                      class="nav-link"                    
-                      href="vision.html"                   
-                      style="
-                        font-family: 'Open Sans', sans-serif;
-                        color: white;
-                      "
-                      >Vision</a
-                    >
-                  </li>
-                </div>
-                <div class="ps-3">
-                  <li class="nav-item">
-                    <a
-                      class="nav-link"                   
-                      href="corevalues.html"                    
-                      style="
-                        font-family: 'Open Sans', sans-serif;                      
-                        color: white;
-                      "
-                      >Core Values</a
-                    >
-                  </li>
-                </div>
-                <div class="ps-3">
-                  <li class="nav-item">
-                    <a
-                      class="nav-link"
-                      href="mission.html"              
-                      style="
-                        font-family: 'Open Sans', sans-serif;
-                        color: white;
-                      "
-                      >Mission</a
-                    >
-                  </li>
-                </div>
-                <div class="ps-3">
-                  <li class="nav-item dropdown">
-                    <a
-                      class="nav-link dropdown-toggle"
-                      href="#"
-                      id="navbarDropdownMenuLink"                   
-                      data-bs-toggle="dropdown"
-                      role="button"                   
-                      aria-expanded="false"
-                      style="                      
-                        font-family: 'Open Sans', sans-serif;  
-                        color: white;"
-                    >
-                      Projects
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                      <li>
-                        <a class="dropdown-item" href="pr1.html">1. Art, Literature, Culture & Religion</a>
-                      </li>
-                      <li>
-                        <a class="dropdown-item" href="pr2.html">2. Blood Donation</a>
-                      </li>
-                      <li>
-                        <a class="dropdown-item" href="pr3.html">3. Drug De-Addiction</a>
-                      </li>
-                      <li>
-                        <a class="dropdown-item" href="pr4.html">4. Environment Armour</a>
-                      </li>
-                      <li>
-                        <a class="dropdown-item" href="pr5.html">5. Gender Justice</a>
-                      </li>
-                      <li>
-                        <a class="dropdown-item" href="pr6.html">6. Gracious Justice</a>
-                      </li>
-                      <li>
-                        <a class="dropdown-item" href="pr7.html">7. Human Rights</a>
-                      </li>
-                      <li>
-                        <a class="dropdown-item" href="pr8.html"
-                          >8. Old Age, Orphanage & Blind Home</a
-                        >
-                      </li>
-                      <li>
-                        <a class="dropdown-item" href="pr9.html"
-                          >9. Sports Training Support</a
-                        >
-                      </li>
-                      <li>
-                        <a class="dropdown-item" href="pr10.html"
-                          >10. True Eternal Warriors</a
-                        >
-                      </li>
-                      <li>
-                        <a class="dropdown-item" href="pr11.html"
-                          >11. Training & Skill Enhancement</a
-                        >
-                      </li>
-                      <li>
-                        <a class="dropdown-item" href="pr12.html"
-                          >12. True Wisdom Devotees</a
-                        >
-                      </li>
-                      <li>
-                        <a class="dropdown-item" href="pr13.html"
-                          >13. Vigour and Vitality</a
-                        >
-                      </li>
-                      <li>
-                        <a class="dropdown-item" href="pr14.html"
-                          >14. Voiceless Souls Protectin</a
-                        >
-                      </li>
-                      <li>
-                        <a class="dropdown-item" href="pr15.html"
-                          >15. Women Empowerment</a
-                        >
-                      </li>
-                    </ul>
-                  </li>
-                </div>
-                <div class="ps-3">
-                  <li class="nav-item dropdown">
-                    <a
-                      class="nav-link dropdown-toggle"
-                      href="#"                   
-                      role="button"
-                      data-bs-toggle="dropdown"
-                      aria-expanded="false"
-                      style="
-                        
-                        font-family: 'Open Sans', sans-serif;
-                        
-                        color: white;
-                      "
-                    >
-                      Orniogram
-                    </a>
-                    <ul class="dropdown-menu">
-                      <li><a class="dropdown-item" href="orniogram.html">Orniogram</a></li>
-                      <li><a class="dropdown-item" href="management.html">Management</a></li>
-                      <li>
-                        <a class="dropdown-item" href="codeofconduct.html">Code of Conduct</a>
-                      </li>
-                    </ul>
-                  </li>
-                </div>
-                <div class="ps-3">
-                  <li class="nav-item dropdown">
-                    <a
-                      class="nav-link dropdown-toggle"
-                      href="#"
+  <header>
+      <section class="section-1">
+        <img src="./Images/Website Header Strip.png" alt="" style="align-items: center; width: 100%;">
+        
+      </section>
+      <center><video height="100%" width="100%" autoplay loop muted>
+        <source src="VISION STATEMENT ANIMATION.mp4" type="video/mp4">  
+      </video></center>
+      <nav
+        class="navbar navbar-expand-sm navbar-dark bg-dark mb-0"  
+      >
+        <div class="container-fluid">
+          <button
+            class="navbar-toggler"
+            type="button"            
+            data-toggle="collapse"
+            data-target="#navbarNavDropdown"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+              <div class="ps-3">
+                <li class="nav-item">
+                  <a class="nav-link"      
+                    href="index.html"
+                    style="
+                      font-family: 'Open Sans', sans-serif;
+                      color: white;
+                    ">Home</a>
+                </li>
+              </div>
+              <div class="ps-3">
+                <li class="nav-item">
+                  <a class="nav-link"
+                    href="agenda.html"                                       
+                    style="
+                      font-family: 'Open Sans', sans-serif;                     
+                      color: white;"
+                    >Agenda</a
+                  >
+                </li>
+              </div>
+              <div class="ps-3">
+                <li class="nav-item">
+                  <a
+                    class="nav-link"
+                    href="aboutus.html"                   
+                    style="
+                      font-family: 'Open Sans', sans-serif;
                       
-                      role="button"
-                      data-bs-toggle="dropdown"
-                      aria-expanded="false"
-                      style="
-                       
-                        font-family: 'Open Sans', sans-serif;
-                        
-                        color: white;
-                      "
-                    >
-                      Career
-                    </a>
-                    <ul class="dropdown-menu">
-                      <li><a class="dropdown-item" href="recruitment.html">Recruitments</a></li>
-                      <li>
-                        <a class="dropdown-item" href="#">Interview form</a>
-                      </li>
-                      <li><a class="dropdown-item" href="#">Joining form</a></li>
-                    </ul>
-                  </li>
-                </div>
-                <div class="ps-3">
-                  <li class="nav-item dropdown">
-                    <a
-                      class="nav-link dropdown-toggle"
-                      href="#"                   
-                      role="button"
-                      data-bs-toggle="dropdown"
-                      aria-expanded="false"
-                      style="
-                        
-                        font-family: 'Open Sans', sans-serif;
-                        
-                        color: white;
-                      "
-                    >
-                      Login
-                    </a>
-                    <ul class="dropdown-menu">
-                      <li><a class="dropdown-item" href="#">Numero</a></li>
-                      <li><a class="dropdown-item" href="#">Employee</a></li>
-                      <li><a class="dropdown-item" href="#">RMS</a></li>
-                    </ul>
-                  </li>
-                </div>
-                <div class="ps-3">
-                  <li class="nav-item">
-                    <a
-                      class="nav-link"
-                      href="refundpolicy.html"                                      
-                      style="
-                        font-family: 'Open Sans', sans-serif;
-                        
-                        color: white;
-                        
-                      "
-                      >Refund Policy</a
-                    >
-                  </li>
-                </div>
-                <div class="ps-3">
-                  <li class="nav-item">
-                    <a
-                      class="nav-link"
-                      href="crm.html"                                      
-                      style="
-                        font-family: 'Open Sans', sans-serif;                     
-                        color: white;
-                      "
-                      >CRM</a
-                    >
-                  </li>
-                </div>
-                <div class="ps-3">
-                  <li class="nav-item">
-                    <a
-                      class="nav-link"
-                      href="faq.html"                   
-                      style="
-                        font-family: 'Open Sans', sans-serif;                     
-                        color: white;
-                      "
-                      >FAQ</a
-                    >
-                  </li>
-                </div>
-                <div class="ps-3">
-                  <li class="nav-item">
-                    <a
-                      class="nav-link"                  
-                      href="#"                   
-                      style="
-                        font-family: 'Open Sans', sans-serif;                                          
-                        color: white;
-                      "
-                      >Contact Us</a
-                    >
-                  </li>
-                </div>
-                <div class="ps-3">
-                  <li class="nav-item">
-                    <a
-                      class="nav-link"              
-                      href="survey.html"
-                      style="
-                        font-family: 'Open Sans', sans-serif;
-                        color: white;
-                      "
-                      >Survey</a
-                    >
-                  </li>
-                </div>
-              </ul>
-            </div>
+                      color: white;
+                    "
+                    >About Us</a
+                  >
+                </li>
+              </div>
+              <div class="ps-3">
+                <li class="nav-item">
+                  <a
+                    class="nav-link"                    
+                    href="vision.html"                   
+                    style="
+                      font-family: 'Open Sans', sans-serif;
+                      color: white;
+                    "
+                    >Vision</a
+                  >
+                </li>
+              </div>
+              <div class="ps-3">
+                <li class="nav-item">
+                  <a
+                    class="nav-link"                   
+                    href="corevalues.html"                    
+                    style="
+                      font-family: 'Open Sans', sans-serif;                      
+                      color: white;
+                    "
+                    >Core Values</a
+                  >
+                </li>
+              </div>
+              <div class="ps-3">
+                <li class="nav-item">
+                  <a
+                    class="nav-link"
+                    href="mission.html"              
+                    style="
+                      font-family: 'Open Sans', sans-serif;
+                      color: white;
+                    "
+                    >Mission</a
+                  >
+                </li>
+              </div>
+              <div class="ps-3">
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    href="#"
+                    id="navbarDropdownMenuLink"                   
+                    data-bs-toggle="dropdown"
+                    role="button"                   
+                    aria-expanded="false"
+                    style="                      
+                      font-family: 'Open Sans', sans-serif;  
+                      color: white;"
+                  >
+                    Projects
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <li>
+                      <a class="dropdown-item" href="pr1.html">1. Art, Literature, Culture & Religion</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="pr2.html">2. Blood Donation</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="pr3.html">3. Drug De-Addiction</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="pr4.html">4. Environment Armour</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="pr5.html">5. Gender Justice</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="pr6.html">6. Gracious Justice</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="pr7.html">7. Human Rights</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="pr8.html"
+                        >8. Old Age, Orphanage & Blind Home</a
+                      >
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="pr9.html"
+                        >9. Sports Training Support</a
+                      >
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="pr10.html"
+                        >10. True Eternal Warriors</a
+                      >
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="pr11.html"
+                        >11. Training & Skill Enhancement</a
+                      >
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="pr12.html"
+                        >12. True Wisdom Devotees</a
+                      >
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="pr13.html"
+                        >13. Vigour and Vitality</a
+                      >
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="pr14.html"
+                        >14. Voiceless Souls Protectin</a
+                      >
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="pr15.html"
+                        >15. Women Empowerment</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+              </div>
+              <div class="ps-3">
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    href="#"                   
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                    style="
+                      
+                      font-family: 'Open Sans', sans-serif;
+                      
+                      color: white;
+                    "
+                  >
+                    Orniogram
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="orniogram.html">Orniogram</a></li>
+                    <li><a class="dropdown-item" href="management.html">Management</a></li>
+                    <li>
+                      <a class="dropdown-item" href="codeofconduct.html">Code of Conduct</a>
+                    </li>
+                  </ul>
+                </li>
+              </div>
+              <div class="ps-3">
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    href="#"
+                    
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                    style="
+                     
+                      font-family: 'Open Sans', sans-serif;
+                      
+                      color: white;
+                    "
+                  >
+                    Career
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="recruitment.html">Recruitments</a></li>
+                    <li>
+                      <a class="dropdown-item" href="#">Interview form</a>
+                    </li>
+                    <li><a class="dropdown-item" href="#">Joining form</a></li>
+                  </ul>
+                </li>
+              </div>
+              <div class="ps-3">
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    href="#"                   
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                    style="
+                      
+                      font-family: 'Open Sans', sans-serif;
+                      
+                      color: white;
+                    "
+                  >
+                    Login
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Numero</a></li>
+                    <li><a class="dropdown-item" href="#">Employee</a></li>
+                    <li><a class="dropdown-item" href="#">RMS</a></li>
+                  </ul>
+                </li>
+              </div>
+              <div class="ps-3">
+                <li class="nav-item">
+                  <a
+                    class="nav-link"
+                    href="refundpolicy.html"                                      
+                    style="
+                      font-family: 'Open Sans', sans-serif;
+                      
+                      color: white;
+                      
+                    "
+                    >Refund Policy</a
+                  >
+                </li>
+              </div>
+              <div class="ps-3">
+                <li class="nav-item">
+                  <a
+                    class="nav-link"
+                    href="crm.html"                                      
+                    style="
+                      font-family: 'Open Sans', sans-serif;                     
+                      color: white;
+                    "
+                    >CRM</a
+                  >
+                </li>
+              </div>
+              <div class="ps-3">
+                <li class="nav-item">
+                  <a
+                    class="nav-link"
+                    href="faq.html"                   
+                    style="
+                      font-family: 'Open Sans', sans-serif;                     
+                      color: white;
+                    "
+                    >FAQ</a
+                  >
+                </li>
+              </div>
+              <div class="ps-3">
+                <li class="nav-item">
+                  <a
+                    class="nav-link"                  
+                    href="#"                   
+                    style="
+                      font-family: 'Open Sans', sans-serif;                                          
+                      color: white;
+                    "
+                    >Contact Us</a
+                  >
+                </li>
+              </div>
+              <div class="ps-3">
+                <li class="nav-item">
+                  <a
+                    class="nav-link"              
+                    href="survey.html"
+                    style="
+                      font-family: 'Open Sans', sans-serif;
+                      color: white;
+                    "
+                    >Survey</a
+                  >
+                </li>
+              </div>
+            </ul>
           </div>
-        </nav>
-      </header>
+        </div>
+      </nav>
+    </header>
 
       <div class="feedback-header">
         <img src="./Images/survey1.jpg">
