@@ -1390,6 +1390,62 @@ font-weight: bold;
 }
 
 
+.vid .container{
+    width: 100%;
+    height: 103vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.vid .container .slider{
+    position: absolute;
+    top: 0px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+.vid .container ul{
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 20;
+}
+
+.vid .container ul li{
+    list-style: none;
+    cursor: pointer;
+    margin: 10px;border: 6px solid black;
+    width: 18px;
+    height: 18px;
+    border-radius:50%;
+}
+.vid .container ul li:hover{
+    border:6px solid blue;
+    border-radius:50%;
+}
+
+
+
+.vid .container ul li video{
+    width: 200px;
+    transition: all 0.3s;
+}
+.vid .container ul li video:hover{
+    transform: scale(1.1);
+}
+
+.vid video{
+    width: 100%;
+    height: 100%;
+}
 
 
 
@@ -1398,9 +1454,10 @@ font-weight: bold;
 
 
 
-
-
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
+    .vid .container{
+        height: 46vh;
+    }
    #projectbanner{
     width: 375px;
    } 
@@ -1408,20 +1465,31 @@ font-weight: bold;
     width: 100%;
    }
    .map{
-    font-size: 13px;
+    font-size: 6px;
+    margin-left: -10px;
+    width: 90%;
    }
    .testimonials h2{
     margin: 50px -15px;
     font-size: 3em;
+    
    }
    .volunteers h2{
     font-size: 3em;
+    margin: 50px 0px
    }
+   
    .unsdg-heading h2{
     font-size: 3em;
+    margin: 50px 0px
    }
    .interns h2{
     font-size: 3em;
+    margin: 50px 0px;
+   }
+   .projects h2{
+    font-size: 3em;
+    margin: 50px 0px;
    }
    .volunteer-section{
     width: 0;
@@ -1494,6 +1562,26 @@ font-weight: bold;
     display: block;
     width: 300%;
 }
+.surveydiv1{
+    display: block;
+    width: 450%;
+}
+.surveydiv2{
+    display: block;
+    width: 450%;
+}
+.surveydiv3{
+    display: block;
+    width: 450%;
+}
+.feedbackdiv1{
+    display: block;
+    width: 450%;
+}
+.feedbackdiv2{
+    display: block;
+    width: 450%;
+}
 .proj-content1 {
     margin-right: 0%;
     margin-top: 70%;
@@ -1522,7 +1610,14 @@ font-weight: bold;
 .proj-content3 ol li{
     margin-right: 50px;
 }
-
+.reach h2{
+    font-size: 3em;
+    margin: 50px -15px;
+   }
+.orniogram img{
+    margin-left: -94px;
+    height: 400px;
+}
 }
 
 @media (max-width:1100px){

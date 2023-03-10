@@ -3,8 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="initial-scale=1, minimum-scale=1, width=device-width, height=device-height" />
     <title>Rudraksha Welfare Foundation</title>
+    
     <link
   rel="stylesheet"
   href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
@@ -26,10 +27,13 @@
       crossorigin="anonymous"
     />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
+   <!-- <link
       href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,200;0,400;0,500;1,300&family=Lora:ital,wght@0,500;0,600;1,400;1,600&family=Roboto:wght@500&family=Urbanist:wght@200;300;400;500;600&family=Varela+Round&display=swap"
       rel="stylesheet"
-    />
+    /> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
     <link
     href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
     rel="stylesheet"
@@ -42,22 +46,56 @@
     crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   
+<script>
+      window.onload=function(){
+        document.getElementById('loader').style.display="none";
+        document.getElementById('content').style.display="block";
+      };
+      </script>
+    
+    <style>
+      #content{display:none;}
+      /*#content img{width:100%;}*/
+      #loader{
+        position: absolute;
+        margin: auto;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 80%;
+        height: 80vh;
+      }
+      #loader img{width:400px;}
+      #timeincrease{
+        display:none;
+      }
+      video::-webkit-media-controls {
+       display: none;
+      }
+      
+      
+      </style>
   
   
   
   </head>
 
   <body>
+   <div id="loader">
+			<video height="100%" width="100%" autoplay loop muted controls src="./videos/RWF Preloader.mp4"></video>
+		</div>
+    <div id="content">
     <header>
       <section class="section-1">
-        <img src="Website Header Strip.png" alt="" style="align-items: center; width: 100%;">
+        <img src="./Images/Website Header Strip.png" alt="" style="align-items: center; width: 100%;">
         
       </section>
-      <!--<img src="vision statement .jpg" alt="" class="img-fluid"> -->
+      <img src="./Images/vision statement .jpg" alt="" class="img-fluid"> 
 
-      <center><video height="100%" width="100%" autoplay loop muted>
+      <!--<center><video height="100%" width="100%" autoplay loop muted>
         <source src="VISION STATEMENT ANIMATION.mp4" type="video/mp4">  
-      </video></center>
+      </video></center> -->
       <nav
         class="navbar navbar-expand-sm navbar-dark bg-dark mb-0"
       >
@@ -80,6 +118,7 @@
                   <a class="nav-link"      
                     href="index.html"
                     style="
+                      margin-left: 7px;
                       font-family: 'Open Sans', sans-serif;
                       color: white;
                     ">Home</a>
@@ -90,6 +129,7 @@
                   <a class="nav-link"
                     href="agenda.html"                                       
                     style="
+                    margin-left: 7px;
                       font-family: 'Open Sans', sans-serif;                     
                       color: white;"
                     >Agenda</a
@@ -103,7 +143,7 @@
                     href="aboutus.html"                   
                     style="
                       font-family: 'Open Sans', sans-serif;
-                      
+                      margin-left: 7px;
                       color: white;
                     "
                     >About Us</a
@@ -118,6 +158,7 @@
                     style="
                       font-family: 'Open Sans', sans-serif;
                       color: white;
+                      margin-left: 7px;
                     "
                     >Vision</a
                   >
@@ -131,6 +172,7 @@
                     style="
                       font-family: 'Open Sans', sans-serif;                      
                       color: white;
+                      margin-left: 7px;
                     "
                     >Core Values</a
                   >
@@ -144,6 +186,7 @@
                     style="
                       font-family: 'Open Sans', sans-serif;
                       color: white;
+                      margin-left: 7px;
                     "
                     >Mission</a
                   >
@@ -160,7 +203,10 @@
                     aria-expanded="false"
                     style="                      
                       font-family: 'Open Sans', sans-serif;  
-                      color: white;"
+                      color: white;
+                      margin-left: 7px;
+                      "
+                      
                   >
                     Projects
                   </a>
@@ -240,7 +286,7 @@
                     style="
                       
                       font-family: 'Open Sans', sans-serif;
-                      
+                      margin-left: 7px;
                       color: white;
                     "
                   >
@@ -267,7 +313,7 @@
                     style="
                      
                       font-family: 'Open Sans', sans-serif;
-                      
+                      margin-left: 7px;
                       color: white;
                     "
                   >
@@ -282,30 +328,7 @@
                   </ul>
                 </li>
               </div>
-              <div class="ps-3">
-                <li class="nav-item dropdown">
-                  <a
-                    class="nav-link dropdown-toggle"
-                    href="#"                   
-                    role="button"
-                    data-bs-toggle="dropdown"
-                    aria-expanded="false"
-                    style="
-                      
-                      font-family: 'Open Sans', sans-serif;
-                      
-                      color: white;
-                    "
-                  >
-                    Login
-                  </a>
-                  <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">Numero</a></li>
-                    <li><a class="dropdown-item" href="#">Employee</a></li>
-                    <li><a class="dropdown-item" href="#">RMS</a></li>
-                  </ul>
-                </li>
-              </div>
+              
               <div class="ps-3">
                 <li class="nav-item">
                   <a
@@ -313,7 +336,7 @@
                     href="refundpolicy.html"                                      
                     style="
                       font-family: 'Open Sans', sans-serif;
-                      
+                      margin-left: 7px;
                       color: white;
                       
                     "
@@ -327,6 +350,7 @@
                     class="nav-link"
                     href="crm.php"                                      
                     style="
+                    margin-left: 7px;
                       font-family: 'Open Sans', sans-serif;                     
                       color: white;
                     "
@@ -340,6 +364,7 @@
                     class="nav-link"
                     href="faq.html"                   
                     style="
+                    margin-left: 7px;
                       font-family: 'Open Sans', sans-serif;                     
                       color: white;
                     "
@@ -353,6 +378,7 @@
                     class="nav-link"                  
                     href="#"                   
                     style="
+                    margin-left: 7px;
                       font-family: 'Open Sans', sans-serif;                                          
                       color: white;
                     "
@@ -361,16 +387,29 @@
                 </li>
               </div>
               <div class="ps-3">
-                <li class="nav-item">
+                <li class="nav-item dropdown">
                   <a
-                    class="nav-link"              
-                    href="survey.html"
+                    class="nav-link dropdown-toggle"
+                    href="#"
+                    
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
                     style="
                       font-family: 'Open Sans', sans-serif;
+                      margin-left: 7px;
                       color: white;
                     "
-                    >Survey</a
                   >
+                    Survey
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="surveyform.php">Survey Form</a></li>
+                    <li>
+                      <a class="dropdown-item" href="feedback.php">Feedback form</a>
+                    </li>
+                    
+                  </ul>
                 </li>
               </div>
             </ul>
@@ -378,6 +417,11 @@
         </div>
       </nav>
     </header>
+
+    <div id="timeincrease" >
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/-QKgzYTPSEo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/-QKgzYTPSEo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+     </div>
 
     <div
       id="carouselExampleIndicators"
@@ -555,18 +599,18 @@
         <div class="row">
           <div class="col-3">
             <h2 class="counter-numbers" data-number="20">0+</h2>
-            <p>Projects Completed</p>
+            <p>Events Completed</p>
           </div>
           <div class="col-3">
             <h2 class="counter-numbers" data-number="100">0+</h2>
             <p>Happy Clients</p>
           </div>
           <div class="col-3">
-            <h2 class="counter-numbers" data-number="80">0+</h2>
+            <h2 class="counter-numbers" data-number="100">0+</h2>
             <p>Interns</p>
           </div>
           <div class="col-3">
-            <h2 class="counter-numbers" data-number="10">0+</h2>
+            <h2 class="counter-numbers" data-number="50">0+</h2>
             <p>Volunteers</p>
           </div>
         </div>
@@ -615,6 +659,9 @@
           </div>
           <div class="swiper-slide">
             <img src="./Images/Interns/all-web-devs/jinesh1.jpg" />
+          </div>
+          <div class="swiper-slide">
+            <img src="./Images/Interns/all-web-devs/Ganesh Wakade Intern Profile.png" />
           </div>
           <div class="swiper-slide">
             <img src="./Images/Interns/all-web-devs/ketki1.jpg" />
@@ -819,6 +866,8 @@
             <img src="./Images/Interns/ui-ux/vidhushi.jpg" />
           </div>
         </div>
+        <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
         <div class="swiper-pagination"></div>
       </div>
     </div>
@@ -1033,7 +1082,7 @@
     </div>
 
     <div class="map">
-      <img src="worldmap.png" alt="" />
+      <img src="./Images/worldmap.png" alt="" />
       
       <div class="pin india">
         <span>INDIA</span>
@@ -1082,44 +1131,37 @@
       <div class="pin singapore">
         <span>SINGAPORE</span>
       </div>
-      <div class="pin newyork">
-        <span>NEW YORK</span>
-      </div>
-      <div class="pin california">
-        <span>CALIFORNIA</span>
-      </div>
       
-      <div class="pin stpetersberg">
-        <span>ST.PETERSBERG</span>
-      </div>
       <div class="pin malaysia">
         <span>MALAYSIA</span>
       </div>
-      <div class="pin sydney">
-        <span>SYDNEY</span>
-      </div>
+      
       
   </div>
-
-  
   
 
+  <div class="vid">
+    <div class="container">
+      <video src="./videos/Art Literature Religion & Culture-_4.mp4" class="slider" type="video/mp4" autoplay loop controls muted></video>
+
+      <ul>
+          <li onclick="videoslider('./videos/Art Literature Religion & Culture-_4.mp4')"><video src="./videos/Art Literature Religion & Culture-_4.mp4"></video></li>
+          <li onclick="videoslider('./videos/blood donation_2 (1).mp4')"><video src="./videos/blood donation_2 (1).mp4" ></video></li>
+          <li onclick="videoslider('./videos/GRACIOUS JUSTICE.mp4')"><video src="./videos/GRACIOUS JUSTICE.mp4" ></video></li>
+          <li onclick="videoslider('./videos/training and skill development_1.mp4')"><video src="./videos/training and skill development_1.mp4" ></video></li>
+          <li onclick="videoslider('./videos/voiceless soul protection_2.mp4')"><video src="./videos/voiceless soul protection_2.mp4" ></video></li>
+          <li onclick="videoslider('./videos/women empowerment 2_1 (1).mp4')"><video src="./videos/women empowerment 2_1 (1).mp4" ></video></li>
+          <!--<li onclick="videoslider('./video.mp4')"><video src="./video.mp4"></video></li>
+          <li onclick="videoslider('./video1.mp4')"><video src="./video1.mp4"></video></li>-->
+      </ul>
+  </div>
+  </div>
 
 
 
 
 
 
-
-
-
-
-  
-<div class="video">
-  <center>
-    <video height="100%" width="100%" autoplay loop muted controls src="./videos/Art Literature Religion & Culture-_4.mp4"></video>
-  </center>
-</div> 
 
 
 <footer class="padding_3x">
@@ -1139,8 +1181,8 @@
     </section>
     <section class="flex-content padding_1x">
       <h3>Let's Connect</h3>
-      <a href="#">Our Mission</a>
-      <a href="#">About Us</a>
+      <a href="mission.html">Our Mission</a>
+      <a href="aboutus.html">About Us</a>
       <a href="#">Blogs and newsletters</a>
       
     </section>
@@ -1164,14 +1206,8 @@
     </section>
   </div>
 </footer>
-
+</div>
   <script src="index.js"></script>
-
-
-
-
-
-
 
 
   <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
@@ -1188,7 +1224,7 @@
     slidesToShow: 4,
     slidesToScroll: 1,
     prevArrow: '<button class="slide-arrow prev-arrow"><i class="fa fa-angle-left"></i></button>',
-      nextArrow: '<button class="slide-arrow next-arrow"><i class="fa fa-angle-right"></i></button>',
+    nextArrow: '<button class="slide-arrow next-arrow"><i class="fa fa-angle-right"></i></button>',
     responsive: [
       {
         breakpoint: 1600,
@@ -1219,8 +1255,9 @@
     ]
   });
   
-  
     </script>
+
+
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script>
@@ -1237,12 +1274,24 @@
           slideShadows: true,
         },
         loop:true,
+        navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
         autoplay: {
-        delay: 2500,
+        delay: 3000,
         disableOnInteraction: false,
       },
       });
     </script>
+
+<script>
+
+  function videoslider(links){
+      document.querySelector(".slider").src = links;
+  }
+  
+  </script>
    <script src="https://code.jquery.com/jquery-3.6.3.min.js" ></script>
    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
    <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js"></script>

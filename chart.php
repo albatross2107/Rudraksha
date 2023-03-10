@@ -1,7 +1,171 @@
+<?php
+$conn= mysqli_connect("localhost", "root", "", "rudra");
+$query="SELECT price, count(*) as number FROM feedback GROUP BY price";
+$result=mysqli_query($conn, $query);
+$query1="SELECT gender, count(*) as number FROM feedback GROUP BY gender";
+$result1=mysqli_query($conn, $query1);
+$query2="SELECT teaquality, count(*) as number FROM feedback GROUP BY teaquality";
+$result2=mysqli_query($conn,$query2);
+$query3="SELECT packagequality, count(*) as number FROM feedback GROUP BY packagequality";
+$result3=mysqli_query($conn,$query3);
+
+
+ 
+$link=mysqli_connect("localhost", "root", "");
+mysqli_select_db($link,"rudra_675");
+$test=array();
+$count=0;
+$res=mysqli_query($link,"SELECT profession, teacups_perday, count(*) as number FROM survey GROUP BY profession");
+while($row=mysqli_fetch_array($res)){
+$test[$count]['label']=$row['profession'];
+$test[$count]['y']=$row['teacups_perday'];
+$count=$count+1;
+}
+
+?>
+
+
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
+
+
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load("current", {packages:["corechart"]});
+      google.charts.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['price', 'Number'],
+          <?php
+          while($row=mysqli_fetch_array($result)){
+            echo "['".$row["price"]."', ".$row["number"]."],";
+          }
+          ?>
+          
+        ]);
+
+        var options = {
+          title: 'Tea Price',
+          
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+        chart.draw(data, options);
+      }
+      </script>
+      <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load("current", {packages:["corechart"]});
+      google.charts.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['gender', 'Number'],
+          <?php
+          while($row=mysqli_fetch_array($result1)){
+            echo "['".$row["gender"]."', ".$row["number"]."],";
+          }
+          ?>
+        ]);
+
+        var options = {
+          title: 'Gender Ratio',
+          is3D: true,
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
+        chart.draw(data, options);
+      }
+    </script>
+
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load("current", {packages:["corechart"]});
+      google.charts.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['teaquality', 'Number'],
+          <?php
+          while($row=mysqli_fetch_array($result2)){
+            echo "['".$row["teaquality"]."', ".$row["number"]."],";
+          }
+          ?>
+        ]);
+
+        var options = {
+          title: 'Quality Report',
+          pieHole: 0.4,
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('donutchart'));
+        chart.draw(data, options);
+      }
+    </script>
+
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load("current", {packages:["corechart"]});
+      google.charts.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['packagequality', 'Number'],
+          <?php
+           while($row=mysqli_fetch_array($result3)){
+            echo "['".$row["packagequality"]."', ".$row["number"]."],";
+          }
+          ?>
+          
+        ]);
+
+        var options = {
+          title: 'Package Quality',
+          
+          pieSliceText: 'label',
+          slices: {  4: {offset: 0.2},
+                    12: {offset: 0.3},
+                    14: {offset: 0.4},
+                    15: {offset: 0.5},
+          },
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart1'));
+        chart.draw(data, options);
+      }
+    </script>
+
+<script>
+window.onload = function() {
+ 
+var chart = new CanvasJS.Chart("chartContainer", {
+	animationEnabled: true,
+	theme: "light1",
+	title:{
+		text: "Profession VS Tea cups/day"
+	},
+	axisY: {
+		title: "Tea cups per day"
+	},
+  axisX: {
+		title: "Profession"
+	},
+	data: [{
+		type: "column",
+		yValueFormatString: "#,##0.## cups",
+		dataPoints: <?php echo json_encode($test, JSON_NUMERIC_CHECK); ?>
+	}]
+});
+chart.render();
+ 
+}
+</script>
+
+
+
     <!-- Required meta tags-->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -42,9 +206,7 @@
             <div class="header-mobile__bar">
                 <div class="container-fluid">
                     <div class="header-mobile-inner">
-                        <a class="logo" href="index.html">
-                            <img src="images/icon/logo.png" alt="CoolAdmin" />
-                        </a>
+                        
                         <button class="hamburger hamburger--slider" type="button">
                             <span class="hamburger-box">
                                 <span class="hamburger-inner"></span>
@@ -56,18 +218,13 @@
             <nav class="navbar-mobile">
                 <div class="container-fluid">
                     <ul class="navbar-mobile__list list-unstyled">
-                        <li class="has-sub">
-                            <a class="js-arrow" href="#">
+                    <li class="has-sub">
+                            <a href="adminpanel.php">
                                 <i class="fas fa-tachometer-alt"></i>Dashboard</a>
-                            <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
-                                <li>
-                                    <a href="index.html">Dashboard 1</a>
-                                </li>
-                                
-                            </ul>
+                            
                         </li>
                         <li>
-                            <a href="chart.html">
+                            <a href="chart.php">
                                 <i class="fas fa-chart-bar"></i>Charts</a>
                         </li>
                     </ul>   
@@ -78,16 +235,12 @@
 
         <!-- MENU SIDEBAR-->
         <aside class="menu-sidebar d-none d-lg-block">
-            <div class="logo">
-                <a href="#">
-                    <img src="images/icon/logo.png" alt="Cool Admin" />
-                </a>
-            </div>
+            
             <div class="menu-sidebar__content js-scrollbar1">
                 <nav class="navbar-sidebar">
                     <ul class="list-unstyled navbar__list">
                         <li class="active has-sub">
-                            <a class="js-arrow" href="index.php">
+                            <a class="js-arrow" href="adminpanel.php">
                                 <i class="fas fa-tachometer-alt"></i>Dashboard</a>
                             
                         </li>
@@ -117,7 +270,7 @@
                             <div class="header-button">
                                 <div class="noti-wrap">
                                     <div class="noti__item js-item-menu">
-                                        
+                                   
                                     </div>
                                     <div class="noti__item js-item-menu">
                                         
@@ -125,19 +278,13 @@
                                 </div>
                                 <div class="account-wrap">
                                     <div class="account-item clearfix js-item-menu">
-                                        <div class="image">
-                                            <img src="images/icon/avatar-01.jpg" alt="John Doe" />
-                                        </div>
+                                        
                                         <div class="content">
                                             <a class="js-acc-btn" href="#">Your name</a>
                                         </div>
                                         <div class="account-dropdown js-dropdown">
                                             <div class="info clearfix">
-                                                <div class="image">
-                                                    <a href="#">
-                                                        <img src="images/icon/avatar-01.jpg" alt="John Doe" />
-                                                    </a>
-                                                </div>
+                                               
                                                 <div class="content">
                                                     <h5 class="name">
                                                         <a href="#">Name</a>
@@ -146,8 +293,8 @@
                                                 </div>
                                             </div>
                                             
-                                            <div class="account-dropdown__footer">
-                                                <a href="#">
+                                            <div class="account-dropdown__footer" name="Logout">
+                                                <a href="crm.php">
                                                     <i class="zmdi zmdi-power"></i>Logout</a>
                                             </div>
                                         </div>
@@ -164,79 +311,68 @@
             <div class="main-content">
                 <div class="section__content section__content--p30">
                     <div class="container-fluid">
+                                <div class="overview-wrap">
+                                    <h2 class="title-1">Siddhi Tea Feedback Analysis</h2>  
+                                </div>
                         <div class="row">
+                        
                             <div class="col-lg-6">
                                 <div class="au-card m-b-30">
                                     <div class="au-card-inner">
-                                        <h3 class="title-2 m-b-40">Yearly Sales</h3>
-                                        <canvas id="sales-chart"></canvas>
+                                    <h3 class="title-2 m-b-40">Tea Price Report</h3>
+                                    <div class="chartsection"><div id="piechart" height="500px" width="1000px"></div></div>
+                                    
                                     </div>
                                 </div>
                             </div>
                             <div class="col-lg-6">
                                 <div class="au-card m-b-30">
                                     <div class="au-card-inner">
-                                        <h3 class="title-2 m-b-40">Team Commits</h3>
-                                        <canvas id="team-chart"></canvas>
+                                        <h3 class="title-2 m-b-40">Gender Ratio</h3>
+                                        <div id="piechart_3d" height="500px" width="1100px"></div>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-lg-6">
                                 <div class="au-card m-b-30">
                                     <div class="au-card-inner">
-                                        <h3 class="title-2 m-b-40">Bar chart</h3>
-                                        <canvas id="barChart"></canvas>
+                                        <h3 class="title-2 m-b-40">Tea Quality Report</h3>
+                                        <div id="donutchart" height="500px" width="1000px"></div>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-lg-6">
                                 <div class="au-card m-b-30">
                                     <div class="au-card-inner">
-                                        <h3 class="title-2 m-b-40">Rader chart</h3>
-                                        <canvas id="radarChart"></canvas>
+                                        <h3 class="title-2 m-b-40">Packaging Quality Report</h3>
+                                        <div id="piechart1" height="500px" width="1000px"></div>
                                     </div>
                                 </div>
                             </div>
+                            </div>
+                        
+                        </div>
+                    </div>
+                </div>  
+                <br>  
+                <div class="section__content section__content--p30">
+                    <div class="container-fluid">
+                                <div class="overview-wrap">
+                                    <h2 class="title-1">Siddhi Tea Survey Analysis</h2>  
+                                </div>
+                        <div class="row">                  
+                            
                             <div class="col-lg-6">
                                 <div class="au-card m-b-30">
                                     <div class="au-card-inner">
-                                        <h3 class="title-2 m-b-40">Line Chart</h3>
-                                        <canvas id="lineChart"></canvas>
+                                    <div id="chartContainer" style="height: 370px; width: 100%;"></div>
+<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-6">
-                                <div class="au-card m-b-30">
-                                    <div class="au-card-inner">
-                                        <h3 class="title-2 m-b-40">Doughut Chart</h3>
-                                        <canvas id="doughutChart"></canvas>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-6">
-                                <div class="au-card m-b-30">
-                                    <div class="au-card-inner">
-                                        <h3 class="title-2 m-b-40">Pie Chart</h3>
-                                        <canvas id="pieChart"></canvas>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-6">
-                                <div class="au-card m-b-30">
-                                    <div class="au-card-inner">
-                                        <h3 class="title-2 m-b-40">Polar Chart</h3>
-                                        <canvas id="polarChart"></canvas>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-6">
-                                <div class="au-card m-b-30">
-                                    <div class="au-card-inner">
-                                        <h3 class="title-2 m-b-40">Single Bar Chart</h3>
-                                        <canvas id="singelBarChart"></canvas>
-                                    </div>
-                                </div>
-                            </div>
+                            
+
+                           
                         </div>
                         
                     </div>

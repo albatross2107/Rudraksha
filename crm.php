@@ -66,16 +66,18 @@ if(isset($_POST['Signin'])){
   </head>
 
   <body>
-    <header>
+  <header>
       <section class="section-1">
         <img src="./Images/Website Header Strip.png" alt="" style="align-items: center; width: 100%;">
         
       </section>
-      <center><video autoplay loop muted>
+      <img src="./Images/vision statement .jpg" alt="" class="img-fluid"> 
+
+      <!--<center><video height="100%" width="100%" autoplay loop muted>
         <source src="VISION STATEMENT ANIMATION.mp4" type="video/mp4">  
-      </video></center>
+      </video></center> -->
       <nav
-        class="navbar navbar-expand-sm navbar-dark bg-dark mb-0"  
+        class="navbar navbar-expand-sm navbar-dark bg-dark mb-0"
       >
         <div class="container-fluid">
           <button
@@ -96,6 +98,7 @@ if(isset($_POST['Signin'])){
                   <a class="nav-link"      
                     href="index.html"
                     style="
+                      margin-left: 7px;
                       font-family: 'Open Sans', sans-serif;
                       color: white;
                     ">Home</a>
@@ -106,6 +109,7 @@ if(isset($_POST['Signin'])){
                   <a class="nav-link"
                     href="agenda.html"                                       
                     style="
+                    margin-left: 7px;
                       font-family: 'Open Sans', sans-serif;                     
                       color: white;"
                     >Agenda</a
@@ -119,7 +123,7 @@ if(isset($_POST['Signin'])){
                     href="aboutus.html"                   
                     style="
                       font-family: 'Open Sans', sans-serif;
-                      
+                      margin-left: 7px;
                       color: white;
                     "
                     >About Us</a
@@ -134,6 +138,7 @@ if(isset($_POST['Signin'])){
                     style="
                       font-family: 'Open Sans', sans-serif;
                       color: white;
+                      margin-left: 7px;
                     "
                     >Vision</a
                   >
@@ -147,6 +152,7 @@ if(isset($_POST['Signin'])){
                     style="
                       font-family: 'Open Sans', sans-serif;                      
                       color: white;
+                      margin-left: 7px;
                     "
                     >Core Values</a
                   >
@@ -160,6 +166,7 @@ if(isset($_POST['Signin'])){
                     style="
                       font-family: 'Open Sans', sans-serif;
                       color: white;
+                      margin-left: 7px;
                     "
                     >Mission</a
                   >
@@ -176,7 +183,10 @@ if(isset($_POST['Signin'])){
                     aria-expanded="false"
                     style="                      
                       font-family: 'Open Sans', sans-serif;  
-                      color: white;"
+                      color: white;
+                      margin-left: 7px;
+                      "
+                      
                   >
                     Projects
                   </a>
@@ -256,7 +266,7 @@ if(isset($_POST['Signin'])){
                     style="
                       
                       font-family: 'Open Sans', sans-serif;
-                      
+                      margin-left: 7px;
                       color: white;
                     "
                   >
@@ -283,7 +293,7 @@ if(isset($_POST['Signin'])){
                     style="
                      
                       font-family: 'Open Sans', sans-serif;
-                      
+                      margin-left: 7px;
                       color: white;
                     "
                   >
@@ -298,30 +308,7 @@ if(isset($_POST['Signin'])){
                   </ul>
                 </li>
               </div>
-              <div class="ps-3">
-                <li class="nav-item dropdown">
-                  <a
-                    class="nav-link dropdown-toggle"
-                    href="#"                   
-                    role="button"
-                    data-bs-toggle="dropdown"
-                    aria-expanded="false"
-                    style="
-                      
-                      font-family: 'Open Sans', sans-serif;
-                      
-                      color: white;
-                    "
-                  >
-                    Login
-                  </a>
-                  <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">Numero</a></li>
-                    <li><a class="dropdown-item" href="#">Employee</a></li>
-                    <li><a class="dropdown-item" href="#">RMS</a></li>
-                  </ul>
-                </li>
-              </div>
+              
               <div class="ps-3">
                 <li class="nav-item">
                   <a
@@ -329,7 +316,7 @@ if(isset($_POST['Signin'])){
                     href="refundpolicy.html"                                      
                     style="
                       font-family: 'Open Sans', sans-serif;
-                      
+                      margin-left: 7px;
                       color: white;
                       
                     "
@@ -341,8 +328,9 @@ if(isset($_POST['Signin'])){
                 <li class="nav-item">
                   <a
                     class="nav-link"
-                    href="crm.html"                                      
+                    href="crm.php"                                      
                     style="
+                    margin-left: 7px;
                       font-family: 'Open Sans', sans-serif;                     
                       color: white;
                     "
@@ -356,6 +344,7 @@ if(isset($_POST['Signin'])){
                     class="nav-link"
                     href="faq.html"                   
                     style="
+                    margin-left: 7px;
                       font-family: 'Open Sans', sans-serif;                     
                       color: white;
                     "
@@ -369,6 +358,7 @@ if(isset($_POST['Signin'])){
                     class="nav-link"                  
                     href="#"                   
                     style="
+                    margin-left: 7px;
                       font-family: 'Open Sans', sans-serif;                                          
                       color: white;
                     "
@@ -377,16 +367,29 @@ if(isset($_POST['Signin'])){
                 </li>
               </div>
               <div class="ps-3">
-                <li class="nav-item">
+                <li class="nav-item dropdown">
                   <a
-                    class="nav-link"              
-                    href="survey.html"
+                    class="nav-link dropdown-toggle"
+                    href="#"
+                    
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
                     style="
                       font-family: 'Open Sans', sans-serif;
+                      margin-left: 7px;
                       color: white;
                     "
-                    >Survey</a
                   >
+                    Survey
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="surveyform.php">Survey Form</a></li>
+                    <li>
+                      <a class="dropdown-item" href="feedback.php">Feedback form</a>
+                    </li>
+                    
+                  </ul>
                 </li>
               </div>
             </ul>

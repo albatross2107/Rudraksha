@@ -19,7 +19,7 @@ if(isset($_POST["submit"])){
   $gift=$_POST["gift"];
   
 
-  $conn= mysqli_connect("localhost", "root", "", "rudra");
+  $conn= mysqli_connect("localhost", "root", "", "rudra_675");
   $query="INSERT INTO survey VALUES('', NOW(), '$name', '$age', '$gender', '$phone_no', '$email', '$city', '$state', '$profession', '$teabrand', '$teacups_perday', '$quality_product', '$price_perkg', '$quantity_permonth', '$taste', '$gift')";
   mysqli_query($conn, $query);
 
@@ -65,6 +65,7 @@ if(isset($_POST["submit"])){
     integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+    
 
 </head>
 
@@ -74,11 +75,13 @@ if(isset($_POST["submit"])){
         <img src="./Images/Website Header Strip.png" alt="" style="align-items: center; width: 100%;">
         
       </section>
-      <center><video height="100%" width="100%" autoplay loop muted>
+      <img src="./Images/vision statement .jpg" alt="" class="img-fluid"> 
+
+      <!--<center><video height="100%" width="100%" autoplay loop muted>
         <source src="VISION STATEMENT ANIMATION.mp4" type="video/mp4">  
-      </video></center>
+      </video></center> -->
       <nav
-        class="navbar navbar-expand-sm navbar-dark bg-dark mb-0"  
+        class="navbar navbar-expand-sm navbar-dark bg-dark mb-0"
       >
         <div class="container-fluid">
           <button
@@ -99,6 +102,7 @@ if(isset($_POST["submit"])){
                   <a class="nav-link"      
                     href="index.html"
                     style="
+                      margin-left: 7px;
                       font-family: 'Open Sans', sans-serif;
                       color: white;
                     ">Home</a>
@@ -109,6 +113,7 @@ if(isset($_POST["submit"])){
                   <a class="nav-link"
                     href="agenda.html"                                       
                     style="
+                    margin-left: 7px;
                       font-family: 'Open Sans', sans-serif;                     
                       color: white;"
                     >Agenda</a
@@ -122,7 +127,7 @@ if(isset($_POST["submit"])){
                     href="aboutus.html"                   
                     style="
                       font-family: 'Open Sans', sans-serif;
-                      
+                      margin-left: 7px;
                       color: white;
                     "
                     >About Us</a
@@ -137,6 +142,7 @@ if(isset($_POST["submit"])){
                     style="
                       font-family: 'Open Sans', sans-serif;
                       color: white;
+                      margin-left: 7px;
                     "
                     >Vision</a
                   >
@@ -150,6 +156,7 @@ if(isset($_POST["submit"])){
                     style="
                       font-family: 'Open Sans', sans-serif;                      
                       color: white;
+                      margin-left: 7px;
                     "
                     >Core Values</a
                   >
@@ -163,6 +170,7 @@ if(isset($_POST["submit"])){
                     style="
                       font-family: 'Open Sans', sans-serif;
                       color: white;
+                      margin-left: 7px;
                     "
                     >Mission</a
                   >
@@ -179,7 +187,10 @@ if(isset($_POST["submit"])){
                     aria-expanded="false"
                     style="                      
                       font-family: 'Open Sans', sans-serif;  
-                      color: white;"
+                      color: white;
+                      margin-left: 7px;
+                      "
+                      
                   >
                     Projects
                   </a>
@@ -259,7 +270,7 @@ if(isset($_POST["submit"])){
                     style="
                       
                       font-family: 'Open Sans', sans-serif;
-                      
+                      margin-left: 7px;
                       color: white;
                     "
                   >
@@ -286,7 +297,7 @@ if(isset($_POST["submit"])){
                     style="
                      
                       font-family: 'Open Sans', sans-serif;
-                      
+                      margin-left: 7px;
                       color: white;
                     "
                   >
@@ -301,30 +312,7 @@ if(isset($_POST["submit"])){
                   </ul>
                 </li>
               </div>
-              <div class="ps-3">
-                <li class="nav-item dropdown">
-                  <a
-                    class="nav-link dropdown-toggle"
-                    href="#"                   
-                    role="button"
-                    data-bs-toggle="dropdown"
-                    aria-expanded="false"
-                    style="
-                      
-                      font-family: 'Open Sans', sans-serif;
-                      
-                      color: white;
-                    "
-                  >
-                    Login
-                  </a>
-                  <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">Numero</a></li>
-                    <li><a class="dropdown-item" href="#">Employee</a></li>
-                    <li><a class="dropdown-item" href="#">RMS</a></li>
-                  </ul>
-                </li>
-              </div>
+              
               <div class="ps-3">
                 <li class="nav-item">
                   <a
@@ -332,7 +320,7 @@ if(isset($_POST["submit"])){
                     href="refundpolicy.html"                                      
                     style="
                       font-family: 'Open Sans', sans-serif;
-                      
+                      margin-left: 7px;
                       color: white;
                       
                     "
@@ -346,6 +334,7 @@ if(isset($_POST["submit"])){
                     class="nav-link"
                     href="crm.php"                                      
                     style="
+                    margin-left: 7px;
                       font-family: 'Open Sans', sans-serif;                     
                       color: white;
                     "
@@ -359,6 +348,7 @@ if(isset($_POST["submit"])){
                     class="nav-link"
                     href="faq.html"                   
                     style="
+                    margin-left: 7px;
                       font-family: 'Open Sans', sans-serif;                     
                       color: white;
                     "
@@ -372,6 +362,7 @@ if(isset($_POST["submit"])){
                     class="nav-link"                  
                     href="#"                   
                     style="
+                    margin-left: 7px;
                       font-family: 'Open Sans', sans-serif;                                          
                       color: white;
                     "
@@ -380,16 +371,29 @@ if(isset($_POST["submit"])){
                 </li>
               </div>
               <div class="ps-3">
-                <li class="nav-item">
+                <li class="nav-item dropdown">
                   <a
-                    class="nav-link"              
-                    href="survey.html"
+                    class="nav-link dropdown-toggle"
+                    href="#"
+                    
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
                     style="
                       font-family: 'Open Sans', sans-serif;
+                      margin-left: 7px;
                       color: white;
                     "
-                    >Survey</a
                   >
+                    Survey
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="surveyform.php">Survey Form</a></li>
+                    <li>
+                      <a class="dropdown-item" href="feedback.php">Feedback form</a>
+                    </li>
+                    
+                  </ul>
                 </li>
               </div>
             </ul>
@@ -399,7 +403,10 @@ if(isset($_POST["submit"])){
     </header>
 
 
+
   <img src="./Images/survey-subbanner.jpg" class="surveyimg">
+
+  
   <div class="projects survey">
     <div class="survey-heading"> <h2>YOUR TEA TASTE SURVEY FORM</h2></div>
     
@@ -632,7 +639,48 @@ if(isset($_POST["submit"])){
   </div>
 
 
-
+<footer class="padding_3x">
+  <div class="flex">
+    <section class="flex-content padding_1x">
+      <h3>About the company</h3>
+      <div class="about-company">
+        <p>A Section 8 Company (Non Profit Organization) under Companies Act 2013, Ministry of Corporate Affairs, Govt. of INDIA.</p>
+      <p>GSTIN 04AAJCR5020K1ZH</p>
+      </div>
+    </section>
+    <section class="flex-content padding_1x">
+      <h3>Quick Links</h3>
+      <a href="#">Privacy Policy</a>
+      <a href="#">Copyright Policy</a>
+      <a href="#">Cookie Policy</a>
+    </section>
+    <section class="flex-content padding_1x">
+      <h3>Let's Connect</h3>
+      <a href="mission.html">Our Mission</a>
+      <a href="aboutus.html">About Us</a>
+      <a href="#">Blogs and newsletters</a>
+      
+    </section>
+    <section class="flex-content padding_1x">
+      <h3>Follow Us</h3>
+      <div class="links">
+        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+        <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        
+        
+      </div>
+      
+    </section>
+    
+  </div>
+  <div class="flex">
+    <section class="flex-content padding_1x">
+      <p>Copyright ©2023 All rights reserved</p>
+    </section>
+  </div>
+</footer>
 
 
   <script>
@@ -643,6 +691,21 @@ if(isset($_POST["submit"])){
       var Age = today.getTime() - DOB.getTime();
       Age = Math.floor(Age / (1000 * 60 * 60 * 24 * 365.25));
       document.getElementById("age").value = Age;
+
+    }
+  </script>
+
+<script>
+    var btn = document.getElementById('btn')
+
+    function leftClick() {
+      btn.style.left = '0'
+
+
+    }
+
+    function rightClick() {
+      btn.style.left = '140px'
 
     }
   </script>
