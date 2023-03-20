@@ -270,10 +270,10 @@ if(isset($_POST['Signin'])){
                       color: white;
                     "
                   >
-                    Orniogram
+                  Organogram
                   </a>
                   <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="orniogram.html">Orniogram</a></li>
+                    <li><a class="dropdown-item" href="orniogram.html">Organogram</a></li>
                     <li><a class="dropdown-item" href="management.html">Management</a></li>
                     <li>
                       <a class="dropdown-item" href="codeofconduct.html">Code of Conduct</a>
@@ -400,7 +400,11 @@ if(isset($_POST['Signin'])){
 
 <div class="admin-background">
 <form method="POST" action="<?php echo $_SERVER['PHP_SELF']; ?>">
+
+
   <div class="form">
+  <div class="logo"><img src="./Images/Logo.png" alt=""></div>
+    
     <h2>Login</h2>
     <div class="input">
         <div class="inputBox">

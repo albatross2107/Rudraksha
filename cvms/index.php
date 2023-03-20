@@ -39,15 +39,14 @@ if(isset($_POST['login']))
     <title>RMS Login</title>
 
     <!-- Fontfaces CSS-->
-    <!--<link href="css/font-face.css" rel="stylesheet" media="all">
+    <link href="css/font-face.css" rel="stylesheet" media="all">
     <link href="vendor/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all">
     <link href="vendor/font-awesome-5/css/fontawesome-all.min.css" rel="stylesheet" media="all">
     <link href="vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
--->
+
     <!-- Bootstrap CSS-->
     
-<!--
-     Vendor CSS
+
     <link href="vendor/animsition/animsition.min.css" rel="stylesheet" media="all">
     <link href="vendor/bootstrap-progressbar/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet" media="all">
     <link href="vendor/wow/animate.css" rel="stylesheet" media="all">
@@ -55,10 +54,10 @@ if(isset($_POST['login']))
     <link href="vendor/slick/slick.css" rel="stylesheet" media="all">
     <link href="vendor/select2/select2.min.css" rel="stylesheet" media="all">
     <link href="vendor/perfect-scrollbar/perfect-scrollbar.css" rel="stylesheet" media="all">
--->
+
     <!-- Main CSS-->
-    <!--<link href="css/theme.css" rel="stylesheet" media="all">-->
-    <link rel="stylesheet" href="style.css">
+    <link href="css/theme.css" rel="stylesheet" media="all">
+    <link rel="stylesheet" href="../style.css">
     <link
   rel="stylesheet"
   href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
@@ -98,54 +97,99 @@ if(isset($_POST['login']))
 
 </head>
 
-<!--<body class="animsition">
+
+
+<body>
+<body class="animsition">
     <div class="page-wrapper">
-        <div class="page-content--bge5">
-            <div class="container">
-                <div class="login-wrap">
-                    <div class="login-content">
-                        <div class="login-logo">
-                            <a href="#" style="font-size:24px;">
-                               Reception Management System (RMS)
-                            </a>
-                        </div>
-                         <p style="font-size:16px; color:red" align="center"> <?php if($msg){
-    echo $msg;
-  }  ?> </p>
-                        <div class="login-form">
-                            <form action="" method="post" name="login">
-                                <div class="form-group">
-                                    <label>User Name</label>
-                                    <input class="au-input au-input--full" type="text" name="username" placeholder="User Name" required="true">
-                                </div>
-                                <div class="form-group">
-                                    <label>Password</label>
-                                    <input class="au-input au-input--full" type="password" name="password" placeholder="Password">
-                                </div>
-                                <div class="login-checkbox">
-                                    <label>
-                                        <a href="forgot-password.php">Forgotten Password?</a>
-                                    </label>
-                                </div>
-                                <button class="au-btn au-btn--block au-btn--green m-b-20" type="submit" name="login">sign in</button>
-                                <div class="social-login-content">
-                                    
-                                </div>
-                                
-                               <button><a href="../index.html">Back to Main Page</a></button> 
-                            
-                            </form>
-                            
-                        </div>
+<header class="header-mobile d-block d-lg-none">
+            <div class="header-mobile__bar">
+                <div class="container-fluid">
+                    <div class="header-mobile-inner">
+                        
+                        <button class="hamburger hamburger--slider" type="button">
+                            <span class="hamburger-box">
+                                <span class="hamburger-inner"></span>
+                            </span>
+                        </button>
                     </div>
                 </div>
             </div>
-        </div>
-
-    </div>
+            <nav class="navbar-mobile">
+                <div class="container-fluid">
+                    <ul class="navbar-mobile__list list-unstyled">
+                        <li>
+                            <a href="adminpanel.php">
+                                <i class="fas fa-tachometer-alt"></i>Dashboard</a>
+                            
+                        </li>
+                        <li>
+                            <a href="chart.php">
+                                <i class="fas fa-chart-bar"></i>Charts</a>
+                        </li>
+                        <li>
+                            <a href="./cvms/index.php">
+                            <i class="fa-solid fa-user"></i>RMS</a>
+                        </li>
+                        
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <aside class="menu-sidebar d-none d-lg-block">
+            
+            <div class="menu-sidebar__content js-scrollbar1">
+                <nav class="navbar-sidebar">
+                    <ul class="list-unstyled navbar__list">
+                        <li class="active has-sub">
+                            <a class="js-arrow" href="index.php">
+                                <i class="fas fa-tachometer-alt"></i>Dashboard</a>
+                            
+                        </li>
+                        <li>
+                            <a href="chart.php">
+                                <i class="fas fa-chart-bar"></i>Charts</a>
+                        </li>
+                        <!--
+                        <li>
+                            <a href="./cvms/index.php">
+                            <i class="fa-solid fa-user"></i>RMS</a>
+                        </li>
 -->
-<body>
-    
+                        
+                </nav>
+            </div>
+        </aside>
+        <!-- END MENU SIDEBAR-->
+
+        <!-- PAGE CONTAINER-->
+        <div class="page-container">
+            <!-- HEADER DESKTOP-->
+            <header class="header-desktop">
+                <div class="section__content section__content--p30">
+                    <div class="container-fluid">
+                        <div class="header-wrap">
+                            <form class="form-header" action="" method="POST">
+                                <input class="au-input au-input--xl" type="text" name="search" placeholder="Search for datas &amp; reports..." />
+                                <button class="au-btn--submit" type="submit">
+                                    <i class="zmdi zmdi-search"></i>
+                                </button>
+                            </form>
+                            <div class="header-button">
+                                <div class="noti-wrap">
+                                    <div class="noti__item js-item-menu">
+                                        
+                                    </div>
+                                    <div class="noti__item js-item-menu">
+                                        
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
 <div class="admin-background">
     <form method="POST" action="<?php echo $_SERVER['PHP_SELF']; ?>" name="login">
   <div class="form">
@@ -169,7 +213,7 @@ if(isset($_POST['login']))
     </div>
   </form>
 </div>
-    <!-- Jquery JS
+    Jquery JS
     <script src="vendor/jquery-3.2.1.min.js"></script>
      Bootstrap JS
     <script src="vendor/bootstrap-4.1/popper.min.js"></script>
@@ -189,10 +233,10 @@ if(isset($_POST['login']))
     <script src="vendor/chartjs/Chart.bundle.min.js"></script>
     <script src="vendor/select2/select2.min.js">
     </script>
--->
-    <!-- Main JS
+
+    
     <script src="js/main.js"></script>
--->
+
 <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js" integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
         <script src="https://code.jquery.com/jquery-3.6.3.min.js" ></script>

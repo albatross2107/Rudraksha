@@ -1447,9 +1447,49 @@ font-weight: bold;
     height: 100%;
 }
 
+.admin-background .form .logo img{
+    height: 50%;
+    width: 50%;
+}
+
+.org img{
+    border-radius: 30%;
+    width:18em;
+    margin-top: 40px;
+    margin-left: 150px;
+    box-shadow: 10px 10px 5px rgb(216, 219, 223);
+    float: left;
+}
+.org{
+    display: flex;
+    flex-direction: row;
+
+}
+.org1{
+    margin-top: 80px;
+    align-content: justify;
+    width:60%;
+}
+.org1 h3,h4{
+margin-left: 35px;
+color: #08C4E2;
+font-weight: 500;
+text-decoration: solid;
 
 
+}
+.org1 h3{
 
+    font-weight: 700;
+
+}
+
+
+  
+  
+  
+  
+  
 
 
 
@@ -1618,6 +1658,35 @@ font-weight: bold;
     margin-left: -94px;
     height: 400px;
 }
+
+.org img{
+    height: 50%;
+    /* width: 26%; */
+    border-radius: 30%;
+    
+    margin-top: 40px;
+    margin-left: 47px;
+    box-shadow: 10px 10px 5px rgb(216, 219, 223);
+}
+.org1 {
+    margin-top: 330px;
+    align-content: justify;
+    width: 60%;
+    margin-left: -330px;
+}
+.org1 h3, h4{
+    color: #08C4E2;
+    text-align: center;
+    align-items: center;
+    margin-right: -100px;
+}
+.org1 p{
+    align-content: justify;
+    margin-right: -100px;
+}
+
+
+
 }
 
 @media (max-width:1100px){
@@ -1628,16 +1697,23 @@ font-weight: bold;
     footer .flex:first-child .flex-content{
         flex: 1 1 40%;
     }
+
+
+    
 }
 
 @media (max-width:920px){
     footer .flex:last-child .flex-content:last-child{
         text-align:left;
     }
+    
 }
 
 @media (max-width:320px){
     footer .flex:first-child .flex-content{
         flex:1 1 100%;
     }
+
+    
+    
 }

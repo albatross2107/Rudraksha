@@ -1,5 +1,5 @@
 <?php
-$conn= mysqli_connect("localhost", "root", "", "rudra");
+$conn= mysqli_connect("localhost", "root", "", "rudra_675");
 $query="SELECT price, count(*) as number FROM feedback GROUP BY price";
 $result=mysqli_query($conn, $query);
 $query1="SELECT gender, count(*) as number FROM feedback GROUP BY gender";
@@ -8,6 +8,8 @@ $query2="SELECT teaquality, count(*) as number FROM feedback GROUP BY teaquality
 $result2=mysqli_query($conn,$query2);
 $query3="SELECT packagequality, count(*) as number FROM feedback GROUP BY packagequality";
 $result3=mysqli_query($conn,$query3);
+$query4="SELECT teabrand, count(*) as number FROM survey GROUP BY teabrand";
+$result4=mysqli_query($conn, $query4);
 
 
  
@@ -163,6 +165,34 @@ chart.render();
  
 }
 </script>
+
+
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load("current", {packages:["corechart"]});
+      google.charts.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['teabrand', 'Number'],
+          <?php
+          while($row=mysqli_fetch_array($result4)){
+            echo "['".$row["teabrand"]."', ".$row["number"]."],";
+          }
+          ?>
+        ]);
+
+        var options = {
+          title: 'Tea Brand',
+          is3D: true,
+          chartArea:{left:0,top:0,width:"100%",height:"100%"},
+          height: 300
+        ,width: 300
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart_3d1'));
+        chart.draw(data, options);
+      }
+    </script>
 
 
 
@@ -358,7 +388,7 @@ chart.render();
                 <div class="section__content section__content--p30">
                     <div class="container-fluid">
                                 <div class="overview-wrap">
-                                    <h2 class="title-1">Siddhi Tea Survey Analysis</h2>  
+                                    <h2 class="title-1">Tea Survey Analysis</h2>  
                                 </div>
                         <div class="row">                  
                             
@@ -367,6 +397,14 @@ chart.render();
                                     <div class="au-card-inner">
                                     <div id="chartContainer" style="height: 370px; width: 100%;"></div>
 <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="au-card m-b-30">
+                                    <div class="au-card-inner">
+                                    <h3 class="title-2 m-b-40">Demand of Tea Brand</h3>
+                                    <div id="piechart_3d1" style="display: flex; justify-content:space-evenly;" height="500px" width="1100px"></div>
                                     </div>
                                 </div>
                             </div>

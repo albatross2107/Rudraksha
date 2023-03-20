@@ -273,10 +273,10 @@ if(isset($_POST["submit"])){
                       color: white;
                     "
                   >
-                    Orniogram
+                  Organogram
                   </a>
                   <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="orniogram.html">Orniogram</a></li>
+                    <li><a class="dropdown-item" href="orniogram.html">Organogram</a></li>
                     <li><a class="dropdown-item" href="management.html">Management</a></li>
                     <li>
                       <a class="dropdown-item" href="codeofconduct.html">Code of Conduct</a>

@@ -1,54 +1,43 @@
 <?php
- 
-
- 
-$link=mysqli_connect("localhost", "root", "");
-mysqli_select_db($link,"rudra_675");
-$test=array();
-$count=0;
-$res=mysqli_query($link,"SELECT profession, quantity_permonth, count(*) as number FROM survey GROUP BY profession");
-while($row=mysqli_fetch_array($res)){
-$test[$count]['label']=$row['profession'];
-$test[$count]['y']=$row['quantity_permonth'];
-$count=$count+1;
-}
-
+$conn= mysqli_connect("localhost", "root", "", "rudra_675");
+$query1="SELECT teabrand, count(*) as number FROM survey GROUP BY teabrand";
+$result1=mysqli_query($conn, $query1);
 
 
 ?>
-<!DOCTYPE HTML>
-<html>
+
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
-<script>
-window.onload = function() {
- 
- var chart = new CanvasJS.Chart("chartContainer", {
-	 animationEnabled: true,
-	 title:{
-		 text: "Profession vs Quantity_permonth"
-	 },
-	 axisY: {
-		 title: "Quantity_permonth",
-		 includeZero: true,
-		 prefix: "$",
-		 suffix:  "k"
-	 },
-	 data: [{
-		 type: "bar",
-		 yValueFormatString: "$#,##0K",
-		 indexLabel: "{y}",
-		 indexLabelPlacement: "inside",
-		 indexLabelFontWeight: "bolder",
-		 indexLabelFontColor: "white",
-		 dataPoints: <?php echo json_encode($test, JSON_NUMERIC_CHECK); ?>
-	 }]
- });
- chart.render();
-}
-</script>
+	
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load("current", {packages:["corechart"]});
+      google.charts.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['teabrand', 'Number'],
+          <?php
+          while($row=mysqli_fetch_array($result1)){
+            echo "['".$row["teabrand"]."', ".$row["number"]."],";
+          }
+          ?>
+        ]);
+
+        var options = {
+          title: 'Tea Brand',
+          is3D: true,
+		  chartArea:{left:0,top:0,width:"100%",height:"100%"}
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
+        chart.draw(data, options);
+      }
+    </script>
 </head>
 <body>
-<div id="chartContainer" style="height: 370px; width: 100%;"></div>
-<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+<div id="piechart_3d" height="500px" width="1100px"></div>
+
 </body>
-</html>                              
+</html>
