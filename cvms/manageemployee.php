@@ -1,3 +1,4 @@
+
 <?php
 session_start();
 if(isset($POST['Logout'])){
@@ -28,7 +29,7 @@ if(isset($POST['Logout'])){
 
     <!-- Bootstrap CSS-->
     <link href="vendor/bootstrap-4.1/bootstrap.min.css" rel="stylesheet" media="all">
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
     <!-- Vendor CSS-->
     <link href="vendor/animsition/animsition.min.css" rel="stylesheet" media="all">
     <link href="vendor/bootstrap-progressbar/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet" media="all">
@@ -71,6 +72,10 @@ if(isset($POST['Logout'])){
                             <a href="chart.php">
                                 <i class="fas fa-chart-bar"></i>Charts</a>
                         </li>
+                        <li>
+                            <a href="./cvms/index.php">
+                            <i class="fa-solid fa-user"></i>RMS</a>
+                        </li>
                         <li class="has-sub">
                             <a class="js-arrow" href="#">
                                 <i class="fa fa-address-card-o menu-icon"></i>Employee Master</a>
@@ -78,11 +83,10 @@ if(isset($POST['Logout'])){
                                         <li>
                                             <a href="./cvms/addemployee.php"><i class="fa-solid fa-plus"></i>Add Employee</a>
                                         </li>  
-                                        <!--<li><a href="./cvms/manageemployee.php"><i class="fa fa-tasks menu-icon"></i>Manage Employee</a>
-                                    </li>-->   
+                                        <li><a href="./cvms/manageemployee.php"><i class="fa fa-tasks menu-icon"></i>Manage Employee</a>
+                                    </li>   
                                     </ul>
                         </li>
-                        
                     </ul>
                 </div>
             </nav>
@@ -104,12 +108,8 @@ if(isset($POST['Logout'])){
                             <a href="chart.php">
                                 <i class="fas fa-chart-bar"></i>Charts</a>
                         </li>
-                        <!--
-                        <li>
-                            <a href="./cvms/index.php">
-                            <i class="fa-solid fa-user"></i>RMS</a>
-                        </li>--> 
-                    
+                        
+                        
                         <li class="has-sub">
                             <a class="js-arrow" href="#">
                                 <i class="fa fa-address-card-o menu-icon"></i>Employee Master</a>
@@ -117,11 +117,11 @@ if(isset($POST['Logout'])){
                                         <li>
                                             <a href="./cvms/addemployee.php"><i class="fa-solid fa-plus"></i>Add Employee</a>
                                         </li>  
-                                        <!--<li><a href="./cvms/manageemployee.php"><i class="fa fa-tasks menu-icon"></i>Manage Employee</a>
-                                    </li>-->   
+                                        <li><a href="./cvms/manageemployee.php"><i class="fa fa-tasks menu-icon"></i>Manage Employee</a>
+                                    </li>   
                                     </ul>
                         </li>
-                    </ul>    
+                    </ul>   
                 </nav>
             </div>
         </aside>
@@ -159,7 +159,7 @@ if(isset($POST['Logout'])){
                                             <div class="info clearfix">
                                                 <div class="image">
                                                     <a href="#">
-                                                        <img src="images/icon/avatar-01.jpg" alt="John Doe" />
+                                                        
                                                     </a>
                                                 </div>
                                                 <div class="content">
@@ -187,41 +187,125 @@ if(isset($POST['Logout'])){
             <!-- HEADER DESKTOP-->
 
             <!-- MAIN CONTENT-->
-            <div class="main-content">
-                <div class="section__content section__content--p30">
-                    <div class="container-fluid">
-                        <div class="row">
-                            <!--<div class="col-md-12">
-                                <div class="overview-wrap">
-                                    <h2 class="title-1">overview</h2>
-                                    
-                                </div>
-                            </div> -->
-                        </div>
-                        
-                      <!--  <div class="row">
-                            <div class="col-lg-6">
-                                <div class="au-card recent-report">
-                                    <div class="au-card-inner">
-                                    
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-6">
-                                <div class="au-card chart-percent-card">
-                                    <div class="au-card-inner">
-                                        
-                                        
-                                    </div>
-                                </div>
-                            </div>
-                        </div> -->
-                        
-                        
-                        
-                    </div>
-                </div>
-            </div>
+            <br>
+            
+          
+            <?php 
+ 
+//  database connection
+require_once "../dbcon.php";
+
+$sql = "SELECT * FROM employee";
+$result = mysqli_query($con , $sql);
+
+$i = 1;
+$you = "";
+
+
+?>
+
+<style>
+table, th, td {
+  border: 1px solid black;
+  padding: 15px;
+}
+table {
+  border-spacing: 10px;
+}
+table th{
+    color:white;
+    font-size:13px;
+}
+table{
+    width:50%;
+}
+</style>
+
+<div class="container bg-white shadow">
+    <div class="py-4 mt-5"> 
+    <div class='text-center pb-2'><h4>Manage Employees</h4></div>
+    <table style="width:100%" class="table-hover text-center ">
+    <tr class="bg-dark">
+        <th>S.No.</th>
+        <th>Employee Id</th>
+        <th>Name</th>
+        <th>Email</th> 
+        <th>Gender</th>
+        <th>Date of Birth</th>
+        <th>Age in Years</th>
+        <th>Salary in Rs</th>
+        <th>Action</th>
+    </tr>
+    <?php 
+    
+    if( mysqli_num_rows($result) > 0){
+        while( $rows = mysqli_fetch_assoc($result) ){
+            $name= $rows["name"];
+            $email= $rows["email"];
+            $dob = $rows["dob"];
+            $gender = $rows["gender"];
+            $id = $rows["id"];
+            $salary = $rows["salary"];
+            if($gender == "" ){
+                $gender = "Not Defined";
+            } 
+
+            if($dob == "" ){
+                $dob = "Not Defined";
+                $age = "Not Defined";
+            }else{
+                $dob = date('jS F, Y' , strtotime($dob));
+                $date1=date_create($dob);
+                $date2=date_create("now");
+                $diff=date_diff($date1,$date2);
+                $age = $diff->format("%Y"); 
+            }
+
+            if($salary== "" ){
+                $salary= "Not Defined";
+            }   
+            
+            ?>
+        <tr>
+        <td><?php echo "{$i}."; ?></td>
+        <td><?php echo $id; ?></td>
+        <td> <?php echo $name ; ?></td>
+        <td><?php echo $email; ?></td>
+        <td><?php echo $gender; ?></td>
+        <td><?php echo $dob; ?></td>
+        <td><?php echo $age; ?></td>
+        <td><?php echo $salary; ?></td>
+
+        <td>  <?php 
+                $edit_icon = "<a href='editemployee.php?id= {$id}' class='btn-sm btn-primary float-right ml-3 '> <span ><i class='fa fa-edit '></i></span> </a>";
+                $delete_icon = " <a href='delete-employee.php?id={$id}' id='bin' class='btn-sm btn-primary float-right'> <span ><i class='fa fa-trash '></i></span> </a>";
+                echo $edit_icon . $delete_icon;
+             ?> 
+        </td>
+
+      
+        
+
+    <?php 
+            $i++;
+            }
+        }else{
+            echo "<script>
+            $(document).ready( function(){
+                $('#showModal').modal('show');
+                $('#linkBtn').attr('href', 'add-employee.php');
+                $('#linkBtn').text('Add Employee');
+                $('#addMsg').text('No Employees Found!');
+                $('#closeBtn').text('Remind Me Later!');
+            })
+         </script>
+         ";
+        }
+    ?>
+     </tr>
+    </table>
+    </div>
+</div>
             <!-- END MAIN CONTENT-->
             <!-- END PAGE CONTAINER-->
         </div>
@@ -259,3 +343,17 @@ if(isset($POST['Logout'])){
 
 </html>
 <!-- end document-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -35,7 +35,29 @@ $count=$count+1;
 <html lang="en">
 
 <head>
+<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="au theme template">
+    <meta name="author" content="Hau Nguyen">
+    <meta name="keywords" content="au theme template">
+    <link href="css/font-face.css" rel="stylesheet" media="all">
+    <link href="vendor/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all">
+    <link href="vendor/font-awesome-5/css/fontawesome-all.min.css" rel="stylesheet" media="all">
+    <link href="vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
 
+    <!-- Bootstrap CSS-->
+    <link href="vendor/bootstrap-4.1/bootstrap.min.css" rel="stylesheet" media="all">
+
+    <!-- Vendor CSS-->
+    <link href="vendor/animsition/animsition.min.css" rel="stylesheet" media="all">
+    <link href="vendor/bootstrap-progressbar/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet" media="all">
+    <link href="vendor/wow/animate.css" rel="stylesheet" media="all">
+    <link href="vendor/css-hamburgers/hamburgers.min.css" rel="stylesheet" media="all">
+    <link href="vendor/slick/slick.css" rel="stylesheet" media="all">
+    <link href="vendor/select2/select2.min.css" rel="stylesheet" media="all">
+    <link href="vendor/perfect-scrollbar/perfect-scrollbar.css" rel="stylesheet" media="all">
+
+    <link href="css/theme.css" rel="stylesheet" media="all">
 
 <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script type="text/javascript">
@@ -257,6 +279,17 @@ chart.render();
                             <a href="chart.php">
                                 <i class="fas fa-chart-bar"></i>Charts</a>
                         </li>
+                        <li class="has-sub">
+                            <a class="js-arrow" href="#">
+                                <i class="fa fa-address-card-o menu-icon"></i>Employee Master</a>
+                                    <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
+                                        <li>
+                                            <a href="./cvms/addemployee.php"><i class="fa-solid fa-plus"></i>Add Employee</a>
+                                        </li>  
+                                        <li><a href="./cvms/manageemployee.php"><i class="fa fa-tasks menu-icon"></i>Manage Employee</a>
+                                    </li>   
+                                    </ul>
+                        </li>
                     </ul>   
                 </div>
             </nav>
@@ -278,7 +311,18 @@ chart.render();
                             <a href="chart.php">
                                 <i class="fas fa-chart-bar"></i>Charts</a>
                         </li>
-                        
+                        <li class="has-sub">
+                            <a class="js-arrow" href="#">
+                                <i class="fa fa-address-card-o menu-icon"></i>Employee Master</a>
+                                    <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
+                                        <li>
+                                            <a href="./cvms/addemployee.php"><i class="fa-solid fa-plus"></i>Add Employee</a>
+                                        </li>  
+                                        <li><a href="./cvms/manageemployee.php"><i class="fa fa-tasks menu-icon"></i>Manage Employee</a>
+                                    </li>   
+                                    </ul>
+                        </li>
+                     </ul> 
                 </nav>
             </div>
         </aside>
