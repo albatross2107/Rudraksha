@@ -189,8 +189,8 @@ if(isset($POST['Logout'])){
                                         <li>
                                             <a href="./cvms/addemployee.php"><i class="fa-solid fa-plus"></i>Add Employee</a>
                                         </li>  
-                                        <!--<li><a href="manageemployee.php"><i class="fa fa-tasks menu-icon"></i>Manage Employee</a>
-                                    </li>-->   
+                                        <li><a href="manageemployee.php"><i class="fa fa-tasks menu-icon"></i>Manage Employee</a>
+                                    </li>   
                                     </ul>
                         </li>
                     </ul>
@@ -223,8 +223,8 @@ if(isset($POST['Logout'])){
                                         <li>
                                             <a href="./cvms/addemployee.php"><i class="fa-solid fa-plus"></i>Add Employee</a>
                                         </li>  
-                                        <!--<li><a href="./manageemployee.php"><i class="fa fa-tasks menu-icon"></i>Manage Employee</a>
-                                    </li>-->   
+                                        <li><a href="./manageemployee.php"><i class="fa fa-tasks menu-icon"></i>Manage Employee</a>
+                                    </li>   
                                     </ul>
                         </li>
                     </ul>    
@@ -295,96 +295,108 @@ if(isset($POST['Logout'])){
             <div class="card login-form mb-4">
             <div class="card-body pt-4">                       
                                     <h4 class="text-center">Add New Employee</h4>
+                                    <br>
+                                    <br>
                                 <form method="POST" action=" <?php htmlspecialchars($_SERVER['PHP_SELF']) ?>" class="empform">
                             
-                                <div class="form">
-                                    <label>First Name :</label>
-                                    <input type="text" class="form-control" value="<?php echo $fname; ?>"  name="fname" >
-                                   <?php echo $fErr; ?>
-                                </div>
-                               
+                                <div class="form-row">
+                                    <div class="form-group col-md-4">
+                                        <label for="fname">First Name:</label>
+                                        <input type="text" class="form-control" value="<?php echo $fname; ?>" name="fname" >
+                                        <?php echo $fErr; ?>
+                                    </div>
+                                    <div class="form-group col-md-4">
+                                        <label for="mname">Middle Name:</label>
+                                        <input type="text" class="form-control" value="<?php echo $fname; ?>" name="mname" >
+                                    </div>
+                                    <div class="form-group col-md-4">
+                                        <label for="lname">Last Name:</label>
+                                        <input type="text" class="form-control" value="<?php echo $lname; ?>" name="lname" >
+                                        <?php echo $lErr; ?>
+                                    </div>
+                                    </div>
 
-                                <div class="form-group">
-                                    <label >Middle Name :</label>
-                                    <input type="text" class="form-control" value="<?php echo $fname; ?>"  name="fname" >
-                                  
-                                </div>
-                                <div class="form-group">
-                                    <label >Last Name :</label>
-                                    <input type="text" class="form-control" value="<?php echo $lname; ?>"  name="lname" >
-                                   <?php echo $lErr; ?>
-                                </div>
-                                <div class="form-group">
-                                    <label >Father's Name :</label>
-                                    <input type="text" class="form-control" value="<?php echo $frname; ?>"  name="frname" >
-                                   <?php echo $frErr; ?>
-                                </div>
-                                <div class="form-group">
-                                    <label >Mother's Name :</label>
-                                    <input type="text" class="form-control" value="<?php echo $mrname; ?>"  name="mrname" >
-                                   <?php echo $mrErr; ?>
-                                </div>
-                                <div class="form-group">
-                                    <label >Blood Group:</label>
-                                    <input type="text" class="form-control" value="<?php echo $bname; ?>"  name="bname" >
-                                   <?php echo $bgErr; ?>
-                                </div>
-                                <div class="form-group">
-                                    <label >Email :</label>
-                                    <input type="email" class="form-control" value="<?php echo $email; ?>"  name="email" >     
-                                    <?php echo $emailErr; ?>
-                                </div>
+                                    <div class="form-row">
+                                    <div class="form-group col-md-4">
+                                        <label for="frname">Father's Name:</label>
+                                        <input type="text" class="form-control" value="<?php echo $frname; ?>" name="frname" >
+                                        <?php echo $frErr; ?>
+                                    </div>
+                                    <div class="form-group col-md-4">
+                                        <label for="mrname">Mother's Name:</label>
+                                        <input type="text" class="form-control" value="<?php echo $mrname; ?>" name="mrname" >
+                                        <?php echo $mrErr; ?>
+                                    </div>
+                                    <div class="form-group col-md-4">
+                                        <label for="bname">Blood Group:</label>
+                                        <input type="text" class="form-control" value="<?php echo $bname; ?>" name="bname" >
+                                        <?php echo $bgErr; ?>
+                                    </div>
+                                    </div>
 
-                                
+                                    
 
-                                <div class="form-group">
-                                    <label >Phone Number</label>
-                                    <input  class="form-control" value="<?php echo $phone; ?>" name="phone" >  
-                                    <?php echo $phoneErr; ?>            
-                                </div>
-                                <div class="form-group">
-                                    <label > Parent's Phone Number</label>
-                                    <input  class="form-control" value="<?php echo $phone; ?>" name="phone" >  
-                                    <?php echo $phoneErr; ?>            
-                                </div>
+                                    <div class="form-row">
 
+                                    <div class="form-group col-md-4">
+                                        <label for="email">Email:</label>
+                                        <input type="email" class="form-control" value="<?php echo $email; ?>" name="email" >     
+                                        <?php echo $emailErr; ?>
+                                    </div>
+                                    <div class="form-group col-md-4">
+                                        <label for="phone">Phone Number:</label>
+                                        <input class="form-control" value="<?php echo $phone; ?>" name="phone" >  
+                                        <?php echo $phoneErr; ?>            
+                                    </div>
+                                    <div class="form-group col-md-4">
+                                        <label for="parent_phone">Parent's Phone Number:</label>
+                                        <input class="form-control" value="<?php echo $phone; ?>" name="parent_phone" >  
+                                        <?php echo $phoneErr; ?>            
+                                    </div>
+                                    </div>
 
-                                <div class="form-group">
-                                    <label >Date-of-Birth :</label>
-                                    <input type="date" class="form-control" value="<?php echo $dob; ?>" name="dob" id="dob" >  
-                                   
-                                </div>
-                                <div>
-                                <label for="age">Age</label>
-                                    <input type="text" class="form-control" readonly id="age" onmousemove="FindAge()" name="age" placeholder="Your Age" value>
-                                </div>
+                                    <div class="form-row">
+                                        <div class="form-group col-md-6">
+                                            <label for="dob">Date-of-Birth:</label>
+                                            <input type="date" class="form-control" value="<?php echo $dob; ?>" name="dob" id="dob" >  
+                                        </div>
+                                        <div class="form-group col-md-6">
+                                            <label for="age">Age:</label>
+                                            <input type="text" class="form-control" readonly id="age" onmousemove="FindAge()" name="age" placeholder="Your Age" value>
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="form-group col-md-4 ">
+                                            <label class="mr-3">Gender:</label>
+                                            <div class="form-inline">
+                                                <div class="form-check mr-3">
+                                                    <input class="form-check-input" type="radio" name="gender" <?php if($gender == "Male" ){ echo "checked"; } ?>  value="Male"  selected>
+                                                    <label class="form-check-label">Male</label>
+                                                </div>
+                                                <div class="form-check mr-3">
+                                                    <input class="form-check-input" type="radio" name="gender" <?php if($gender == "Female" ){ echo "checked"; } ?>  value="Female">
+                                                    <label class="form-check-label">Female</label>
+                                                </div>
+                                                <div class="form-check mr-3">
+                                                    <input class="form-check-input" type="radio" name="gender" <?php if($gender == "Other" ){ echo "checked"; } ?>  value="Other">
+                                                    <label class="form-check-label">TG</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group col-md-4">
+                                            <label for="resume">Resume:</label>
+                                            <input type="file" class="form-control-file" id="resume" required>
+                                        </div>
+                                        <div class="form-group col-md-4">
+                                            <label for="profile-photo">Profile Photo:</label>
+                                            <input type="file" class="form-control-file" id="profile-photo" required>
+                                        </div>
+                                    </div>
 
-                                <div class="form-group form-check form-check-inline">
-                                    <label class="form-check-label" >Gender :</label>
-                                </div>
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="gender" <?php if($gender == "Male" ){ echo "checked"; } ?>  value="Male"  selected>
-                                    <label class="form-check-label" >Male</label>
-                                </div>
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="gender" <?php if($gender == "Female" ){ echo "checked"; } ?>  value="Female">
-                                    <label class="form-check-label" >Female</label>
-                                </div>
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="gender" <?php if($gender == "Other" ){ echo "checked"; } ?>  value="Other">
-                                    <label class="form-check-label" >TG</label>
-                                </div>
-                                <div class="form-group">
-                                <label for="resume">Profile Photo</label>
-                                    <input type="file" required value>
-                                </div>
-                                <div class="form-group">
-                                <label for="resume">Resume</label>
-                                    <input type="file" required value>
-                                </div>
+                                    
                                 <br>
-                                <button ><a href="./addemp1.php">Next</a></button>
-                                  </form>
+                                <button class="btn btn-outline-primary float-right"><a href="./addemp1.php">Next</a></button>
+                                </form>
                             
                         
             <!-- END MAIN CONTENT-->
@@ -430,6 +442,14 @@ if(isset($POST['Logout'])){
     ></script>
     <!-- Main JS-->
     <script src="js/main.js"></script>
+
+    <script>
+        $('.btn-outline-primary').hover(function() {
+            $(this).find('a').css('color', 'white');
+        }, function() {
+            $(this).find('a').css('color', '');
+        });
+    </script>
 
 </body>
 

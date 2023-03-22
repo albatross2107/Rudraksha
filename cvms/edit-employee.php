@@ -1,4 +1,108 @@
 
+
+
+<?php  
+
+
+         $id = $_GET["id"];
+        require_once "../dbcon.php";
+
+        $sql = "SELECT * FROM employee WHERE id = $id ";
+        $result = mysqli_query($con , $sql);
+
+        if(mysqli_num_rows($result) > 0 ){
+        
+            while($rows = mysqli_fetch_assoc($result) ){
+                $name = $rows["name"];
+                $email = $rows["email"];
+                $dob = $rows["dob"];
+                $gender = $rows["gender"];
+                $salary = $rows["salary"];
+            }
+        }
+
+        $nameErr = $emailErr = $passErr = $salaryErr= "";
+        $pass = "";
+      
+
+        if( $_SERVER["REQUEST_METHOD"] == "POST" ){
+
+            if( empty($_REQUEST["gender"]) ){
+                $gender ="";
+            }else {
+                $gender = $_REQUEST["gender"];
+            }
+
+
+            if( empty($_REQUEST["dob"]) ){
+                $dob = "";
+            }else {
+                $dob = $_REQUEST["dob"];
+            }
+
+            if( empty($_REQUEST["name"]) ){
+                $nameErr = "<p style='color:red'> * Name is required</p>";
+                $name = "";
+            }else {
+                $name = $_REQUEST["name"];
+            }
+
+            if( empty($_REQUEST["salary"]) ){
+                $salaryErr = "<p style='color:red'> * Salary is required</p>";
+                $salary = "";
+            }else {
+                $salary = $_REQUEST["salary"];
+            }
+
+            if( empty($_REQUEST["email"]) ){
+                $emailErr = "<p style='color:red'> * Email is required</p> ";
+                $email = "";
+            }else{
+                $email = $_REQUEST["email"];
+            }
+
+            if( empty($_REQUEST["pass"]) ){
+                $passErr = "<p style='color:red'> * Password is required</p> ";
+            }else{
+                $pass = $_REQUEST["pass"];
+            }
+
+
+            if( !empty($name) && !empty($email) && !empty($pass) && !empty($salary) ){
+
+                // database connection
+                // require_once "../connection.php";
+
+                $sql_select_query = "SELECT email FROM employee WHERE email = '$email' ";
+                $r = mysqli_query($conn , $sql_select_query);
+
+                if( mysqli_num_rows($r) > 0 ){
+                    $emailErr = "<p style='color:red'> * Email Already Register</p>";
+                } else{
+                   
+
+                    $sql = "UPDATE employee SET name = '$name' , email = '$email', password ='$pass' , dob='$dob', gender='$gender' , salary='$salary' WHERE id = $_GET[id] ";
+                    $result = mysqli_query($conn , $sql);
+                    if($result){
+                        echo "<script>
+                        $(document).ready( function(){
+                            $('#showModal').modal('show');
+                            $('#modalHead').hide();
+                            $('#linkBtn').attr('href', 'manage-employee.php');
+                            $('#linkBtn').text('View Employees');
+                            $('#addMsg').text('Profile Edit Successfully!');
+                            $('#closeBtn').text('Edit Again?');
+                        })
+                     </script>
+                     ";
+                    }
+                    
+                }
+
+            }
+        }
+
+?>
 <?php
 session_start();
 if(isset($POST['Logout'])){
@@ -41,24 +145,8 @@ if(isset($POST['Logout'])){
 
     <!-- Main CSS-->
     <link href="css/theme.css" rel="stylesheet" media="all">
-    <style>
-table, th, td {
-  border: 1px solid black;
-  padding: 15px;
-}
-table {
-  border-spacing: 10px;
-}
-table th{
-    color:white;
-    font-size:13px;
-}
-table{
-    width:50%;
-}
-</style>
+   
 </head>
-
 <body class="animsition">
     <div class="page-wrapper">
         <!-- HEADER MOBILE-->
@@ -199,121 +287,85 @@ table{
                     </div>
                 </div>
             </header>
-            <!-- HEADER DESKTOP-->
 
-            <!-- MAIN CONTENT-->
-            <br>
-            <?php 
- 
-//  database connection
-require_once "../dbcon.php";
-
-$sql = "SELECT * FROM employee";
-$result = mysqli_query($con , $sql);
-
-$i = 1;
-$you = "";
-
-
-?>
-          <body>
-          <div class="container bg-white shadow">
-    <div class="py-4 mt-5"> 
-    <div class='text-center pb-2'><h4>Manage Employees</h4></div>
-          <table style="width:100%" class="table-hover text-center ">
-                <tr class="bg-dark">
-                    <th>S.No.</th>
-                    <th>Employee Id</th>
-                    <th>Name</th>
-                    <th>Email</th> 
-                    <th>Gender</th>
-                    <th>Date of Birth</th>
-                    <th>Age in Years</th>
-                    <th>Salary in Rs</th>
-                    <th>Action</th>
-                </tr>
-                <?php 
-    
-    if( mysqli_num_rows($result) > 0){
-        while( $rows = mysqli_fetch_assoc($result) ){
-            $name= $rows["name"];
-            $email= $rows["email"];
-            $dob = $rows["dob"];
-            $gender = $rows["gender"];
-            $id = $rows["id"];
-            $salary = $rows["salary"];
-            if($gender == "" ){
-                $gender = "Not Defined";
-            } 
-
-            if($dob == "" ){
-                $dob = "Not Defined";
-                $age = "Not Defined";
-            }else{
-                $dob = date('jS F, Y' , strtotime($dob));
-                $date1=date_create($dob);
-                $date2=date_create("now");
-                $diff=date_diff($date1,$date2);
-                $age = $diff->format("%Y"); 
-            }
-
-            if($salary== "" ){
-                $salary= "Not Defined";
-            }   
-            
-            ?>
-        <tr>
-        <td><?php echo "{$i}."; ?></td>
-        <td><?php echo $id; ?></td>
-        <td> <?php echo $name ; ?></td>
-        <td><?php echo $email; ?></td>
-        <td><?php echo $gender; ?></td>
-        <td><?php echo $dob; ?></td>
-        <td><?php echo $age; ?></td>
-        <td><?php echo $salary; ?></td>
-
-        <td>  <?php 
-                $edit_icon = "<a href='./edit-employee.php?id= {$id}' class='btn-sm btn-primary float-right ml-3 '> <span ><i class='fa fa-edit '></i></span> </a>";
-                $delete_icon = " <a href='./delete-employee.php?id={$id}' id='bin' class='btn-sm btn-primary float-right'> <span ><i class='fa fa-trash '></i></span> </a>";
-                echo $edit_icon . $delete_icon;
-             ?> 
-        </td>
-
-      
         
+    
 
-    <?php 
-            $i++;
-            }
-        }else{
-            echo "<script>
-            $(document).ready( function(){
-                $('#showModal').modal('show');
-                $('#linkBtn').attr('href', 'add-employee.php');
-                $('#linkBtn').text('Add Employee');
-                $('#addMsg').text('No Employees Found!');
-                $('#closeBtn').text('Remind Me Later!');
-            })
-         </script>
-         ";
-        }
-    ?>
-     </tr>
-    </table>
+<div style=""> 
+<div class="login-form-bg h-100">
+        <div class="container  h-100">
+            <div class="row justify-content-center h-100">
+                <div class="col-xl-6">
+                    <div class="form-input-content">
+                        <div class="card login-form mb-0">
+                            <div class="card-body pt-4 shadow">                       
+                                    <h4 class="text-center">Edit Employee profile</h4>
+                                <form method="POST" action=" <?php htmlspecialchars($_SERVER['PHP_SELF']) ?>">
+                            
+                                <div class="form-group">
+                                    <label >Full Name :</label>
+                                    <input type="text" class="form-control" value="<?php echo $name; ?>"  name="name" >
+                                   <?php echo $nameErr; ?>
+                                </div>
+
+
+                                <div class="form-group">
+                                    <label >Email :</label>
+                                    <input type="email" class="form-control" value="<?php echo $email; ?>"  name="email" >     
+                                    <?php echo $emailErr; ?>
+                                </div>
+
+                                <div class="form-group">
+                                    <label >Password: </label>
+                                    <input type="password" class="form-control" value="<?php echo $pass; ?>" name="pass" > 
+                                    <?php echo $passErr; ?>           
+                                </div>
+
+                                <div class="form-group">
+                                    <label >Salary :</label>
+                                    <input type="number" class="form-control" value="<?php echo $salary; ?>" name="salary" >  
+                                    <?php echo $salaryErr; ?>            
+                                </div>
+
+                                <div class="form-group">
+                                    <label >Date-of-Birth :</label>
+                                    <input type="date" class="form-control" value="<?php echo $dob; ?>" name="dob" >  
+                                   
+                                </div>
+
+                                <div class="form-group form-check form-check-inline">
+                                    <label class="form-check-label" >Gender :</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="gender" <?php if($gender == "Male" ){ echo "checked"; } ?>  value="Male"  selected>
+                                    <label class="form-check-label" >Male</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="gender" <?php if($gender == "Female" ){ echo "checked"; } ?>  value="Female">
+                                    <label class="form-check-label" >Female</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="gender" <?php if($gender == "Other" ){ echo "checked"; } ?>  value="Other">
+                                    <label class="form-check-label" >Other</label>
+                                </div>
+
+                               
+                                <br>
+
+                                <button type="submit" class="btn btn-primary btn-block">Add</button>
+                            </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
-</body>
-          
 
 
-
-
-            <!-- END MAIN CONTENT-->
-            <!-- END PAGE CONTAINER-->
-       
-
-    <!-- Jquery JS-->
-    <script src="vendor/jquery-3.2.1.min.js"></script>
+ <!-- Jquery JS-->
+ <script src="vendor/jquery-3.2.1.min.js"></script>
     <!-- Bootstrap JS-->
     <script src="vendor/bootstrap-4.1/popper.min.js"></script>
     <script src="vendor/bootstrap-4.1/bootstrap.min.js"></script>
@@ -339,21 +391,5 @@ $you = "";
     <!-- Main JS-->
     <script src="js/main.js"></script>
 
-</body>
 
 </html>
-<!-- end document-->
-
-
-
-
-
-
-
-
-
-
-
-
-
-

@@ -1,3 +1,52 @@
+
+<?php
+
+
+if(isset($_POST["submit"])){
+  $first_name=$_POST["first_name"];
+  $middle_name=$_POST["middle_name"];
+  $last_name=$_POST["last_name"];
+  $dob=$_POST["dob"];
+  $age=$_POST["age"];
+  $gender=$_POST["gender"];
+  $email=$_POST["email"];
+  $father_name=$_POST["father_name"];
+  $mother_name=$_POST["mother_name"];
+  $contact=$_POST["contact"];
+  $address1=$_POST["address1"];
+  $address2=$_POST["address2"];
+  $city=$_POST["city"];
+  $pincode=$_POST["pincode"];
+  $state=$_POST["state"];
+  $education=$_POST["education"];
+  $stream=$_POST["stream"];
+  $degree=$_POST["degree"];
+  $board_name=$_POST["board_name"];
+  $college_name=$_POST["college_name"];
+  $uni_name=$_POST["uni_name"];
+  $current_company=$_POST["current_company"];
+  $designation=$_POST["designation"];
+  $experience=$_POST["experience"];
+  $vaccination=$_POST["vaccination"];
+  $remarks=$_POST["remarks"];
+  $resume=$_POST["resume"];
+
+
+  
+
+  
+
+  $conn= mysqli_connect("localhost", "root", "", "rudra_675");
+  $query="INSERT INTO recruitments VALUES('', NOW(), '$first_name', '$middle_name', '$last_name', '$dob', '$age', '$gender', '$email', '$father_name', '$mother_name', '$contact', '$address1', '$address2', '$city', '$pincode', '$state', '$education', '$stream', '$degree', '$board_name', '$college_name', '$uni_name', '$current_company', '$designation', '$experience', '$vaccination','$remarks', '$resume')";
+  mysqli_query($conn, $query);
+
+
+}
+?>
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -51,9 +100,6 @@
       </section>
       <img src="./Images/vision statement .jpg" alt="" class="img-fluid"> 
 
-      <!--<center><video height="100%" width="100%" autoplay loop muted>
-        <source src="VISION STATEMENT ANIMATION.mp4" type="video/mp4">  
-      </video></center> -->
       <nav
         class="navbar navbar-expand-sm navbar-dark bg-dark mb-0"
       >
@@ -384,19 +430,19 @@
     <h4 class="perhead">Personal Information</h4>
     <hr>
   </div>
-  <form action="#">
+  <form method="POST">
     <div class="recdiv1">
       <div>
         <label for="FirstName">First Name</label>
-        <input type="text" required class="form-control" id="FirstName" placeholder="Enter your First name" value>
+        <input type="text" required class="form-control" name="first_name" id="FirstName" placeholder="Enter your First name" value>
       </div>
       <div>
         <label for="MiddleName">Middle Name</label>
-        <input type="text" class="form-control" id="MiddleName" placeholder="Enter your Middle name" value>
+        <input type="text" class="form-control" name="middle_name" id="MiddleName" placeholder="Enter your Middle name" value>
       </div>
       <div>
         <label for="LastName">Last Name</label>
-        <input type="text" class="form-control" id="LastName" placeholder="Enter your Last name" value>
+        <input type="text" class="form-control" name="last_name" id="LastName" placeholder="Enter your Last name" value>
       </div>
       <div>
         <label for="dob">Date Of Birth</label>
@@ -425,43 +471,43 @@
 <div class="recdiv2">
   <div>
     <label for="email">Email</label>
-    <input type="text" class="form-control" id="email" placeholder="Enter your Email" value>
+    <input type="text" class="form-control" name="email" id="email" placeholder="Enter your Email" value>
   </div>
   <div>
     <label for="FatherName">Father's Name</label>
-    <input type="text" class="form-control" id="FatherName" placeholder="Enter your Father's Name" value>
+    <input type="text" class="form-control" name="father_name" id="FatherName" placeholder="Enter your Father's Name" value>
   </div>
   <div>
     <label for="MotherName">Mother's Name</label>
-    <input type="text" class="form-control" id="MotherName" placeholder="Enter your Mother's Name" value>
+    <input type="text" class="form-control" name="mother_name" id="MotherName" placeholder="Enter your Mother's Name" value>
   </div>
 </div>
 <div class="recdiv3">
   <div>
     <label for="phone">Contact No.</label>
-    <input type="text" class="form-control" id="phone" placeholder="Enter your Contact No." value>
+    <input type="text" class="form-control" name="contact" id="phone" placeholder="Enter your Contact No." value>
   </div>
   <div>
     <label for="address1">Address Line 1</label>
-    <input type="text" class="form-control" id="address1" placeholder="Enter your Address Line 1" value>
+    <input type="text" class="form-control" name="address1" id="address1" placeholder="Enter your Address Line 1" value>
   </div>
   <div>
     <label for="address2">Address Line 2</label>
-    <input type="text" class="form-control" id="address2" placeholder="Enter your Address Line 2" value>
+    <input type="text" class="form-control" name="address2" id="address2" placeholder="Enter your Address Line 2" value>
   </div>
 </div>
 <div class="recdiv4">
   <div>
     <label for="city">City</label>
-    <input type="text" class="form-control" id="city" placeholder="Enter your City" value>
+    <input type="text" class="form-control" name="city" id="city" placeholder="Enter your City" value>
   </div>
   <div>
     <label for="pincode">Pincode</label>
-    <input type="text" class="form-control" id="pincode" placeholder="Enter your Pincode" value>
+    <input type="text" class="form-control" name="pincode" id="pincode" placeholder="Enter your Pincode" value>
   </div>
   <div>
     <label for="state">State</label>
-    <input type="text" class="form-control" id="state" placeholder="Enter your State" value>
+    <input type="text" class="form-control" name="state" id="state" placeholder="Enter your State" value>
   </div>
 </div>
 <div class="recdiv1heading">
@@ -472,7 +518,7 @@
 <div class="recdiv5">
   <div>
     <label for="education">Education</label>
-    <select id="education" required class="form-control">
+    <select id="education" name="education" required class="form-control">
       <option>Select</option>
       <option>Secondary</option>
       <option>Higher Secondary</option>
@@ -483,7 +529,7 @@
   </div>
   <div>
     <label for="stream">Stream</label>
-      <select id="stream" required class="form-control" style="display: inline;">
+      <select id="stream" name="stream" required class="form-control" style="display: inline;">
         <option>Select</option>
       <option>Science</option>
       <option>Commerce</option>
@@ -492,7 +538,7 @@
       </div>
       <div>
       <label for="degree">Degree</label>
-      <select id="degree" required class="form-control" style="display: inline;">
+      <select id="degree" name="degree" required class="form-control" style="display: inline;">
         <option>Select</option>
         <option>NA</option>
       <option>BE/BTech</option>
@@ -508,7 +554,7 @@
 <div class="recdiv6">
   <div>
     <label for="board">Board Name</label>
-    <select id="board" required class="form-control">
+    <select id="board" name="board_name" required class="form-control">
       <option>Select</option>
       <option>State Boards</option>
       <option>Central Board of Secondary Education (CBSE)</option>
@@ -521,11 +567,11 @@
   </div>
   <div>
     <label for="collegename">College Name</label>
-    <input type="text" class="form-control" id="collegename" placeholder="Enter your College Name" value>
+    <input type="text" class="form-control" name="college_name" id="collegename" placeholder="Enter your College Name" value>
   </div>
   <div>
     <label for="uniname">University Name</label>
-    <input type="text" class="form-control" id="uniname" placeholder="Enter your University Name" value>
+    <input type="text" class="form-control" name="uni_name" id="uniname" placeholder="Enter your University Name" value>
   </div>
 </div>
 <div class="recdiv1heading">
@@ -535,11 +581,11 @@
 <div class="recdiv7">
   <div>
     <label for="currentcompany">Current Company</label>
-    <input type="text" class="form-control" id="currentcompany" placeholder="Enter your Current Company" value>
+    <input type="text" class="form-control" name="current_company" id="currentcompany" placeholder="Enter your Current Company" value>
   </div>
   <div>
     <label for="designation">Designation</label>
-    <select id="designation" required class="form-control" style="display: inline;">
+    <select id="designation" name="designation" required class="form-control" style="display: inline;">
       <option>Select</option>
       <option>NA</option>
       <option>Branch Manager</option>
@@ -556,7 +602,7 @@
 </div>
 <div>
   <label for="experience">Experience</label>
-    <select id="experience" required class="form-control" style="display: inline;">
+    <select id="experience" name="experience" required class="form-control" style="display: inline;">
       <option>Select</option>
       <option>No Experience</option>
     <option>0-2 Years</option>
@@ -572,13 +618,13 @@
   <div>
     <label for="vaccination">Vaccination</label>
     <div class="form-check form-check-inline">
-      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1">
+      <input class="form-check-input" type="radio" name="vaccination" id="inlineRadio1">
       <label class="form-check-label" for="inlineRadio1">
         Yes
       </label>
     </div>
     <div class="form-check form-check-inline">
-      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1">
+      <input class="form-check-input" type="radio" name="vaccination" id="inlineRadio1">
       <label class="form-check-label" for="inlineRadio1">
         No
       </label>
@@ -587,17 +633,17 @@
   </div>
   <div>
     <label for="remarks">Remarks</label>
-    <input type="text" required class="form-control" id="remarks" placeholder="Enter your Remarks"value>
+    <input type="text" required class="form-control" name="remarks" id="remarks" placeholder="Enter your Remarks"value>
   </div>
 
 <div class="resumefile">
   <label for="resume">Resume</label>
-  <input type="file" required value>
+  <input type="file" name="resume" required value>
 </div>
 </div>
     
     <div class="recdiv9">
-      <button type="submit" class="btn btn-outline-info">Submit Data</button>
+      <button type="submit" name="submit" value="submit" class="btn btn-outline-info">Submit Data</button>
     </div>
   </form>
 </div>

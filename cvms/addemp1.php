@@ -206,7 +206,7 @@ if(isset($POST['Logout'])){
                             <i class="fa-solid fa-user"></i>Employee Master</a>
                             <ul aria-expanded="false">
                             <li><a href="./addemployee.php"> <i class="icon-plus menu-icon"></i><span class="nav-text">Add Employee</span></a></li>
-                            <li><a href="./manageemployee.php"> <i class="fa fa-tasks menu-icon"></i><span class="nav-text">Manage Employee</span></a></li>
+                            <!--<li><a href="./manageemployee.php"> <i class="fa fa-tasks menu-icon"></i><span class="nav-text">Manage Employee</span></a></li>-->
                             <!-- <li><a href="./"> <i class="fa fa-bar-chart menu-icon"></i><span class="nav-text">Salary Table</span></a></li> -->
 
                         </ul>
@@ -291,114 +291,170 @@ if(isset($POST['Logout'])){
             <div class="card-body pt-4 shadow">                       
                                     
                                 <form method="POST" action=" <?php htmlspecialchars($_SERVER['PHP_SELF']) ?>" class="empform">
+                               
                                 <h4 class="text-center">Secondary Education Qualification Details</h4>
-                                <div class="form-group">
-                                    <label >Year of Passing:  </label>
-                               <select>
-                                <option>2020</option>
-                                <option>2019</option><option>2018</option><option>2017</option><option>2016</option>
-    </select>
+                                <br>
+                                <div class="container">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label>Year of Passing:</label>
+                                        <select class="form-control">
+                                        <option>2020</option>
+                                        <option>2019</option>
+                                        <option>2018</option>
+                                        <option>2017</option>
+                                        <option>2016</option>
+                                        </select>
+                                    </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label>Qualifying Examination State:</label>
+                                        <input type="text" class="form-control">
+                                    </div>
+                                    </div>
                                 </div>
-                                <div class="form-group">
-                                    <label >Qualifying Examination State :</label>
-                                    <input type="text" class="form-control"  >
-                                  
+                                <div class="row">
+                                    <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label>School Board:</label>
+                                        <select class="form-control">
+                                        <option>Select</option>
+                                        <option>State Boards</option>
+                                        <option>Central Board of Secondary Education (CBSE)</option>
+                                        <option>Indian Certificate of Secondary Education (ICSE)</option>
+                                        <option>Council for the Indian School Certificate Examination (CISCE)</option>
+                                        <option>National Institute of Open Schooling (NIOS)</option>
+                                        <option>International Baccalaureate (IB)</option>
+                                        <option>Cambridge International Examinations (CIE)</option>
+                                        </select>
+                                    </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label>Marks (%):</label>
+                                        <input type="text" class="form-control">
+                                    </div>
+                                    </div>
                                 </div>
-                                <div class="form-group">
-                                    <label >School Board:</label>
-                                    <select>
-                                    <option>Select</option>
-      <option>State Boards</option>
-      <option>Central Board of Secondary Education (CBSE)</option>
-      <option>Indian Certificate of Secondary Education (ICSE)</option>
-      <option>Council for the Indian School Certificate Examination (CISCE)</option>
-      <option>National Institute of Open Schooling (NIOS)</option>
-      <option>International Baccalaureate (IB)</option>
-      <option>Cambridge International Examinations (CIE)</option>
-    </select>
                                 </div>
-                                <div class="form-group">
-                                    <label >Marks(%) </label>
-                                    <input type="text" class="form-control"  >
-                                   
-                                </div>
+                                <br>
                                 <h4 class="text-center">Higher Secondary Qualification Details</h4>
-                                <div class="form-group">
-                                    <label >Year of Passing:  </label>
-                               <select>
-                                <option>2020</option>
-                                <option>2019</option><option>2018</option><option>2017</option><option>2016</option>
-    </select>
-                                </div>
-                                <div class="form-group">
-                                    <label >Qualifying Examination State :</label>
-                                    <input type="text" class="form-control"  >
-                                  
-                                </div>
-                                <div class="form-group">
-                                    <label >School Board:</label>
-                                    <select>
-                                    <option>Select</option>
-      <option>State Boards</option>
-      <option>Central Board of Secondary Education (CBSE)</option>
-      <option>Indian Certificate of Secondary Education (ICSE)</option>
-      <option>Council for the Indian School Certificate Examination (CISCE)</option>
-      <option>National Institute of Open Schooling (NIOS)</option>
-      <option>International Baccalaureate (IB)</option>
-      <option>Cambridge International Examinations (CIE)</option>
-    </select>
-                                </div>
-                                <div class="form-group">
-                                    <label >Marks(%) </label>
-                                    <input type="text" class="form-control"  >
-                                   
-                                </div>
-                                <h4 class="text-center">Higher Qualification Details</h4>
+                                <br>
+                                    <div class="row">
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                        <label>Year of Passing:</label>
+                                        <select class="form-control">
+                                            <option>2020</option>
+                                            <option>2019</option>
+                                            <option>2018</option>
+                                            <option>2017</option>
+                                            <option>2016</option>
+                                        </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                        <label>Qualifying Examination State:</label>
+                                        <input type="text" class="form-control">
+                                        </div>
+                                    </div>
+                                    </div>
 
-                                <div class="form-group">
-                                <label for="education">Education</label>
-    <select style="display: inline" >
-      <option>Select</option>
-      
-      <option>Under-Graduate</option>
-      <option>Graduate</option>
-      <option>Post-Graduate</option>
-    </select>
+                                    <div class="row">
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                        <label>School Board:</label>
+                                        <select class="form-control">
+                                            <option>Select</option>
+                                            <option>State Boards</option>
+                                            <option>Central Board of Secondary Education (CBSE)</option>
+                                            <option>Indian Certificate of Secondary Education (ICSE)</option>
+                                            <option>Council for the Indian School Certificate Examination (CISCE)</option>
+                                            <option>National Institute of Open Schooling (NIOS)</option>
+                                            <option>International Baccalaureate (IB)</option>
+                                            <option>Cambridge International Examinations (CIE)</option>
+                                        </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                        <label>Marks(%):</label>
+                                        <input type="text" class="form-control">
+                                        </div>
+                                    </div>
                                 </div>
 
-                                <div class="form-group form-check form-check-inline">
-                                <label for="degree">Degree:</label>
-      <select id="degree"  style="display: inline;">
-        <option>Select</option>
-        <option>NA</option>
-      <option>BE/BTech</option>
-      <option>BCom</option>
-      <option>Bsc</option>
-      <option>BA</option>
-      <option>LAW</option>
-      <option>BBA</option>
-      <option>BCA</option>
-      </select>
-                                </div>
+                                <br>
                                 
-                                <div class="form-group">
-                                <label for="collegename">College Name</label>
-    <input type="text" class="form-control" id="collegename" placeholder="Enter your College Name" value>
-                                   
+
+                                <h4 class="text-center">Higher Qualification Details</h4>
+                                <br>
+
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label for="education">Education</label>
+                                                <select class="form-control">
+                                                    <option>Select</option>
+                                                    <option>Under-Graduate</option>
+                                                    <option>Graduate</option>
+                                                    <option>Post-Graduate</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="collegename">College Name</label>
+                                                <input type="text" class="form-control" id="collegename" placeholder="Enter your College Name">
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label>Marks(%)</label>
+                                                <input type="text" class="form-control">
+                                            </div>
+
+                                            
+                                        </div>
+
+                                        <div class="col-md-6">
+
+                                        <div class="form-group ">
+                                                <label for="degree">Degree</label>
+                                                <select id="degree" class="form-control">
+                                                    <option>Select</option>
+                                                    <option>NA</option>
+                                                    <option>BE/BTech</option>
+                                                    <option>BCom</option>
+                                                    <option>Bsc</option>
+                                                    <option>BA</option>
+                                                    <option>LAW</option>
+                                                    <option>BBA</option>
+                                                    <option>BCA</option>
+                                                </select>
+                                            </div>
+                                            
+
+                                            <div class="form-group">
+                                                <label for="uniname">University Name</label>
+                                                <input type="text" class="form-control" id="uniname" placeholder="Enter your University Name">
+                                            </div>
+
+                                            
+                                        </div>
                                 </div>
-                                <div class="form-group">
-                                <label for="uniname">University Name</label>
-    <input type="text" class="form-control" id="uniname" placeholder="Enter your University Name" value>
-                                   
+                                <br>
+                                <div class="form-row">
+                                
+                                <div class="form-group col-md-6">
+                                    <button  class="btn btn-outline-primary float-left"><a href="./addemployee.php">Previous</a></button>
                                 </div>
-                                <div class="form-group">
-                                    <label >Marks(%) </label>
-                                    <input type="text" class="form-control"  >
-                                   
+
+                                <div class="form-group col-md-6">
+                                    <button  class="btn btn-outline-primary float-right"><a href="./addemp2.php">Next</a></button> <br>
                                 </div>
-                              
-                                <button  ><a href="./addemp2.php">Next</a></button> <br>
-                                <button  ><a href="./addemployee.php">Previous</a></button>
+
+                                </div>
     
     </div>
                                   </form>
@@ -439,6 +495,14 @@ if(isset($POST['Logout'])){
     ></script>
     <!-- Main JS-->
     <script src="js/main.js"></script>
+
+    <script>
+        $('.btn-outline-primary').hover(function() {
+            $(this).find('a').css('color', 'white');
+        }, function() {
+            $(this).find('a').css('color', '');
+        });
+    </script>
 
 </body>
 

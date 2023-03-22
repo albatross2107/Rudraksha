@@ -78,8 +78,8 @@ if(isset($POST['Logout'])){
                                         <li>
                                             <a href="./cvms/addemployee.php"><i class="fa-solid fa-plus"></i>Add Employee</a>
                                         </li>  
-                                        <!--<li><a href="./cvms/manageemployee.php"><i class="fa fa-tasks menu-icon"></i>Manage Employee</a>
-                                    </li>-->   
+                                        <li><a href="./cvms/manageemployee.php"><i class="fa fa-tasks menu-icon"></i>Manage Employee</a>
+                                    </li>  
                                     </ul>
                         </li>
                         
@@ -117,8 +117,8 @@ if(isset($POST['Logout'])){
                                         <li>
                                             <a href="./cvms/addemployee.php"><i class="fa-solid fa-plus"></i>Add Employee</a>
                                         </li>  
-                                        <!--<li><a href="./cvms/manageemployee.php"><i class="fa fa-tasks menu-icon"></i>Manage Employee</a>
-                                    </li>-->   
+                                        <li><a href="./cvms/manageemployee.php"><i class="fa fa-tasks menu-icon"></i>Manage Employee</a>
+                                    </li>  
                                     </ul>
                         </li>
                     </ul>    

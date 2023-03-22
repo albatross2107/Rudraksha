@@ -206,7 +206,7 @@ if(isset($POST['Logout'])){
                             <i class="fa-solid fa-user"></i>Employee Master</a>
                             <ul aria-expanded="false">
                             <li><a href="./addemployee.php"> <i class="icon-plus menu-icon"></i><span class="nav-text">Add Employee</span></a></li>
-                            <li><a href="./manageemployee.php"> <i class="fa fa-tasks menu-icon"></i><span class="nav-text">Manage Employee</span></a></li>
+                            <!--<li><a href="./manageemployee.php"> <i class="fa fa-tasks menu-icon"></i><span class="nav-text">Manage Employee</span></a></li>-->
                             <!-- <li><a href="./"> <i class="fa fa-bar-chart menu-icon"></i><span class="nav-text">Salary Table</span></a></li> -->
 
                             </ul>
@@ -292,90 +292,113 @@ if(isset($POST['Logout'])){
                                     
                                 <form method="POST" action=" <?php htmlspecialchars($_SERVER['PHP_SELF']) ?>" class="empform">
                                 <h4 class="text-center">Work Experience</h4>
-                                <div class="form-group">
-                                <label for="currentcompany"> Company Name</label>
-    <input type="text" class="form-control" id="currentcompany" placeholder="Enter your Company Name" value>
-                                </div>
-                               
-                                <div class="form-group">
-                                <label for="designation">Designation</label>
-    <select id="designation" style="display: inline;">
-      <option>Select</option>
-      <option>NA</option>
-      <option>Branch Manager</option>
-    <option>Custom Manager</option>
-    <option>Operation Manager</option>
-    <option>Admin Manager</option>
-    <option>Sales Manager</option>
-    <option>Relationship Manager</option>
-    <option>HR Manager</option>
-    <option>Receptionist</option>
-    <option>Guard</option>
-    <option>Support Staff</option>
-    </select>
-    <div class="form-group">
-                                <label for="currentcompany">Department</label>
-    <input type="text" class="form-control" id="currentcompany" placeholder="Enter your Department" value>
-                                </div>
-                                  
-                                </div>
-                                <div class="form-group">
-                                <label for="experience">Experience</label>
-    <select id="experience"  style="display: inline;">
-      <option>Select</option>
-      <option>No Experience</option>
-    <option>0-2 Years</option>
-    <option>2-4 Years</option>
-    <option>4-6 Years</option>
-    <option>6-8 Years</option>
-    <option>8-10 Years</option>
-    <option>10+ Years</option>
-    </select>
-                                </div>
-                                <div class="form-group">
-                                <label for="currentcompany">Package</label>
-    <input type="text" class="form-control" id="currentcompany" placeholder="Enter your Salary Package" value>
-                                </div>
-                                <div class="form-group">
-                                <label for="currentcompany">Take Off Salary</label>
-    <input type="text" class="form-control" id="currentcompany" placeholder="Enter your Salary " value>
+                                <br>
+                                    <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                        <label for="currentcompany">Company Name</label>
+                                        <input type="text" class="form-control" id="currentcompany" placeholder="Enter your Company Name" value>
+                                        </div>
+                                        <div class="form-group">
+                                        <label for="designation">Designation</label>
+                                        <select id="designation" class="form-control">
+                                            <option>Select</option>
+                                            <option>NA</option>
+                                            <option>Branch Manager</option>
+                                            <option>Custom Manager</option>
+                                            <option>Operation Manager</option>
+                                            <option>Admin Manager</option>
+                                            <option>Sales Manager</option>
+                                            <option>Relationship Manager</option>
+                                            <option>HR Manager</option>
+                                            <option>Receptionist</option>
+                                            <option>Guard</option>
+                                            <option>Support Staff</option>
+                                        </select>
+                                        </div>
+                                        <div class="form-group">
+                                        <label for="department">Department</label>
+                                        <input type="text" class="form-control" id="department" placeholder="Enter your Department" value>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                        <label for="experience">Experience</label>
+                                        <select id="experience" class="form-control">
+                                            <option>Select</option>
+                                            <option>No Experience</option>
+                                            <option>0-2 Years</option>
+                                            <option>2-4 Years</option>
+                                            <option>4-6 Years</option>
+                                            <option>6-8 Years</option>
+                                            <option>8-10 Years</option>
+                                            <option>10+ Years</option>
+                                        </select>
+                                        </div>
+                                        <div class="form-group">
+                                        <label for="package">Package</label>
+                                        <input type="text" class="form-control" id="package" placeholder="Enter your Salary Package" value>
+                                        </div>
+                                        <div class="form-group">
+                                        <label for="salary">Take Off Salary</label>
+                                        <input type="text" class="form-control" id="salary" placeholder="Enter your Salary" value>
+                                        </div>
+                                    </div>
                                 </div>
 
-
+                                <br>
+                                
                                 <h4 class="text-center">Bank Details</h4>
-                                <div class="form-group">
-                                <label for="currentcompany">Account Holder Name</label>
-    <input type="text" class="form-control" id="currentcompany" placeholder="Enter account holder name" value>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="accountHolderName">Account Holder Name</label>
+                                        <input type="text" class="form-control" id="accountHolderName" placeholder="Enter account holder name" value>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="bankName">Bank Name</label>
+                                        <input type="text" class="form-control" id="bankName" placeholder="Enter your Bank name" value>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="accountNumber">Account Number</label>
+                                        <input type="text" class="form-control" id="accountNumber" placeholder="Enter your account number" value>
+                                    </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="ifscCode">IFSC Code</label>
+                                        <input type="text" class="form-control" id="ifscCode" placeholder="Enter your IFSC Code" value>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="branchName">Branch Name</label>
+                                        <input type="text" class="form-control" id="branchName" placeholder="Enter your Bank Branch" value>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="paymentType">Payment Type</label>
+                                        <select id="paymentType" class="form-control">
+                                        <option>Select</option>
+                                        <option>NEFT</option>
+                                        <option>UPI</option>
+                                        </select>
+                                    </div>
+                                    </div>
+                                
                                 </div>
-                                <div class="form-group">
-                                <label for="currentcompany">Bank Name</label>
-    <input type="text" class="form-control" id="currentcompany" placeholder="Enter your Bank name" value>
-                                </div>
-                                <div class="form-group">
-                                <label for="currentcompany">Account Number</label>
-    <input type="text" class="form-control" id="currentcompany" placeholder="Enter your account number" value>
-                                </div>
-                                <div class="form-group">
-                                <label for="currentcompany">IFSC Code</label>
-    <input type="text" class="form-control" id="currentcompany" placeholder="Enter your IFSC Code" value>
-                                </div>
-                                <div class="form-group">
-                                <label for="currentcompany">Branch Name</label>
-    <input type="text" class="form-control" id="currentcompany" placeholder="Enter your Bank Branch" value>
-                                </div>
-                                <div class="form-group">
-                                <label for="experience">Payment Type</label>
-    <select id="experience"  style="display: inline;">
-      <option>Select</option>
-      <option>NEFT</option>
-    <option>UPI</option>
-    
-    </select>
-                                </div>
+
                                
                                   </form>
-                                  <button class="btn btn-outline-primary"><a href="./addemp1.php">Previous</a></button><br>
-                                  <button class="btn btn-outline-primary"><a href="">Submit</a></button>
+
+                                 <div class="form-row">
+                                
+                                    <div class="form-group col-md-6">
+                                      <button class="btn btn-outline-primary"><a href="./addemp1.php">Previous</a></button><br>
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                     <button class="btn btn-outline-primary float-right"><a href="">Submit</a></button>
+                                    </div>
+                                </div>
+
+
                             </div>
     </div>
                         </div>
@@ -413,6 +436,15 @@ if(isset($POST['Logout'])){
     ></script>
     <!-- Main JS-->
     <script src="js/main.js"></script>
+
+
+    <script>
+        $('.btn-outline-primary').hover(function() {
+            $(this).find('a').css('color', 'white');
+        }, function() {
+            $(this).find('a').css('color', '');
+        });
+    </script>
 
 </body>
 

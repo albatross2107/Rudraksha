@@ -300,7 +300,7 @@ if(isset($_POST['Signin'])){
                     Career
                   </a>
                   <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="recruitment.html">Recruitments</a></li>
+                    <li><a class="dropdown-item" href="recruitment.php">Recruitments</a></li>
                     <li>
                       <a class="dropdown-item" href="#">Interview form</a>
                     </li>
