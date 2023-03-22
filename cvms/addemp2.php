@@ -187,7 +187,7 @@ if(isset($POST['Logout'])){
         <!-- END HEADER MOBILE-->
 
         <!-- MENU SIDEBAR-->
-        <aside class="menu-sidebar d-none d-lg-block">
+        <aside class="menu-sidebar d-none d-lg-block" style="background-color: #D1D0CE;">
             
             <div class="menu-sidebar__content js-scrollbar1">
                 <nav class="navbar-sidebar">
@@ -200,7 +200,7 @@ if(isset($POST['Logout'])){
                         <li>
                             <a href="chart.php">
                                 <i class="fas fa-chart-bar"></i>Charts</a>
-                        </li
+                        </li>
                         <li>
                             <a href="./addemployee.php">
                             <i class="fa-solid fa-user"></i>Employee Master</a>
@@ -227,7 +227,7 @@ if(isset($POST['Logout'])){
         <!-- PAGE CONTAINER-->
         <div class="page-container">
             <!-- HEADER DESKTOP-->
-            <header class="header-desktop">
+            <header class="header-desktop" style="background-color: #A9A9A9;">
                 <div class="section__content section__content--p30">
                     <div class="container-fluid">
                         <div class="header-wrap">
@@ -288,13 +288,13 @@ if(isset($POST['Logout'])){
             <br>
             <br>
             <div class="card login-form mb-0">
-            <div class="card-body pt-4 shadow">                       
+            <div class="card-body pt-4 justify-content-between">                       
                                     
                                 <form method="POST" action=" <?php htmlspecialchars($_SERVER['PHP_SELF']) ?>" class="empform">
-                                <h4 class="text-center">Work Experience</h4>
+                                <h4 class="text-center pb-3 border-bottom">Work Experience</h4>
                                 <br>
-                                    <div class="row">
-                                    <div class="col-md-6">
+                                    <div class="row justify-content-center">
+                                    <div class="col-md-5">
                                         <div class="form-group">
                                         <label for="currentcompany">Company Name</label>
                                         <input type="text" class="form-control" id="currentcompany" placeholder="Enter your Company Name" value>
@@ -321,7 +321,7 @@ if(isset($POST['Logout'])){
                                         <input type="text" class="form-control" id="department" placeholder="Enter your Department" value>
                                         </div>
                                     </div>
-                                    <div class="col-md-6">
+                                    <div class="col-md-5">
                                         <div class="form-group">
                                         <label for="experience">Experience</label>
                                         <select id="experience" class="form-control">
@@ -347,53 +347,81 @@ if(isset($POST['Logout'])){
                                 </div>
 
                                 <br>
+                                <br>
                                 
-                                <h4 class="text-center">Bank Details</h4>
-                                <div class="row">
-                                    <div class="col-md-6">
+                                <h4 class="text-center pb-3 border-bottom">Bank Details</h4>
+                                <br>
+                                <div class="row justify-content-center">
+                                    <div class="col-md-5">
+                                    
                                     <div class="form-group">
-                                        <label for="accountHolderName">Account Holder Name</label>
-                                        <input type="text" class="form-control" id="accountHolderName" placeholder="Enter account holder name" value>
+                                        <label for="accountType">Account Type</label>
+                                        <select name="account-type" class="form-control">
+                                        <option value="">Select Account Type</option>
+                                        <option value="savings">Savings Account</option>
+                                        <option value="Salary">Salary Account</option>
+                                        <option value="checking">Checking Account</option>
+                                        <option value="credit">Credit Card Account</option>
+                                        <option value="loan">Loan Account</option>
+                                        </select>
+
                                     </div>
                                     <div class="form-group">
                                         <label for="bankName">Bank Name</label>
-                                        <input type="text" class="form-control" id="bankName" placeholder="Enter your Bank name" value>
+                                        <select id="bankName" class="form-control">
+                                        <option>Select</option>
+                                        <option value="bank-of-baroda">Bank of Baroda</option>
+                                        <option value="bank-of-india">Bank of India</option>
+                                        <option value="bank-of-maharashtra">Bank of Maharashtra</option>
+                                        <option value="canara-bank">Canara Bank</option>
+                                        <option value="central-bank-of-india">Central Bank of India</option>
+                                        <option value="indian-bank">Indian Bank</option>
+                                        <option value="indian-overseas-bank">Indian Overseas Bank</option>
+                                        <option value="punjab-and-sind-bank">Punjab and Sind Bank</option>
+                                        <option value="punjab-national-bank">Punjab National Bank</option>
+                                        <option value="state-bank-of-india">State Bank of India</option>
+                                        <option value="uco-bank">UCO Bank</option>
+                                        <option value="union-bank-of-india">Union Bank of India</option>
+                                        </select>
                                     </div>
                                     <div class="form-group">
                                         <label for="accountNumber">Account Number</label>
                                         <input type="text" class="form-control" id="accountNumber" placeholder="Enter your account number" value>
                                     </div>
-                                    </div>
-                                    <div class="col-md-6">
                                     <div class="form-group">
-                                        <label for="ifscCode">IFSC Code</label>
-                                        <input type="text" class="form-control" id="ifscCode" placeholder="Enter your IFSC Code" value>
+                                        <label for="upiNumber">UPI Number</label>
+                                        <input type="text" class="form-control" id="upiNumber" placeholder="Enter your UPI Number" value>
+                                        
+                                    </div>
+                                    </div>
+                                    <div class="col-md-5">
+                                    <div class="form-group">
+                                        <label for="accountHolderName">Account Holder Name</label>
+                                        <input type="text" class="form-control" id="accountHolderName" placeholder="Enter account holder name" value>
                                     </div>
                                     <div class="form-group">
                                         <label for="branchName">Branch Name</label>
                                         <input type="text" class="form-control" id="branchName" placeholder="Enter your Bank Branch" value>
                                     </div>
                                     <div class="form-group">
-                                        <label for="paymentType">Payment Type</label>
-                                        <select id="paymentType" class="form-control">
-                                        <option>Select</option>
-                                        <option>NEFT</option>
-                                        <option>UPI</option>
-                                        </select>
+                                        <label for="ifscCode">IFSC Code</label>
+                                        <input type="text" class="form-control" id="ifscCode" placeholder="Enter your IFSC Code" value>
                                     </div>
+                                    
                                     </div>
                                 
                                 </div>
 
                                
                                   </form>
+                                  <br>
 
-                                 <div class="form-row">
+                                 <div class="form-row justify-content-center">
                                 
-                                    <div class="form-group col-md-6">
+                                    <div class="form-group col-md-5">
                                       <button class="btn btn-outline-primary"><a href="./addemp1.php">Previous</a></button><br>
                                     </div>
-                                    <div class="form-group col-md-6">
+                                    <div class="form-group col-md-5">
                                      <button class="btn btn-outline-primary float-right"><a href="">Submit</a></button>
                                     </div>
                                 </div>

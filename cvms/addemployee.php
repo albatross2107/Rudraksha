@@ -200,14 +200,14 @@ if(isset($POST['Logout'])){
         <!-- END HEADER MOBILE-->
 
         <!-- MENU SIDEBAR-->
-        <aside class="menu-sidebar d-none d-lg-block">
+        <aside class="menu-sidebar d-none d-lg-block" style="background-color: #D1D0CE;" >
             
-            <div class="menu-sidebar__content js-scrollbar1">
-                <nav class="navbar-sidebar">
-                    <ul class="list-unstyled navbar__list">
+            <div class="menu-sidebar__content js-scrollbar1" >
+                <nav class="navbar-sidebar" >
+                    <ul class="list-unstyled navbar__list" >
                         <li class="active has-sub">
                             <a class="js-arrow" href="../adminpanel.php">
-                                <i class="fas fa-tachometer-alt"></i>Dashboard</a>
+                                <i class="fas fa-tachometer-alt "></i>Dashboard</a>
                             
                         </li>
                         <li>
@@ -217,7 +217,7 @@ if(isset($POST['Logout'])){
                         
                         
                         <li class="has-sub">
-                            <a class="js-arrow" href="#">
+                            <a class="js-arrow " href="#">
                                 <i class="fa fa-address-card-o menu-icon"></i>Employee Master</a>
                                     <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
                                         <li>
@@ -236,7 +236,7 @@ if(isset($POST['Logout'])){
         <!-- PAGE CONTAINER-->
         <div class="page-container">
             <!-- HEADER DESKTOP-->
-            <header class="header-desktop">
+            <header class="header-desktop" style="background-color: #A9A9A9;">
                 <div class="section__content section__content--p30">
                     <div class="container-fluid">
                         <div class="header-wrap">
@@ -292,79 +292,90 @@ if(isset($POST['Logout'])){
             <br>
             <br>
             <br>
+        
             <div class="card login-form mb-4">
-            <div class="card-body pt-4">                       
-                                    <h4 class="text-center">Add New Employee</h4>
+            <div class="card-body pt-4 mx-auto ml-5">  
+                <br>
+                        
+                
+
+
+                                <h4 class="text-center pb-3" style="border-bottom: 1px solid black;">Personal Details</h4>
+
+
                                     <br>
                                     <br>
                                 <form method="POST" action=" <?php htmlspecialchars($_SERVER['PHP_SELF']) ?>" class="empform">
                             
-                                <div class="form-row">
-                                    <div class="form-group col-md-4">
+                                <div class="form-row ">
+                                    <div class="form-group col-md-3 ">
                                         <label for="fname">First Name:</label>
-                                        <input type="text" class="form-control" value="<?php echo $fname; ?>" name="fname" >
+                                        <input type="text" class="form-control " value="<?php echo $fname; ?>" name="fname" >
                                         <?php echo $fErr; ?>
                                     </div>
-                                    <div class="form-group col-md-4">
+                                    <div class="form-group col-md-3 ">
                                         <label for="mname">Middle Name:</label>
-                                        <input type="text" class="form-control" value="<?php echo $fname; ?>" name="mname" >
+                                        <input type="text" class="form-control " value="<?php echo $fname; ?>" name="mname" >
                                     </div>
-                                    <div class="form-group col-md-4">
+                                    <div class="form-group col-md-3 ">
                                         <label for="lname">Last Name:</label>
-                                        <input type="text" class="form-control" value="<?php echo $lname; ?>" name="lname" >
+                                        <input type="text" class="form-control " value="<?php echo $lname; ?>" name="lname" >
                                         <?php echo $lErr; ?>
                                     </div>
+                                    <div class="form-group col-md-3">
+                                            <label for="dob">Date-of-Birth:</label>
+                                            <input type="date" class="form-control " value="<?php echo $dob; ?>" name="dob" id="dob" >  
                                     </div>
-
-                                    <div class="form-row">
-                                    <div class="form-group col-md-4">
-                                        <label for="frname">Father's Name:</label>
-                                        <input type="text" class="form-control" value="<?php echo $frname; ?>" name="frname" >
-                                        <?php echo $frErr; ?>
-                                    </div>
-                                    <div class="form-group col-md-4">
-                                        <label for="mrname">Mother's Name:</label>
-                                        <input type="text" class="form-control" value="<?php echo $mrname; ?>" name="mrname" >
-                                        <?php echo $mrErr; ?>
-                                    </div>
-                                    <div class="form-group col-md-4">
-                                        <label for="bname">Blood Group:</label>
-                                        <input type="text" class="form-control" value="<?php echo $bname; ?>" name="bname" >
-                                        <?php echo $bgErr; ?>
-                                    </div>
-                                    </div>
-
                                     
-
+                                    </div>
+                                    <br>
                                     <div class="form-row">
 
                                     <div class="form-group col-md-4">
                                         <label for="email">Email:</label>
-                                        <input type="email" class="form-control" value="<?php echo $email; ?>" name="email" >     
+                                        <input type="email" class="form-control " value="<?php echo $email; ?>" name="email" >     
                                         <?php echo $emailErr; ?>
                                     </div>
                                     <div class="form-group col-md-4">
                                         <label for="phone">Phone Number:</label>
-                                        <input class="form-control" value="<?php echo $phone; ?>" name="phone" >  
+                                        <input class="form-control " value="<?php echo $phone; ?>" name="phone" >  
                                         <?php echo $phoneErr; ?>            
                                     </div>
                                     <div class="form-group col-md-4">
                                         <label for="parent_phone">Parent's Phone Number:</label>
-                                        <input class="form-control" value="<?php echo $phone; ?>" name="parent_phone" >  
+                                        <input class="form-control " value="<?php echo $phone; ?>" name="parent_phone" >  
                                         <?php echo $phoneErr; ?>            
                                     </div>
                                     </div>
 
+                                    <br>
                                     <div class="form-row">
-                                        <div class="form-group col-md-6">
-                                            <label for="dob">Date-of-Birth:</label>
-                                            <input type="date" class="form-control" value="<?php echo $dob; ?>" name="dob" id="dob" >  
-                                        </div>
-                                        <div class="form-group col-md-6">
+                                    <div class="form-group col-md-4">
+                                        <label for="frname">Father's Name:</label>
+                                        <input type="text" class="form-control " value="<?php echo $frname; ?>" name="frname" >
+                                        <?php echo $frErr; ?>
+                                    </div>
+                                    <div class="form-group col-md-4">
+                                        <label for="mrname">Mother's Name:</label>
+                                        <input type="text" class="form-control " value="<?php echo $mrname; ?>" name="mrname" >
+                                        <?php echo $mrErr; ?>
+                                    </div>
+                                    <div class="form-group col-md-2 ">
+                                        <label for="bname">Blood Group:</label>
+                                        <input type="text" class="form-control " value="<?php echo $bname; ?>" name="bname" >
+                                        <?php echo $bgErr; ?>
+                                    </div>
+                                    <div class="form-group col-md-2">
                                             <label for="age">Age:</label>
-                                            <input type="text" class="form-control" readonly id="age" onmousemove="FindAge()" name="age" placeholder="Your Age" value>
+                                            <input type="text" class="form-control " readonly id="age" onmousemove="FindAge()" name="age" placeholder="Your Age" value>
                                         </div>
                                     </div>
+
+                                    <br>
+
+                                   
+
+                                   
                                     <div class="form-row">
                                         <div class="form-group col-md-4 ">
                                             <label class="mr-3">Gender:</label>
@@ -385,11 +396,11 @@ if(isset($POST['Logout'])){
                                         </div>
                                         <div class="form-group col-md-4">
                                             <label for="resume">Resume:</label>
-                                            <input type="file" class="form-control-file" id="resume" required>
+                                            <input type="file" class="form-control -file" id="resume" required>
                                         </div>
                                         <div class="form-group col-md-4">
                                             <label for="profile-photo">Profile Photo:</label>
-                                            <input type="file" class="form-control-file" id="profile-photo" required>
+                                            <input type="file" class="form-control -file" id="profile-photo" required>
                                         </div>
                                     </div>
 
@@ -397,6 +408,7 @@ if(isset($POST['Logout'])){
                                 <br>
                                 <button class="btn btn-outline-primary float-right"><a href="./addemp1.php">Next</a></button>
                                 </form>
+          
                             
                         
             <!-- END MAIN CONTENT-->
@@ -404,7 +416,7 @@ if(isset($POST['Logout'])){
         </div>
 
     </div>
-
+    
     <script>
   function FindAge(){
     var day=document.getElementById("dob").value;

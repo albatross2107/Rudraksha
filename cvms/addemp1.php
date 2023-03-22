@@ -187,7 +187,7 @@ if(isset($POST['Logout'])){
         <!-- END HEADER MOBILE-->
 
         <!-- MENU SIDEBAR-->
-        <aside class="menu-sidebar d-none d-lg-block">
+        <aside class="menu-sidebar d-none d-lg-block" style="background-color: #D1D0CE;">
             
             <div class="menu-sidebar__content js-scrollbar1">
                 <nav class="navbar-sidebar">
@@ -227,7 +227,7 @@ if(isset($POST['Logout'])){
         <!-- PAGE CONTAINER-->
         <div class="page-container">
             <!-- HEADER DESKTOP-->
-            <header class="header-desktop">
+            <header class="header-desktop" style="background-color: #A9A9A9;">
                 <div class="section__content section__content--p30">
                     <div class="container-fluid">
                         <div class="header-wrap">
@@ -287,17 +287,17 @@ if(isset($POST['Logout'])){
             <br>
             <br>
             <br>
-            <div class="card login-form mb-0">
-            <div class="card-body pt-4 shadow">                       
+            <div class="card login-form mb-4">
+            <div class="card-body pt-4  justify-content-between ">                       
                                     
-                                <form method="POST" action=" <?php htmlspecialchars($_SERVER['PHP_SELF']) ?>" class="empform">
+                                <form method="POST" action=" <?php htmlspecialchars($_SERVER['PHP_SELF']) ?>" class="empform ">
                                
-                                <h4 class="text-center">Secondary Education Qualification Details</h4>
+                                <h4 class="text-center pb-3 border-bottom">Secondary Education Qualification Details</h4>
                                 <br>
-                                <div class="container">
-                                <div class="row">
-                                    <div class="col-md-6">
-                                    <div class="form-group">
+                            
+                                <div class="row justify-content-center" >
+                                    <div class="col-md-5">
+                                    <div class="form-group" >
                                         <label>Year of Passing:</label>
                                         <select class="form-control">
                                         <option>2020</option>
@@ -308,15 +308,15 @@ if(isset($POST['Logout'])){
                                         </select>
                                     </div>
                                     </div>
-                                    <div class="col-md-6">
+                                    <div class="col-md-5 ">
                                     <div class="form-group">
                                         <label>Qualifying Examination State:</label>
                                         <input type="text" class="form-control">
                                     </div>
                                     </div>
                                 </div>
-                                <div class="row">
-                                    <div class="col-md-6">
+                                <div class="row justify-content-center">
+                                    <div class="col-md-5">
                                     <div class="form-group">
                                         <label>School Board:</label>
                                         <select class="form-control">
@@ -331,19 +331,19 @@ if(isset($POST['Logout'])){
                                         </select>
                                     </div>
                                     </div>
-                                    <div class="col-md-6">
+                                    <div class="col-md-5">
                                     <div class="form-group">
                                         <label>Marks (%):</label>
-                                        <input type="text" class="form-control">
+                                        <input type="text" class="form-control ">
                                     </div>
                                     </div>
                                 </div>
-                                </div>
                                 <br>
-                                <h4 class="text-center">Higher Secondary Qualification Details</h4>
                                 <br>
-                                    <div class="row">
-                                    <div class="col-sm-6">
+                                <h4 class="text-center pb-3 border-bottom">Higher Secondary Qualification Details</h4>
+                                <br>
+                                    <div class="row justify-content-center">
+                                    <div class="col-sm-5">
                                         <div class="form-group">
                                         <label>Year of Passing:</label>
                                         <select class="form-control">
@@ -355,7 +355,7 @@ if(isset($POST['Logout'])){
                                         </select>
                                         </div>
                                     </div>
-                                    <div class="col-sm-6">
+                                    <div class="col-sm-5">
                                         <div class="form-group">
                                         <label>Qualifying Examination State:</label>
                                         <input type="text" class="form-control">
@@ -363,8 +363,8 @@ if(isset($POST['Logout'])){
                                     </div>
                                     </div>
 
-                                    <div class="row">
-                                    <div class="col-sm-6">
+                                    <div class="row justify-content-center">
+                                    <div class="col-sm-5">
                                         <div class="form-group">
                                         <label>School Board:</label>
                                         <select class="form-control">
@@ -379,7 +379,7 @@ if(isset($POST['Logout'])){
                                         </select>
                                         </div>
                                     </div>
-                                    <div class="col-sm-6">
+                                    <div class="col-sm-5">
                                         <div class="form-group">
                                         <label>Marks(%):</label>
                                         <input type="text" class="form-control">
@@ -389,12 +389,12 @@ if(isset($POST['Logout'])){
 
                                 <br>
                                 
-
-                                <h4 class="text-center">Higher Qualification Details</h4>
+                                <br>
+                                <h4 class="text-center pb-3 border-bottom">Higher Qualification Details</h4>
                                 <br>
 
-                                    <div class="row">
-                                        <div class="col-md-6">
+                                    <div class="row justify-content-center">
+                                        <div class="col-md-5">
                                             <div class="form-group">
                                                 <label for="education">Education</label>
                                                 <select class="form-control">
@@ -417,7 +417,7 @@ if(isset($POST['Logout'])){
                                             
                                         </div>
 
-                                        <div class="col-md-6">
+                                        <div class="col-md-5">
 
                                         <div class="form-group ">
                                                 <label for="degree">Degree</label>
@@ -444,13 +444,13 @@ if(isset($POST['Logout'])){
                                         </div>
                                 </div>
                                 <br>
-                                <div class="form-row">
+                                <div class="form-row justify-content-center">
                                 
-                                <div class="form-group col-md-6">
+                                <div class="form-group col-md-5">
                                     <button  class="btn btn-outline-primary float-left"><a href="./addemployee.php">Previous</a></button>
                                 </div>
 
-                                <div class="form-group col-md-6">
+                                <div class="form-group col-md-5">
                                     <button  class="btn btn-outline-primary float-right"><a href="./addemp2.php">Next</a></button> <br>
                                 </div>
 
