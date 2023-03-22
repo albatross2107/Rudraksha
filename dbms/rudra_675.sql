@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 10, 2023 at 04:10 PM
+-- Generation Time: Mar 22, 2023 at 03:15 PM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.1.12
 
@@ -42,6 +42,34 @@ INSERT INTO `admin` (`admin_id`, `admin_password`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `employee`
+--
+
+CREATE TABLE `employee` (
+  `id` int(15) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `gender` varchar(10) DEFAULT NULL,
+  `dob` varchar(255) DEFAULT NULL,
+  `password` varchar(75) NOT NULL,
+  `salary` int(10) NOT NULL,
+  `dp` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `employee`
+--
+
+INSERT INTO `employee` (`id`, `name`, `email`, `gender`, `dob`, `password`, `salary`, `dp`) VALUES
+(13, 'emp1', 'emp1@emp.com', 'Male', '1998-06-25', '1234', 121123, '60df10fa13c124.43381995marco-mons-ROWNIiEV9iM-unsplash.jpg'),
+(14, 'emp2', 'emp2@emp.com', 'Female', '1998-07-09', '1234', 3432423, '60df15c11c4505.59875888marco-mons-ROWNIiEV9iM-unsplash.png'),
+(16, 'test', 'test@gmail.com', 'Male', '1998-06-19', 'asdf', 234, '60e047c12caa19.90869347profile.png'),
+(17, 'Rucha', 'rucha@gmail.com', 'Female', '23-09-1998', 'hello@123', 23000, 'gsgsg'),
+(18, 'Rucha', 'rucha@gmail.com', 'Female', '23-09-1998', 'hello@123', 23000, 'gsgsg');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `feedback`
 --
 
@@ -72,6 +100,54 @@ INSERT INTO `feedback` (`id`, `name`, `age`, `gender`, `phone`, `email`, `teaqua
 (10, 'Asmita', '43', 'Female', '9223488211', 'asmita@123', 'Excellent', 'Perfect', 'Excellent'),
 (11, 'Soham', '39', 'Male', '9876534478', 'soham@123', 'Poor', 'Expensive', 'Average'),
 (12, 'Jaspreet', '23', 'Female', '8765457898', 'jaspreet@123', 'Average', 'Perfect', 'Poor');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `recruitments`
+--
+
+CREATE TABLE `recruitments` (
+  `id` int(11) NOT NULL,
+  `date` datetime NOT NULL,
+  `first_name` varchar(50) NOT NULL,
+  `middle_name` varchar(50) NOT NULL,
+  `last_name` varchar(50) NOT NULL,
+  `dob` varchar(50) NOT NULL,
+  `age` int(50) NOT NULL,
+  `gender` varchar(50) NOT NULL,
+  `email` varchar(50) NOT NULL,
+  `father_name` varchar(50) NOT NULL,
+  `mother_name` varchar(50) NOT NULL,
+  `contact` varchar(50) NOT NULL,
+  `address1` varchar(50) NOT NULL,
+  `address2` varchar(50) NOT NULL,
+  `city` varchar(50) NOT NULL,
+  `pincode` varchar(50) NOT NULL,
+  `state` varchar(50) NOT NULL,
+  `education` varchar(50) NOT NULL,
+  `stream` varchar(50) NOT NULL,
+  `degree` varchar(50) NOT NULL,
+  `board_name` varchar(50) NOT NULL,
+  `college_name` varchar(50) NOT NULL,
+  `uni_name` varchar(50) NOT NULL,
+  `current_company` varchar(50) NOT NULL,
+  `designation` varchar(50) NOT NULL,
+  `experience` varchar(50) NOT NULL,
+  `vaccination` varchar(50) NOT NULL,
+  `remarks` varchar(50) NOT NULL,
+  `resume` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `recruitments`
+--
+
+INSERT INTO `recruitments` (`id`, `date`, `first_name`, `middle_name`, `last_name`, `dob`, `age`, `gender`, `email`, `father_name`, `mother_name`, `contact`, `address1`, `address2`, `city`, `pincode`, `state`, `education`, `stream`, `degree`, `board_name`, `college_name`, `uni_name`, `current_company`, `designation`, `experience`, `vaccination`, `remarks`, `resume`) VALUES
+(1, '2023-03-21 20:26:56', 'Rahul', '', '', '', 0, 'Select', '', '', '', '', '', '', '', '', '', 'Select', 'Select', 'Select', 'Select', '', '', '', 'Select', 'Select', '', 'ytku6', 'Assignment 17.docx'),
+(2, '2023-03-21 20:30:25', 'Rahul', '', '', '', 0, 'Select', '', '', '', '', '', '', '', '', '', 'Select', 'Select', 'Select', 'Select', '', '', '', 'Select', 'Select', '', 'ytku6', 'Assignment 17.docx'),
+(3, '2023-03-21 23:01:54', 'Rahul', '', '', '', 0, 'Select', '', '', '', '', '', '', '', '', '', 'Select', 'Select', 'Select', 'Select', '', '', '', 'Select', 'Select', '', 'ytku6', 'Assignment 17.docx'),
+(4, '2023-03-22 10:54:54', 'Seema', 'Manik', 'Desai', '1988-07-21', 34, 'Female', 'seema@gmail.com', 'Manik', 'sayli', '989897897', 'jhvjvjg', 'mvjkg', 'ksagfiua', '8768758', 'Maharashtra', 'Graduate', 'Science', 'Bsc', 'Central Board of Secondary Education (CBSE)', 'hvhkvkkh', 'hvhjvgc', 'hvjgvjg', 'Receptionist', '0-2 Years', 'on', 'nbkhhhhhhh', 'ass2.cpp');
 
 -- --------------------------------------------------------
 
@@ -115,9 +191,21 @@ INSERT INTO `survey` (`id`, `date`, `name`, `age`, `gender`, `phone_no`, `email`
 --
 
 --
+-- Indexes for table `employee`
+--
+ALTER TABLE `employee`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `feedback`
 --
 ALTER TABLE `feedback`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `recruitments`
+--
+ALTER TABLE `recruitments`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -131,10 +219,22 @@ ALTER TABLE `survey`
 --
 
 --
+-- AUTO_INCREMENT for table `employee`
+--
+ALTER TABLE `employee`
+  MODIFY `id` int(15) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+
+--
 -- AUTO_INCREMENT for table `feedback`
 --
 ALTER TABLE `feedback`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+
+--
+-- AUTO_INCREMENT for table `recruitments`
+--
+ALTER TABLE `recruitments`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `survey`
