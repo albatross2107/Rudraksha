@@ -187,7 +187,7 @@ if(isset($POST['Logout'])){
         <!-- END HEADER MOBILE-->
 
         <!-- MENU SIDEBAR-->
-        <aside class="menu-sidebar d-none d-lg-block" style="background-color: #D1D0CE;">
+        <aside class="menu-sidebar d-none d-lg-block" style="background-color: #E0FFFF;">
             
             <div class="menu-sidebar__content js-scrollbar1">
                 <nav class="navbar-sidebar">
@@ -227,7 +227,7 @@ if(isset($POST['Logout'])){
         <!-- PAGE CONTAINER-->
         <div class="page-container">
             <!-- HEADER DESKTOP-->
-            <header class="header-desktop" style="background-color: #A9A9A9;">
+            <header class="header-desktop" style="background-color: #ADD8E6;">
                 <div class="section__content section__content--p30">
                     <div class="container-fluid">
                         <div class="header-wrap">
@@ -291,17 +291,31 @@ if(isset($POST['Logout'])){
             <div class="card-body pt-4 justify-content-between">                       
                                     
                                 <form method="POST" action=" <?php htmlspecialchars($_SERVER['PHP_SELF']) ?>" class="empform">
-                                <h4 class="text-center pb-3 border-bottom">Work Experience</h4>
+                                <h4 class="text-center text-info pb-3 border-bottom">Work Experience</h4>
                                 <br>
+                                <div id="workExp">
+                                <div id="workExp1">
                                     <div class="row justify-content-center">
-                                    <div class="col-md-5">
+                                        <div class="col-md-5">
                                         <div class="form-group">
-                                        <label for="currentcompany">Company Name</label>
-                                        <input type="text" class="form-control" id="currentcompany" placeholder="Enter your Company Name" value>
+                                            <label for="currentcompany">Company Name:</label>
+                                            <input type="text" class="form-control" id="currentcompany" placeholder="Enter your Company Name" value>
                                         </div>
+                                        </div>
+                                       
+                                        <div class="col-md-5">
                                         <div class="form-group">
-                                        <label for="designation">Designation</label>
-                                        <select id="designation" class="form-control">
+                                            <label for="department">Department:</label>
+                                            <input type="text" class="form-control" id="department" placeholder="Enter your Department" value>
+                                        </div>
+                                        </div>
+                                    </div>
+                                    <div class="row justify-content-center">
+                                        
+                                        <div class="col-md-3">
+                                        <div class="form-group">
+                                            <label for="designation">Designation:</label>
+                                            <select id="designation" class="form-control">
                                             <option>Select</option>
                                             <option>NA</option>
                                             <option>Branch Manager</option>
@@ -314,17 +328,13 @@ if(isset($POST['Logout'])){
                                             <option>Receptionist</option>
                                             <option>Guard</option>
                                             <option>Support Staff</option>
-                                        </select>
+                                            </select>
                                         </div>
-                                        <div class="form-group">
-                                        <label for="department">Department</label>
-                                        <input type="text" class="form-control" id="department" placeholder="Enter your Department" value>
                                         </div>
-                                    </div>
-                                    <div class="col-md-5">
+                                        <div class="col-md-3">
                                         <div class="form-group">
-                                        <label for="experience">Experience</label>
-                                        <select id="experience" class="form-control">
+                                            <label for="experience">Experience:</label>
+                                            <select id="experience" class="form-control">
                                             <option>Select</option>
                                             <option>No Experience</option>
                                             <option>0-2 Years</option>
@@ -333,84 +343,250 @@ if(isset($POST['Logout'])){
                                             <option>6-8 Years</option>
                                             <option>8-10 Years</option>
                                             <option>10+ Years</option>
-                                        </select>
+                                            </select>
                                         </div>
-                                        <div class="form-group">
-                                        <label for="package">Package</label>
-                                        <input type="text" class="form-control" id="package" placeholder="Enter your Salary Package" value>
                                         </div>
+                                        <div class="col-md-2">
                                         <div class="form-group">
-                                        <label for="salary">Take Off Salary</label>
-                                        <input type="text" class="form-control" id="salary" placeholder="Enter your Salary" value>
+                                            <label for="package">Package:</label>
+                                            <input type="text" class="form-control" id="package" placeholder="Enter your Salary Package" value>
+                                        </div>
+                                        </div>
+                                        <div class="col-md-2">
+                                        <div class="form-group">
+                                            <label for="salary">Take Home Salary:</label>
+                                            <input type="text" class="form-control" id="salary" placeholder="Enter your Salary" value>
+                                        </div>
                                         </div>
                                     </div>
-                                </div>
 
-                                <br>
-                                <br>
+                                    <div class="form-row justify-content-center">
                                 
-                                <h4 class="text-center pb-3 border-bottom">Bank Details</h4>
-                                <br>
-                                <div class="row justify-content-center">
-                                    <div class="col-md-5">
-                                    
-                                    <div class="form-group">
-                                        <label for="accountType">Account Type</label>
-                                        <select name="account-type" class="form-control">
-                                        <option value="">Select Account Type</option>
-                                        <option value="savings">Savings Account</option>
-                                        <option value="Salary">Salary Account</option>
-                                        <option value="checking">Checking Account</option>
-                                        <option value="credit">Credit Card Account</option>
-                                        <option value="loan">Loan Account</option>
-                                        </select>
-
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="bankName">Bank Name</label>
-                                        <select id="bankName" class="form-control">
-                                        <option>Select</option>
-                                        <option value="bank-of-baroda">Bank of Baroda</option>
-                                        <option value="bank-of-india">Bank of India</option>
-                                        <option value="bank-of-maharashtra">Bank of Maharashtra</option>
-                                        <option value="canara-bank">Canara Bank</option>
-                                        <option value="central-bank-of-india">Central Bank of India</option>
-                                        <option value="indian-bank">Indian Bank</option>
-                                        <option value="indian-overseas-bank">Indian Overseas Bank</option>
-                                        <option value="punjab-and-sind-bank">Punjab and Sind Bank</option>
-                                        <option value="punjab-national-bank">Punjab National Bank</option>
-                                        <option value="state-bank-of-india">State Bank of India</option>
-                                        <option value="uco-bank">UCO Bank</option>
-                                        <option value="union-bank-of-india">Union Bank of India</option>
-                                        </select>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="accountNumber">Account Number</label>
-                                        <input type="text" class="form-control" id="accountNumber" placeholder="Enter your account number" value>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="upiNumber">UPI Number</label>
-                                        <input type="text" class="form-control" id="upiNumber" placeholder="Enter your UPI Number" value>
+                                    <div class="form-group col-md-5">
                                         
                                     </div>
+
+                                    <div class="form-group col-md-5">
+                                        <button  class="btn btn-outline-primary btn-sm float-right remove-Exp" type="button">Remove</button> 
+                                        <button  class="btn btn-outline-primary btn-sm float-right add-Exp" type="button">&nbsp; &nbsp;  Add &nbsp; &nbsp;  </button>
                                     </div>
-                                    <div class="col-md-5">
-                                    <div class="form-group">
-                                        <label for="accountHolderName">Account Holder Name</label>
-                                        <input type="text" class="form-control" id="accountHolderName" placeholder="Enter account holder name" value>
+
                                     </div>
-                                    <div class="form-group">
-                                        <label for="branchName">Branch Name</label>
-                                        <input type="text" class="form-control" id="branchName" placeholder="Enter your Bank Branch" value>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="ifscCode">IFSC Code</label>
-                                        <input type="text" class="form-control" id="ifscCode" placeholder="Enter your IFSC Code" value>
+
+
                                     </div>
                                     
-                                    </div>
-                                
                                 </div>
+
+                                <br>
+                                <br>
+                                
+                                <h4 class="text-center text-info pb-3 border-bottom">Bank Details:</h4>
+                                <br>
+                                <div class="row justify-content-center">
+                                    <div class="col-md-3">
+                                        <div class="form-group">
+                                            <label for="accountType">Account Type:</label>
+                                            <select name="account-type" class="form-control">
+                                                <option value="">Select Account Type</option>
+                                                <option value="savings">Savings Account</option>
+                                                <option value="Salary">Salary Account</option>
+                                                <option value="checking">Checking Account</option>
+                                                <option value="credit">Credit Card Account</option>
+                                                <option value="loan">Loan Account</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+                                            <label for="accountHolderName">Account Holder Name:</label>
+                                            <input type="text" class="form-control" id="accountHolderName" placeholder="Enter account holder name" value>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="form-group">
+                                            <label for="accountNumber">Account Number:</label>
+                                            <input type="text" class="form-control" id="accountNumber" placeholder="Enter your account number" value>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row justify-content-center">
+                                    
+                                    <div class="col-md-3">
+                                        <div class="form-group">
+                                            <label for="bankName">Bank Name:</label>
+                                            <select id="bankName" class="form-control">
+                                                <option>Select</option>
+                                                <!--public sector banks-->
+                                                <option value="bank-of-baroda">Bank of Baroda</option>
+                                                <option value="bank-of-india">Bank of India</option>
+                                                <option value="bank-of-maharashtra">Bank of Maharashtra</option>
+                                                <option value="canara-bank">Canara Bank</option>
+                                                <option value="central-bank-of-india">Central Bank of India</option>
+                                                <option value="indian-bank">Indian Bank</option>
+                                                <option value="indian-overseas-bank">Indian Overseas Bank</option>
+                                                <option value="punjab-and-sind-bank">Punjab and Sind Bank</option>
+                                                <option value="punjab-national-bank">Punjab National Bank</option>
+                                                <option value="state-bank-of-india">State Bank of India</option>
+                                                <option value="uco-bank">UCO Bank</option>
+                                                <option value="union-bank-of-india">Union Bank of India</option>
+                                                <!--private sector banks-->
+                                                <option value="HDFC Bank">HDFC Bank</option>
+                                                <option value="ICICI Bank">ICICI Bank</option>
+                                                <option value="Axis Bank">Axis Bank</option>
+                                                <option value="Kotak Mahindra Bank">Kotak Mahindra Bank</option>
+                                                <option value="IndusInd Bank">IndusInd Bank</option>
+                                                <option value="Yes Bank">Yes Bank</option>
+                                                <option value="IDFC First Bank">IDFC First Bank</option>
+                                                <option value="Bandhan Bank">Bandhan Bank</option>
+                                                <option value="RBL Bank">RBL Bank</option>
+                                                <option value="Federal Bank">Federal Bank</option>
+                                                <option value="South Indian Bank">South Indian Bank</option>
+                                                <option value="City Union Bank">City Union Bank</option>
+                                                <option value="Karur Vysya Bank">Karur Vysya Bank</option>
+                                                <option value="Tamilnad Mercantile Bank">Tamilnad Mercantile Bank</option>
+                                                <option value="DCB Bank">DCB Bank</option>
+                                                <option value="Lakshmi Vilas Bank">Lakshmi Vilas Bank</option>
+                                                <option value="Jammu &amp; Kashmir Bank">Jammu &amp; Kashmir Bank</option>
+                                                <option value="Karnataka Bank">Karnataka Bank</option>
+                                                <option value="Nainital Bank">Nainital Bank</option>
+                                                <option value="AU Small Finance Bank">AU Small Finance Bank</option>
+                                                <option value="Equitas Small Finance Bank">Equitas Small Finance Bank</option>
+                                                <option value="Ujjivan Small Finance Bank">Ujjivan Small Finance Bank</option>
+                                                <option value="ESAF Small Finance Bank">ESAF Small Finance Bank</option>
+                                                <option value="Fincare Small Finance Bank">Fincare Small Finance Bank</option>
+                                                <option value="Suryoday Small Finance Bank">Suryoday Small Finance Bank</option>
+                                                <option value="North East Small Finance Bank">North East Small Finance Bank</option>
+                                                <option value="Jana Small Finance Bank">Jana Small Finance Bank</option>
+                                                <option value="Capital Small Finance Bank">Capital Small Finance Bank</option>
+                                                <option value="Utkarsh Small Finance Bank">Utkarsh Small Finance Bank</option>
+                                                <option value="India Post Payments Bank">India Post Payments Bank</option>
+                                                <!--State co-oparative banks-->
+                                                <option value="jharkhand">Jharkhand State Cooperative Bank Ltd.</option>
+                                                <option value="kerala">The Kerala State Co-operative Bank Ltd.</option>
+                                                <option value="andaman">The Andaman and Nicobar State Co-operative Bank Ltd.</option>
+                                                <option value="andhra">The Andhra Pradesh State Co-operative Bank Ltd.</option>
+                                                <option value="arunachal">The Arunachal Pradesh State co-operative Apex Bank Ltd.</option>
+                                                <option value="assam">The Assam Co-operative Apex Bank Ltd.</option>
+                                                <option value="bihar">The Bihar State Co-operative Bank Ltd.</option>
+                                                <option value="chandigarh">The Chandigarh State Co-operative Bank Ltd.</option>
+                                                <option value="chhattisgarh1">The Chhattisgarh Rajya Sahakari Bank.</option>
+                                                <option value="chhattisgarh2">The Chhattisgarh RajyaSahakari Bank Maryadit</option>
+                                                <option value="delhi">The Delhi State Co-operative Bank Ltd.</option>
+                                                <option value="goa">The Goa State Co-operative Bank Ltd.</option>
+                                                <option value="gujarat">The Gujarat State Co-operative Bank Ltd.</option>
+                                                <option value="haryana">The Haryana State Co-operative Apex Bank Ltd.</option>
+                                                <option value="himachal">The Himachal Pradesh State Co-operative Bank Ltd.</option>
+                                                <option value="jammu">The Jammu and Kashmir State Co-operative Bank Ltd.</option>
+                                                <option value="karnataka">The Karnataka State Co-operative Apex Bank Ltd.</option>
+                                                <option value="madhya">The Madhya Pradesh Rajya Sahakari Bank Maryadit</option>
+                                                <option value="maharashtra">The Maharashtra State Co-operative Bank Ltd.</option>
+                                                <option value="manipur">The Manipur State Co-operative Bank Ltd.</option>
+                                                <option value="meghalaya">The Meghalaya Co-operative Apex Bank Ltd.</option>
+                                                <option value="mizoram">The Mizoram Co-operative Apex Bank Ltd.</option>
+                                                <option value="nagaland">The Nagaland State Co-operative Bank Ltd.</option>
+                                                <option value="orissa">The Orissa State Co-operative Bank Ltd.</option>
+                                                <option value="pondichery">The Pondichery State Co-operative Bank Ltd.</option>
+                                                <option value="punjab">The Punjab State Co-operative Bank Ltd.</option>
+                                                <option value="rajasthan">The Rajasthan State Co-operative Bank Ltd.</option>
+                                                <option value="sikkim">The Sikkim State Co-operative Bank Ltd.</option>
+                                                <option value="tamil">The Tamil Nadu State Apex Co-operative Bank Ltd.</option>
+                                                <option value="telangana">The Telangana State Cooperative Apex Bank Ltd.</option>
+                                                <option value="tripura">The Tripura State Co-operative Bank Ltd.</option>
+                                                <option value="uttar">The Uttar Pradesh Co-operative Bank Ltd.</option>
+                                                <option value="uttaranchal">The Uttaranchal Rajya Sahakari Bank Ltd.</option>
+                                                <option value="west">The West Bengal State Co-operative Bank Ltd.</option>
+
+                                                <!--Urban co-oparative banks-->
+                                                <option value="Abhyudaya Co-operative Bank Ltd.">Abhyudaya Co-operative Bank Ltd.</option>
+                                                <option value="Ahmedabad Mercantile Co-Op Bank Ltd.">Ahmedabad Mercantile Co-Op Bank Ltd.</option>
+                                                <option value="Amanath Co-operative Bank Ltd.">Amanath Co-operative Bank Ltd.</option>
+                                                <option value="Andhra Pradesh Mahesh Co-Op Urban Bank Ltd.">Andhra Pradesh Mahesh Co-Op Urban Bank Ltd.</option>
+                                                <option value="Bassein Catholic Co-operative Bank Ltd.">Bassein Catholic Co-operative Bank Ltd.</option>
+                                                <option value="Bharat Co-operative Bank (Mumbai) Ltd.">Bharat Co-operative Bank (Mumbai) Ltd.</option>
+                                                <option value="Bharati Sahakari Bank Limited.">Bharati Sahakari Bank Limited.</option>
+                                                <option value="Bombay Mercantile Co-operative Bank Limited">Bombay Mercantile Co-operative Bank Limited</option>
+                                                <option value="Buldana Urban Cooperative Credit Society">Buldana Urban Cooperative Credit Society</option>
+                                                <option value="Charminar Co-operative Urban Bank Ltd.">Charminar Co-operative Urban Bank Ltd.</option>
+                                                <option value="Citizen Credit Co-operative Bank Ltd.">Citizen Credit Co-operative Bank Ltd.</option>
+                                                <option value="Cosmos Co-operative Bank Ltd.">Cosmos Co-operative Bank Ltd.</option>
+                                                <option value="Dombivli Nagari Sahakari Bank Ltd.">Dombivli Nagari Sahakari Bank Ltd.</option>
+                                                <option value="Darrusalam Co-operative Bank Ltd.">Darrusalam Co-operative Bank Ltd.</option>
+                                                <option value="Goa Urban Co-operative Bank Limited.">Goa Urban Co-operative Bank Limited.</option>
+                                                <option value="Gopinath Patil Parsik Janata Sahakari Bank Ltd.">Gopinath Patil Parsik Janata Sahakari Bank Ltd.</option>
+                                                <option value="Greater Bombay Co-operative Bank Limited">Greater Bombay Co-operative Bank Limited</option>
+                                                <option value="Indian Mercantile Co-operative Bank Ltd.">Indian Mercantile Co-operative Bank Ltd.</option>
+                                                <option value="Jalgaon Janata Sahakari Bank Ltd.">Jalgaon Janata Sahakari Bank Ltd.</option>
+                                                <option value="Janakalyan Sahakari Bank Ltd.">Janakalyan Sahakari Bank Ltd.</option>
+                                                <option value="Janalaxmi Co-operative Bank Ltd.">Janalaxmi Co-operative Bank Ltd.</option>
+                                                <option value="Janata Sahakari Bank Ltd.">Janata Sahakari Bank Ltd.</option>
+                                                <option value="Kallappanna Awade Ichalkaranji Janata Sahakari Bank Ltd.">Kallappanna Awade Ichalkaranji Janata Sahakari Bank Ltd.</option>
+                                                <option value="Kalupur Commercial Co-Op. Bank Ltd.">Kalupur Commercial Co-Op. Bank Ltd.</option>
+                                                <option value="Kalyan Janata Sahakari Bank Ltd.">Kalyan Janata Sahakari Bank Ltd.</option>
+                                                <option value="Karad Urban Co-operative Bank Ltd.">Karad Urban Co-operative Bank Ltd.</option>
+                                                <option value="Madhavpura Mercantile Cooperative Bank Ltd.">Madhavpura Mercantile Cooperative Bank Ltd.</option>
+                                                <option value="Mahanagar Co-operative Bank Ltd.">Mahanagar Co-operative Bank Ltd.</option>
+                                                <option value="Mapusa Urban Co-operative Bank of Goa Ltd.">Mapusa Urban Co-operative Bank of Goa Ltd.</option>
+                                                <option value="Mehsana Urban Co-Op Bank Ltd.">Mehsana Urban Co-Op Bank Ltd.</option>
+                                                <option value="Nagar Urban Co-operative Bank Ltd.">Nagar Urban Co-operative Bank Ltd.</option>
+                                                <option value="Nagpur Nagrik Sahakari Bank Ltd.">Nagpur Nagrik Sahakari Bank Ltd.</option>
+                                                <option value="Nasik Merchant's Co-operative Bank Ltd.">Nasik Merchant's Co-operative Bank Ltd.</option>
+                                                <option value="New India Co-operative Bank Ltd.">New India Co-operative Bank Ltd.</option>
+                                                <option value="NKGSB Co-operative Bank Ltd.">NKGSB Co-operative Bank Ltd.</option>
+                                                <option value="Nutan Nagarik Sahakari Bank Ltd.">Nutan Nagarik Sahakari Bank Ltd.</option>
+                                                <option value="Pravara Sahakari Bank Ltd.">Pravara Sahakari Bank Ltd.</option>
+                                                <option value="Punjab and Maharashtra Co-operative Bank Ltd.">Punjab and Maharashtra Co-operative Bank Ltd.</option>
+                                                <option value="Rajkot Nagrik Sahakari Bank Ltd.">Rajkot Nagrik Sahakari Bank Ltd.</option>
+                                                <option value="Rohtak Co-Operative Bank Ltd.">Rohtak Co-Operative Bank Ltd.</option>
+                                                <option value="Rupee Co-operative Bank Ltd.">Rupee Co-operative Bank Ltd.</option>
+                                                <option value="Sangli Urban Co-operative Bank Ltd.">Sangli Urban Co-operative Bank Ltd.</option>
+                                                <option value="Saraswat Co-operative Bank Ltd.">Saraswat Co-operative Bank Ltd.</option>
+                                                <option value="Sardar Bhiladwala Pardi Peoples Coop Bank Ltd.">Sardar Bhiladwala Pardi Peoples Coop Bank Ltd.</option>
+                                                <option value="Shamrao Vithal Co-operative Bank Ltd.">Shamrao Vithal Co-operative Bank Ltd.</option>
+                                                <option value="Shikshak Sahakari Bank Ltd.">Shikshak Sahakari Bank Ltd.</option>
+                                                <option value="Solapur Janata Sahakari Bank Ltd.">Solapur Janata Sahakari Bank Ltd.</option>
+                                                <option value="The Sonipat Urban Co-operative Bank Ltd.">The Sonipat Urban Co-operative Bank Ltd.</option>
+                                                <option value="Surat Peoples Coop Bank Ltd.">Surat Peoples Coop Bank Ltd.</option>
+                                                <option value="Thane Bharat Sahakari Bank Ltd.">Thane Bharat Sahakari Bank Ltd.</option>
+                                                <option value="Thane Janata Sahakari Bank">Thane Janata Sahakari Bank</option>
+                                                <option value="The Akola Janata Commercial Co-operative Bank Ltd.">The Akola Janata Commercial Co-operative Bank Ltd.</option>
+                                                <option value="The Akola Urban Co-operative Bank Ltd.">The Akola Urban Co-operative Bank Ltd.</option>
+                                                <option value="The Panipat Urban Co-operative Bank Ltd.">The Panipat Urban Co-operative Bank Ltd.</option>
+                                                <option value="The Kapol Co-operative Bank Ltd.">The Kapol Co-operative Bank Ltd.</option>
+                                                <option value="The Khamgaon Urban Co-operative Bank Ltd.">The Khamgaon Urban Co-operative Bank Ltd.</option>
+                                                <option value="Vasavi Coop Urban Bank Limited.">Vasavi Coop Urban Bank Limited.</option>
+                                                <option value="Vidyasagar cooperative bank limited, midnapore.">Vidyasagar cooperative bank limited, midnapore.</option>
+                                                <option value="Zoroastrian Co-operative Bank Ltd.">Zoroastrian Co-operative Bank Ltd.</option>
+
+
+
+                                            </select>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="col-md-3">
+                                        <div class="form-group">
+                                            <label for="branchName">Branch Name:</label>
+                                            <input type="text" class="form-control" id="branchName" placeholder="Enter your Bank Branch" value>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-2">
+                                        <div class="form-group">
+                                            <label for="upiNumber">UPI Number:</label>
+                                            <input type="text" class="form-control" id="upiNumber" placeholder="Enter your UPI Number" value>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <div class="form-group">
+                                            <label for="ifscCode">IFSC Code:</label>
+                                            <input type="text" class="form-control" id="ifscCode" placeholder="Enter your IFSC Code" value>
+                                        </div>
+                                    </div>
+                                </div>
+                               
+
 
                                
                                   </form>
@@ -472,6 +648,103 @@ if(isset($POST['Logout'])){
         }, function() {
             $(this).find('a').css('color', '');
         });
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            // Add education details
+            $(document).on("click", ".add-Exp", function() {
+                var html = `<div id="workExp1">
+                                    <h4 class="text-center text-info pb-3 border-bottom"></h4>
+                                    <br>
+                                    <div class="row justify-content-center">
+                                        <div class="col-md-5">
+                                        <div class="form-group">
+                                            <label for="currentcompany">Company Name:</label>
+                                            <input type="text" class="form-control" id="currentcompany" placeholder="Enter your Company Name" value>
+                                        </div>
+                                        </div>
+                                       
+                                        <div class="col-md-5">
+                                        <div class="form-group">
+                                            <label for="department">Department:</label>
+                                            <input type="text" class="form-control" id="department" placeholder="Enter your Department" value>
+                                        </div>
+                                        </div>
+                                    </div>
+                                    <div class="row justify-content-center">
+                                        
+                                        <div class="col-md-3">
+                                        <div class="form-group">
+                                            <label for="designation">Designation:</label>
+                                            <select id="designation" class="form-control">
+                                            <option>Select</option>
+                                            <option>NA</option>
+                                            <option>Branch Manager</option>
+                                            <option>Custom Manager</option>
+                                            <option>Operation Manager</option>
+                                            <option>Admin Manager</option>
+                                            <option>Sales Manager</option>
+                                            <option>Relationship Manager</option>
+                                            <option>HR Manager</option>
+                                            <option>Receptionist</option>
+                                            <option>Guard</option>
+                                            <option>Support Staff</option>
+                                            </select>
+                                        </div>
+                                        </div>
+                                        <div class="col-md-3">
+                                        <div class="form-group">
+                                            <label for="experience">Experience:</label>
+                                            <select id="experience" class="form-control">
+                                            <option>Select</option>
+                                            <option>No Experience</option>
+                                            <option>0-2 Years</option>
+                                            <option>2-4 Years</option>
+                                            <option>4-6 Years</option>
+                                            <option>6-8 Years</option>
+                                            <option>8-10 Years</option>
+                                            <option>10+ Years</option>
+                                            </select>
+                                        </div>
+                                        </div>
+                                        <div class="col-md-2">
+                                        <div class="form-group">
+                                            <label for="package">Package:</label>
+                                            <input type="text" class="form-control" id="package" placeholder="Enter your Salary Package" value>
+                                        </div>
+                                        </div>
+                                        <div class="col-md-2">
+                                        <div class="form-group">
+                                            <label for="salary">Take Home Salary:</label>
+                                            <input type="text" class="form-control" id="salary" placeholder="Enter your Salary" value>
+                                        </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-row justify-content-center">
+                                
+                                    <div class="form-group col-md-5">
+                                       
+                                    </div>
+
+                                    <div class="form-group col-md-5">
+                                    
+                                        <button  class="btn btn-outline-primary btn-sm float-right remove-Exp" type="button">Remove</button>
+                                        <button  class="btn btn-outline-primary btn-sm float-right add-Exp" type="button">&nbsp; &nbsp;  Add &nbsp; &nbsp;</button>
+                                    </div>
+
+                                    </div>
+                                    </div>`
+                            $("#workExp").append(html);
+            });
+
+            // Remove education details
+            $(document).on("click", ".remove-Exp", function() {
+                $(this).closest("#workExp1").remove();
+            });
+        });
+        
     </script>
 
 </body>

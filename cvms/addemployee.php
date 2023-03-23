@@ -200,7 +200,7 @@ if(isset($POST['Logout'])){
         <!-- END HEADER MOBILE-->
 
         <!-- MENU SIDEBAR-->
-        <aside class="menu-sidebar d-none d-lg-block" style="background-color: #D1D0CE;" >
+        <aside class="menu-sidebar d-none d-lg-block" style="background-color: #E0FFFF;" >
             
             <div class="menu-sidebar__content js-scrollbar1" >
                 <nav class="navbar-sidebar" >
@@ -236,7 +236,7 @@ if(isset($POST['Logout'])){
         <!-- PAGE CONTAINER-->
         <div class="page-container">
             <!-- HEADER DESKTOP-->
-            <header class="header-desktop" style="background-color: #A9A9A9;">
+            <header class="header-desktop" style="background-color: #ADD8E6;">
                 <div class="section__content section__content--p30">
                     <div class="container-fluid">
                         <div class="header-wrap">
@@ -300,7 +300,7 @@ if(isset($POST['Logout'])){
                 
 
 
-                                <h4 class="text-center pb-3" style="border-bottom: 1px solid black;">Personal Details</h4>
+                                <h4 class="text-center text-info pb-3" style="border-bottom: 1px solid black;">Personal Details</h4>
 
 
                                     <br>
@@ -362,7 +362,18 @@ if(isset($POST['Logout'])){
                                     </div>
                                     <div class="form-group col-md-2 ">
                                         <label for="bname">Blood Group:</label>
-                                        <input type="text" class="form-control " value="<?php echo $bname; ?>" name="bname" >
+                                        <select class="form-control"value="<?php echo $bname; ?>" name="bname">
+                                            <option>Select</option>
+                                            <option>NA</option>
+                                            <option>A+</option>
+                                            <option>A-</option>
+                                            <option>B+</option>
+                                            <option>B-</option>
+                                            <option>O+</option>
+                                            <option>O-</option>
+                                            <option>AB+</option>
+                                            <option>AB-</option>
+                                        </select>
                                         <?php echo $bgErr; ?>
                                     </div>
                                     <div class="form-group col-md-2">
@@ -396,11 +407,11 @@ if(isset($POST['Logout'])){
                                         </div>
                                         <div class="form-group col-md-4">
                                             <label for="resume">Resume:</label>
-                                            <input type="file" class="form-control -file" id="resume" required>
+                                            <input type="file" class="form-control-file" id="resume" required>
                                         </div>
                                         <div class="form-group col-md-4">
                                             <label for="profile-photo">Profile Photo:</label>
-                                            <input type="file" class="form-control -file" id="profile-photo" required>
+                                            <input type="file" class="form-control-file" id="profile-photo" required>
                                         </div>
                                     </div>
 

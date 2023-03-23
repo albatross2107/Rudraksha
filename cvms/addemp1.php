@@ -187,7 +187,7 @@ if(isset($POST['Logout'])){
         <!-- END HEADER MOBILE-->
 
         <!-- MENU SIDEBAR-->
-        <aside class="menu-sidebar d-none d-lg-block" style="background-color: #D1D0CE;">
+        <aside class="menu-sidebar d-none d-lg-block" style="background-color: #E0FFFF;">
             
             <div class="menu-sidebar__content js-scrollbar1">
                 <nav class="navbar-sidebar">
@@ -227,7 +227,7 @@ if(isset($POST['Logout'])){
         <!-- PAGE CONTAINER-->
         <div class="page-container">
             <!-- HEADER DESKTOP-->
-            <header class="header-desktop" style="background-color: #A9A9A9;">
+            <header class="header-desktop" style="background-color: #ADD8E6;">
                 <div class="section__content section__content--p30">
                     <div class="container-fluid">
                         <div class="header-wrap">
@@ -292,135 +292,32 @@ if(isset($POST['Logout'])){
                                     
                                 <form method="POST" action=" <?php htmlspecialchars($_SERVER['PHP_SELF']) ?>" class="empform ">
                                
-                                <h4 class="text-center pb-3 border-bottom">Secondary Education Qualification Details</h4>
-                                <br>
-                            
-                                <div class="row justify-content-center" >
-                                    <div class="col-md-5">
-                                    <div class="form-group" >
-                                        <label>Year of Passing:</label>
-                                        <select class="form-control">
-                                        <option>2020</option>
-                                        <option>2019</option>
-                                        <option>2018</option>
-                                        <option>2017</option>
-                                        <option>2016</option>
-                                        </select>
-                                    </div>
-                                    </div>
-                                    <div class="col-md-5 ">
-                                    <div class="form-group">
-                                        <label>Qualifying Examination State:</label>
-                                        <input type="text" class="form-control">
-                                    </div>
-                                    </div>
-                                </div>
-                                <div class="row justify-content-center">
-                                    <div class="col-md-5">
-                                    <div class="form-group">
-                                        <label>School Board:</label>
-                                        <select class="form-control">
-                                        <option>Select</option>
-                                        <option>State Boards</option>
-                                        <option>Central Board of Secondary Education (CBSE)</option>
-                                        <option>Indian Certificate of Secondary Education (ICSE)</option>
-                                        <option>Council for the Indian School Certificate Examination (CISCE)</option>
-                                        <option>National Institute of Open Schooling (NIOS)</option>
-                                        <option>International Baccalaureate (IB)</option>
-                                        <option>Cambridge International Examinations (CIE)</option>
-                                        </select>
-                                    </div>
-                                    </div>
-                                    <div class="col-md-5">
-                                    <div class="form-group">
-                                        <label>Marks (%):</label>
-                                        <input type="text" class="form-control ">
-                                    </div>
-                                    </div>
-                                </div>
-                                <br>
-                                <br>
-                                <h4 class="text-center pb-3 border-bottom">Higher Secondary Qualification Details</h4>
-                                <br>
-                                    <div class="row justify-content-center">
-                                    <div class="col-sm-5">
-                                        <div class="form-group">
-                                        <label>Year of Passing:</label>
-                                        <select class="form-control">
-                                            <option>2020</option>
-                                            <option>2019</option>
-                                            <option>2018</option>
-                                            <option>2017</option>
-                                            <option>2016</option>
-                                        </select>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-5">
-                                        <div class="form-group">
-                                        <label>Qualifying Examination State:</label>
-                                        <input type="text" class="form-control">
-                                        </div>
-                                    </div>
-                                    </div>
-
-                                    <div class="row justify-content-center">
-                                    <div class="col-sm-5">
-                                        <div class="form-group">
-                                        <label>School Board:</label>
-                                        <select class="form-control">
-                                            <option>Select</option>
-                                            <option>State Boards</option>
-                                            <option>Central Board of Secondary Education (CBSE)</option>
-                                            <option>Indian Certificate of Secondary Education (ICSE)</option>
-                                            <option>Council for the Indian School Certificate Examination (CISCE)</option>
-                                            <option>National Institute of Open Schooling (NIOS)</option>
-                                            <option>International Baccalaureate (IB)</option>
-                                            <option>Cambridge International Examinations (CIE)</option>
-                                        </select>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-5">
-                                        <div class="form-group">
-                                        <label>Marks(%):</label>
-                                        <input type="text" class="form-control">
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <br>
                                 
                                 <br>
-                                <h4 class="text-center pb-3 border-bottom">Higher Qualification Details</h4>
+                                <h4 class="text-center pb-3 text-info border-bottom">Higher Qualification Details</h4>
                                 <br>
 
-                                    <div class="row justify-content-center">
-                                        <div class="col-md-5">
-                                            <div class="form-group">
-                                                <label for="education">Education</label>
+                                <div id="education-details">
+                                <div id="education-details1">
+                                
+
+                                <div class="row justify-content-center" >
+                                    
+                                    <div class="col-md-3 ">
+                                        <div class="form-group">
+                                            <label for="education">Education:</label>
                                                 <select class="form-control">
                                                     <option>Select</option>
                                                     <option>Under-Graduate</option>
                                                     <option>Graduate</option>
                                                     <option>Post-Graduate</option>
                                                 </select>
-                                            </div>
-                                            <div class="form-group">
-                                                <label for="collegename">College Name</label>
-                                                <input type="text" class="form-control" id="collegename" placeholder="Enter your College Name">
-                                            </div>
+                                            </div> 
+                                    </div>
 
-                                            <div class="form-group">
-                                                <label>Marks(%)</label>
-                                                <input type="text" class="form-control">
-                                            </div>
-
-                                            
-                                        </div>
-
-                                        <div class="col-md-5">
-
+                                    <div class="col-md-3">
                                         <div class="form-group ">
-                                                <label for="degree">Degree</label>
+                                            <label for="degree">Degree:</label>
                                                 <select id="degree" class="form-control">
                                                     <option>Select</option>
                                                     <option>NA</option>
@@ -433,16 +330,463 @@ if(isset($POST['Logout'])){
                                                     <option>BCA</option>
                                                 </select>
                                             </div>
-                                            
+                                    </div>
 
-                                            <div class="form-group">
-                                                <label for="uniname">University Name</label>
-                                                <input type="text" class="form-control" id="uniname" placeholder="Enter your University Name">
-                                            </div>
-
-                                            
+                                    <div class="col-md-4 ">
+                                        <div class="form-group">
+                                                <label for="collegename">College Name:</label>
+                                                <input type="text" class="form-control" id="collegename" placeholder="Enter your College Name">
                                         </div>
+                                    </div>
+                                    
+
                                 </div>
+                                <div class="row justify-content-center" >
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+                                                <label for="uniname">University Name:</label>
+                                                <input type="text" class="form-control" id="uniname" placeholder="Enter your University Name">
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-3 ">
+                                    <div class="form-group">
+                                        <label>Branch:</label>
+                                        <input type="text" class="form-control">
+                                    </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="form-group">
+                                            <label>State:</label>
+                                            <select class="form-control">
+                                                <option value="">Select State</option>
+                                                <option value="Andhra Pradesh">Andhra Pradesh</option>
+                                                <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                                                <option value="Assam">Assam</option>
+                                                <option value="Bihar">Bihar</option>
+                                                <option value="Chhattisgarh">Chhattisgarh</option>
+                                                <option value="Goa">Goa</option>
+                                                <option value="Gujarat">Gujarat</option>
+                                                <option value="Haryana">Haryana</option>
+                                                <option value="Himachal Pradesh">Himachal Pradesh</option>
+                                                <option value="Jharkhand">Jharkhand</option>
+                                                <option value="Karnataka">Karnataka</option>
+                                                <option value="Kerala">Kerala</option>
+                                                <option value="Madhya Pradesh">Madhya Pradesh</option>
+                                                <option value="Maharashtra">Maharashtra</option>
+                                                <option value="Manipur">Manipur</option>
+                                                <option value="Meghalaya">Meghalaya</option>
+                                                <option value="Mizoram">Mizoram</option>
+                                                <option value="Nagaland">Nagaland</option>
+                                                <option value="Odisha">Odisha</option>
+                                                <option value="Punjab">Punjab</option>
+                                                <option value="Rajasthan">Rajasthan</option>
+                                                <option value="Sikkim">Sikkim</option>
+                                                <option value="Tamil Nadu">Tamil Nadu</option>
+                                                <option value="Telangana">Telangana</option>
+                                                <option value="Tripura">Tripura</option>
+                                                <option value="Uttar Pradesh">Uttar Pradesh</option>
+                                                <option value="Uttarakhand">Uttarakhand</option>
+                                                <option value="West Bengal">West Bengal</option>
+                                            </select>
+                                            
+                                    </div>
+                                    </div>
+                                   
+                                    
+
+
+                                </div>
+                                <div class="row justify-content-center" >
+                                <div class="col-md-4">
+                                        <div class="form-group">
+                                        <label>Joining Date:</label>
+                                        <div class="input-group date" id="start-time-picker" data-target-input="nearest">
+                                            <input type="date" class="form-control datetimepicker-input" data-target="#start-time-picker"/>
+                                            <div class="input-group-append" data-target="#start-time-picker" data-toggle="datetimepicker">
+                                            
+                                            </div>
+                                        </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+                                        <label>Graduation date:</label>
+                                        <div class="input-group date" id="end-time-picker" data-target-input="nearest">
+                                            <input type="date" class="form-control datetimepicker-input" data-target="#end-time-picker"/>
+                                            <div class="input-group-append" data-target="#end-time-picker" data-toggle="datetimepicker">
+                                            
+                                            </div>
+                                        </div>
+                                        </div>
+                                    </div>
+                               
+                                <div class="col-md-2">
+                                    <div class="form-group">
+                                        <label>Marks (%):</label>
+                                        <input type="text" class="form-control ">
+                                    </div>
+                                </div>
+
+
+                                </div>
+                                <div class="form-row justify-content-center">
+                                
+                                <div class="form-group col-md-5">
+                                    
+                                </div>
+
+                                <div class="form-group col-md-5">
+                                    <button  class="btn btn-outline-primary btn-sm float-right remove-education" type="button">Remove</button> 
+                                    <button  class="btn btn-outline-primary btn-sm float-right add-education" type="button">&nbsp; &nbsp;  Add &nbsp; &nbsp;</button>
+                                </div>
+
+                                </div>
+                                <br>
+                                <br>
+                              </div>
+                              </div>
+
+                                <h4 class="text-center pb-3 text-info border-bottom">Higher Secondary Qualification Details</h4>
+                                <br>
+                                     <div class="row justify-content-center" >
+                                    
+                                    <div class="col-md-3 ">
+                                    <div class="form-group">
+                                        <label>Institution Name:</label>
+                                        <input type="text" class="form-control">
+                                    </div>
+                                    </div>
+
+                                    <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label>School Board:</label>
+                                        <select class="form-control">
+                                        <option>Select</option>
+                                        <option>State Boards</option>
+                                        <option>Central Board of Secondary Education (CBSE)</option>
+                                        <option>Indian Certificate of Secondary Education (ICSE)</option>
+                                        <option>Council for the Indian School Certificate Examination (CISCE)</option>
+                                        <option>National Institute of Open Schooling (NIOS)</option>
+                                        <option>International Baccalaureate (IB)</option>
+                                        <option>Cambridge International Examinations (CIE)</option>
+                                        <option value="1">CENTRAL BOARD OF SECONDARY EDUCATION, NEW DELHI</option>
+                                        <option value="2">NATIONAL INSTITUTE OF OPEN SCHOOLING, NEW DELHI</option>
+                                        <option value="3">COUNCIL FOR THE INDIAN SCHOOL CERTIFICATE EXAMINATIONS, NEW DELHI</option>
+                                        <option value="4">BOARD OF INTERMEDIATE EDUCATION, ANDHRA PRADESH</option>
+                                        <option value="5">BOARD OF SECONDARY EDUCATION, ANDHRA PRADESH</option>
+                                        <option value="6">A.P. OPEN SCHOOL SOCIETY, ANDHRA PRADESH</option>
+                                        <option value="7">ASSAM HIGHER SECONDARY EDUCATION COUNCIL, ASSAM</option>
+                                        <option value="8">BOARD OF SECONDARY EDUCATION, ASSAM</option>
+                                        <option value="9">BIHAR SCHOOL EXAMINATION BOARD, BIHAR</option>
+                                        <option value="10">BIHAR BOARD OF OPEN SCHOOLING AND EXAMINATION (BBOSE), BIHAR</option>
+                                        <option value="11">CHHATISGARH BOARD OF SECONDARY EDUCATION, CHHATISGARH</option>
+                                        <option value="12">CHHATISGARH STATE OPEN SCHOOL, CHHATISGARH</option>
+                                        <option value="13">GOA BOARD OF SECONDARY AND HIGHER SECONDARY EDUCATION, GOA</option>
+                                        <option value="14">GUJARAT SECONDARY AND HIGHER SECONDARY EDUCATION BOARD, GUJARAT</option>
+                                        <option value="15">BOARD OF SCHOOL EDUCATION, HARYANA</option>
+                                        <option value="16">H. P. BOARD OF SCHOOL EDUCATION, HIMACHAL PRADESH</option>
+                                        <option value="17">THE J & K STATE BOARD OF SCHOOL EDUCATION, JAMMU</option>
+                                        <option value="18">JHARKHAND ACADEMIC COUNCIL,RANCHI</option>
+                                        <option value="19">GOVT. OF KARNATAKA DEPT. OF PRE-UNIVERSITY EDUCATION, KARNATAKA</option>
+                                        <option value="20">KARNATAKA SECONDARY EDUCATION, EXAMINATION BOARD, KARNATAKA</option>
+                                        <option value="21">KERALA BOARD OF PUBLIC EXAMINATION, KERALA</option>
+                                        <option value="22">KERALA BOARD OF HIGHER SECONDARY EDUCATION, KERALA</option>
+                                        <option value="23">BOARD OF VOCATIONAL HIGHER SECONDARY EDUCATION, KERALA</option>
+                                        <option value="24">MAHARASHTRA STATE BOARD OF SECONDARY AND HIGHER SECONDARY EDUCATION, MAHARASHTRA</option>
+                                        <option value="25">BOARD OF SECONDARY EDUCATION, MADHYA PRADESH</option>
+                                        <option value="26">M. P. STATE OPEN SCHOOL EDUCATION BOARD, MADHYA PRADESH</option>
+                                        <option value="27">BOARD OF SECONDARY EDUCATION, MANIPUR</option>
+                                        <option value='28'>COUNCIL OF HIGHER SECONDARY EDUCATION, MANIPUR</option>
+                                        <option value="29">MEGHALAYA BOARD OF SCHOOL EDUCATION, MEGHALAYA</option>
+                                        <option value="30">MIZORAM BOARD OF SCHOOL EDUCATION, MIZORAM</option>
+                                        <option value="31">NAGALAND BOARD OF SCHOOL EDUCATION, NAGALAND</option>
+                                        <option value="32">COUNCIL OF HIGHER SECONDARY EDUCATION, ODISHA</option>
+                                        <option value="33">BOARD OF SECONDARY EDUCATION, ODISHA</option>
+                                        <option value="34">PUNJAB SCHOOL EDUCATION BOARD, PUNJAB</option>
+                                        <option value="35">RAJASTHAN BOARD OF SECONDARY EDUCATION, RAJASTHAN</option>
+                                        <option value="36">RAJASTHAN STATE OPEN SCHOOL, RAJASTHAN</option>
+                                        <option value="37">STATE BOARD OF SCHOOL EXAMINATIONS (SEC.) & BOARD OF HIGHER SECONDARY, TAMIL NADU</option>
+                                        <option value="38">BOARD OF SECONDARY EDUCATION, TELANGANA STATE</option>
+                                        <option value="39">TELANGANA STATE BOARD OF INTERMEDIATE EDUCATION, TELANGANA</option>
+                                        <option value="40">TELANGANA OPEN SCHOOL SOCIETY, TELANGANA</option>
+                                        <option value="41">TRIPURA BOARD OF SECONDARY EDUCATION, TRIPURA</option>
+                                        <option value="42">U.P. BOARD OF HIGH SCHOOL & INTERMEDIATE EDUCATION, UTTAR PRADESH</option>
+                                        <option value="43">BOARD OF SCHOOL EDUCATION, UTTARAKHAND</option>
+                                        <option value="44">WEST BENGAL BOARD OF SECONDARY EDUCATION, WEST BENGAL</option>
+                                        <option value="45">WEST BENGAL COUNCIL OF HIGHER SECONDARY EDUCATION, WEST BENGAL</option>
+                                        <option value="46">THE WEST BENGAL COUNCIL OF RABINDRA OPEN SCHOOLING, WEST BENGAL</option>
+                                        <option value="47">WEST BENGAL STATE COUNCIL OF TECHNICAL & VOCATIONAL EDUCATION & SKILL DEVELOPMENT, WEST BENGAL</option>
+                                        <option value="48">MAHARISHI PATANJALI SANSKRIT SANSTHAN, NEW DELHI</option>
+                                        <option value="49">URDU EDUCATION BOARD, NEW DELHI</option>
+                                        <option value="50">BIHAR SANSKRIT SHIKSHA BOARD, BIHAR</option>
+                                        <option value="51">U.P. BOARD OF SEC. SANSKRIT EDUCATION SANSKRIT BHAWAN, UTTAR PRADESH</option>
+                                        <option value="52">ASSAM SANSKRIT BOARD, ASSAM</option>
+                                        <option value="53">JAMIA MILIA ISLAMIA, NEW DELHI</option>
+                                        <option value="54">UTTRAKHAND SANSKRIT SHIKSHA PARISHAD, UTTRAKHAND</option>
+                                        <option value="55">STATE MADRASSA EDUCATION BOARD, ASSAM</option>
+                                        <option value="56">BIHAR STATE MADRASA EDUCATION BOARD, BIHAR</option>
+                                        <option value="57">WEST BENGAL BOARD OF MADRASAH EDUCATION, WEST BENGAL</option>
+                                        <option value="58">CHHATTISGARH MADRASA BOARD, CHHATTISGARH</option>
+                                        <option value="59">UTTARAKHAND MADRASA EDUCATION BOARD, UTTARAKHAND</option>
+                                        <option value="60">ALIGARH MUSLIM UNIVERSITY BOARD OF SECONDARY & SR. SECONDARY EDUCATION, UTTAR PARDESH</option>
+                                        <option value="61">INDIAN COUNCIL FOR HINDI & SANSKRIT EDUCATION, NEW DELHI</option>
+                                        <option value="62">DAYALBAGH EDUCATIONAL INSTITUTE, AGRA</option>
+                                        <option value="63">BANASTHALI VIDYAPITH P.O., RAJASTHAN</option>
+                                        <option value="64">BHUTAN COUNCIL FOR SCHOOL EXAMINATIONS & ASSESSMENT, BHUTAN</option>
+                                        <option value="65">CAMBRIDGE ASSESSMENT INTERNATIONAL EXAMINATIONS, UK</option>
+                                        <option value="66">CHHATTISGARH SANSKRIT BOARD, RAIPUR</option>
+                                        <option value="67">MAURITIUS EXAMINATION SYNDICATE, MAURITIUS</option>
+                                        <option value="68">NATIONAL EXAMINATIONS BOARD, NEPAL</option>
+
+                                        </select>
+                                    </div>
+                                    </div>
+
+                                    <div class="col-md-3 ">
+                                    <div class="form-group">
+                                        <label>State:</label>
+                                        <select class="form-control">
+                                                <option value="">Select State</option>
+                                                <option value="Andhra Pradesh">Andhra Pradesh</option>
+                                                <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                                                <option value="Assam">Assam</option>
+                                                <option value="Bihar">Bihar</option>
+                                                <option value="Chhattisgarh">Chhattisgarh</option>
+                                                <option value="Goa">Goa</option>
+                                                <option value="Gujarat">Gujarat</option>
+                                                <option value="Haryana">Haryana</option>
+                                                <option value="Himachal Pradesh">Himachal Pradesh</option>
+                                                <option value="Jharkhand">Jharkhand</option>
+                                                <option value="Karnataka">Karnataka</option>
+                                                <option value="Kerala">Kerala</option>
+                                                <option value="Madhya Pradesh">Madhya Pradesh</option>
+                                                <option value="Maharashtra">Maharashtra</option>
+                                                <option value="Manipur">Manipur</option>
+                                                <option value="Meghalaya">Meghalaya</option>
+                                                <option value="Mizoram">Mizoram</option>
+                                                <option value="Nagaland">Nagaland</option>
+                                                <option value="Odisha">Odisha</option>
+                                                <option value="Punjab">Punjab</option>
+                                                <option value="Rajasthan">Rajasthan</option>
+                                                <option value="Sikkim">Sikkim</option>
+                                                <option value="Tamil Nadu">Tamil Nadu</option>
+                                                <option value="Telangana">Telangana</option>
+                                                <option value="Tripura">Tripura</option>
+                                                <option value="Uttar Pradesh">Uttar Pradesh</option>
+                                                <option value="Uttarakhand">Uttarakhand</option>
+                                                <option value="West Bengal">West Bengal</option>
+                                            </select>
+                                    </div>
+                                    </div>
+                                    
+
+                                </div>
+                                <div class="row justify-content-center" >
+                                <div class="col-md-4">
+                                        <div class="form-group">
+                                        <label>Joining Date:</label>
+                                        <div class="input-group date" id="start-time-picker" data-target-input="nearest">
+                                            <input type="date" class="form-control datetimepicker-input" data-target="#start-time-picker"/>
+                                            <div class="input-group-append" data-target="#start-time-picker" data-toggle="datetimepicker">
+                                            
+                                            </div>
+                                        </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+                                        <label>Graduation Date:</label>
+                                        <div class="input-group date" id="end-time-picker" data-target-input="nearest">
+                                            <input type="date" class="form-control datetimepicker-input" data-target="#end-time-picker"/>
+                                            <div class="input-group-append" data-target="#end-time-picker" data-toggle="datetimepicker">
+                                            
+                                            </div>
+                                        </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2">
+                                    <div class="form-group">
+                                        <label>Marks (%):</label>
+                                        <input type="text" class="form-control ">
+                                    </div>
+                                    </div>
+
+
+                                </div>
+                                <br>
+                                <br>
+
+                                <h4 class="text-center pb-3 text-info border-bottom">Secondary Education Qualification Details</h4>
+                                <br>
+                            
+                                <div class="row justify-content-center" >
+                                    
+                                    <div class="col-md-3 ">
+                                    <div class="form-group">
+                                        <label>Institution Name:</label>
+                                        <input type="text" class="form-control">
+                                    </div>
+                                    </div>
+
+                                    <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label>School Board:</label>
+                                        <select class="form-control">
+                                        <option>Select</option>
+                                        <option>State Boards</option>
+                                        <option>Central Board of Secondary Education (CBSE)</option>
+                                        <option>Indian Certificate of Secondary Education (ICSE)</option>
+                                        <option>Council for the Indian School Certificate Examination (CISCE)</option>
+                                        <option>National Institute of Open Schooling (NIOS)</option>
+                                        <option>International Baccalaureate (IB)</option>
+                                        <option>Cambridge International Examinations (CIE)</option>
+                                        <option value="1">CENTRAL BOARD OF SECONDARY EDUCATION, NEW DELHI</option>
+                                        <option value="2">NATIONAL INSTITUTE OF OPEN SCHOOLING, NEW DELHI</option>
+                                        <option value="3">COUNCIL FOR THE INDIAN SCHOOL CERTIFICATE EXAMINATIONS, NEW DELHI</option>
+                                        <option value="4">BOARD OF INTERMEDIATE EDUCATION, ANDHRA PRADESH</option>
+                                        <option value="5">BOARD OF SECONDARY EDUCATION, ANDHRA PRADESH</option>
+                                        <option value="6">A.P. OPEN SCHOOL SOCIETY, ANDHRA PRADESH</option>
+                                        <option value="7">ASSAM HIGHER SECONDARY EDUCATION COUNCIL, ASSAM</option>
+                                        <option value="8">BOARD OF SECONDARY EDUCATION, ASSAM</option>
+                                        <option value="9">BIHAR SCHOOL EXAMINATION BOARD, BIHAR</option>
+                                        <option value="10">BIHAR BOARD OF OPEN SCHOOLING AND EXAMINATION (BBOSE), BIHAR</option>
+                                        <option value="11">CHHATISGARH BOARD OF SECONDARY EDUCATION, CHHATISGARH</option>
+                                        <option value="12">CHHATISGARH STATE OPEN SCHOOL, CHHATISGARH</option>
+                                        <option value="13">GOA BOARD OF SECONDARY AND HIGHER SECONDARY EDUCATION, GOA</option>
+                                        <option value="14">GUJARAT SECONDARY AND HIGHER SECONDARY EDUCATION BOARD, GUJARAT</option>
+                                        <option value="15">BOARD OF SCHOOL EDUCATION, HARYANA</option>
+                                        <option value="16">H. P. BOARD OF SCHOOL EDUCATION, HIMACHAL PRADESH</option>
+                                        <option value="17">THE J & K STATE BOARD OF SCHOOL EDUCATION, JAMMU</option>
+                                        <option value="18">JHARKHAND ACADEMIC COUNCIL,RANCHI</option>
+                                        <option value="19">GOVT. OF KARNATAKA DEPT. OF PRE-UNIVERSITY EDUCATION, KARNATAKA</option>
+                                        <option value="20">KARNATAKA SECONDARY EDUCATION, EXAMINATION BOARD, KARNATAKA</option>
+                                        <option value="21">KERALA BOARD OF PUBLIC EXAMINATION, KERALA</option>
+                                        <option value="22">KERALA BOARD OF HIGHER SECONDARY EDUCATION, KERALA</option>
+                                        <option value="23">BOARD OF VOCATIONAL HIGHER SECONDARY EDUCATION, KERALA</option>
+                                        <option value="24">MAHARASHTRA STATE BOARD OF SECONDARY AND HIGHER SECONDARY EDUCATION, MAHARASHTRA</option>
+                                        <option value="25">BOARD OF SECONDARY EDUCATION, MADHYA PRADESH</option>
+                                        <option value="26">M. P. STATE OPEN SCHOOL EDUCATION BOARD, MADHYA PRADESH</option>
+                                        <option value="27">BOARD OF SECONDARY EDUCATION, MANIPUR</option>
+                                        <option value='28'>COUNCIL OF HIGHER SECONDARY EDUCATION, MANIPUR</option>
+                                        <option value="29">MEGHALAYA BOARD OF SCHOOL EDUCATION, MEGHALAYA</option>
+                                        <option value="30">MIZORAM BOARD OF SCHOOL EDUCATION, MIZORAM</option>
+                                        <option value="31">NAGALAND BOARD OF SCHOOL EDUCATION, NAGALAND</option>
+                                        <option value="32">COUNCIL OF HIGHER SECONDARY EDUCATION, ODISHA</option>
+                                        <option value="33">BOARD OF SECONDARY EDUCATION, ODISHA</option>
+                                        <option value="34">PUNJAB SCHOOL EDUCATION BOARD, PUNJAB</option>
+                                        <option value="35">RAJASTHAN BOARD OF SECONDARY EDUCATION, RAJASTHAN</option>
+                                        <option value="36">RAJASTHAN STATE OPEN SCHOOL, RAJASTHAN</option>
+                                        <option value="37">STATE BOARD OF SCHOOL EXAMINATIONS (SEC.) & BOARD OF HIGHER SECONDARY, TAMIL NADU</option>
+                                        <option value="38">BOARD OF SECONDARY EDUCATION, TELANGANA STATE</option>
+                                        <option value="39">TELANGANA STATE BOARD OF INTERMEDIATE EDUCATION, TELANGANA</option>
+                                        <option value="40">TELANGANA OPEN SCHOOL SOCIETY, TELANGANA</option>
+                                        <option value="41">TRIPURA BOARD OF SECONDARY EDUCATION, TRIPURA</option>
+                                        <option value="42">U.P. BOARD OF HIGH SCHOOL & INTERMEDIATE EDUCATION, UTTAR PRADESH</option>
+                                        <option value="43">BOARD OF SCHOOL EDUCATION, UTTARAKHAND</option>
+                                        <option value="44">WEST BENGAL BOARD OF SECONDARY EDUCATION, WEST BENGAL</option>
+                                        <option value="45">WEST BENGAL COUNCIL OF HIGHER SECONDARY EDUCATION, WEST BENGAL</option>
+                                        <option value="46">THE WEST BENGAL COUNCIL OF RABINDRA OPEN SCHOOLING, WEST BENGAL</option>
+                                        <option value="47">WEST BENGAL STATE COUNCIL OF TECHNICAL & VOCATIONAL EDUCATION & SKILL DEVELOPMENT, WEST BENGAL</option>
+                                        <option value="48">MAHARISHI PATANJALI SANSKRIT SANSTHAN, NEW DELHI</option>
+                                        <option value="49">URDU EDUCATION BOARD, NEW DELHI</option>
+                                        <option value="50">BIHAR SANSKRIT SHIKSHA BOARD, BIHAR</option>
+                                        <option value="51">U.P. BOARD OF SEC. SANSKRIT EDUCATION SANSKRIT BHAWAN, UTTAR PRADESH</option>
+                                        <option value="52">ASSAM SANSKRIT BOARD, ASSAM</option>
+                                        <option value="53">JAMIA MILIA ISLAMIA, NEW DELHI</option>
+                                        <option value="54">UTTRAKHAND SANSKRIT SHIKSHA PARISHAD, UTTRAKHAND</option>
+                                        <option value="55">STATE MADRASSA EDUCATION BOARD, ASSAM</option>
+                                        <option value="56">BIHAR STATE MADRASA EDUCATION BOARD, BIHAR</option>
+                                        <option value="57">WEST BENGAL BOARD OF MADRASAH EDUCATION, WEST BENGAL</option>
+                                        <option value="58">CHHATTISGARH MADRASA BOARD, CHHATTISGARH</option>
+                                        <option value="59">UTTARAKHAND MADRASA EDUCATION BOARD, UTTARAKHAND</option>
+                                        <option value="60">ALIGARH MUSLIM UNIVERSITY BOARD OF SECONDARY & SR. SECONDARY EDUCATION, UTTAR PARDESH</option>
+                                        <option value="61">INDIAN COUNCIL FOR HINDI & SANSKRIT EDUCATION, NEW DELHI</option>
+                                        <option value="62">DAYALBAGH EDUCATIONAL INSTITUTE, AGRA</option>
+                                        <option value="63">BANASTHALI VIDYAPITH P.O., RAJASTHAN</option>
+                                        <option value="64">BHUTAN COUNCIL FOR SCHOOL EXAMINATIONS & ASSESSMENT, BHUTAN</option>
+                                        <option value="65">CAMBRIDGE ASSESSMENT INTERNATIONAL EXAMINATIONS, UK</option>
+                                        <option value="66">CHHATTISGARH SANSKRIT BOARD, RAIPUR</option>
+                                        <option value="67">MAURITIUS EXAMINATION SYNDICATE, MAURITIUS</option>
+                                        <option value="68">NATIONAL EXAMINATIONS BOARD, NEPAL</option>
+
+                                        </select>
+                                    </div>
+                                    </div>
+
+                                    <div class="col-md-3 ">
+                                    <div class="form-group">
+                                        <label>State:</label>
+                                        <select class="form-control">
+                                                <option value="">Select State</option>
+                                                <option value="Andhra Pradesh">Andhra Pradesh</option>
+                                                <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                                                <option value="Assam">Assam</option>
+                                                <option value="Bihar">Bihar</option>
+                                                <option value="Chhattisgarh">Chhattisgarh</option>
+                                                <option value="Goa">Goa</option>
+                                                <option value="Gujarat">Gujarat</option>
+                                                <option value="Haryana">Haryana</option>
+                                                <option value="Himachal Pradesh">Himachal Pradesh</option>
+                                                <option value="Jharkhand">Jharkhand</option>
+                                                <option value="Karnataka">Karnataka</option>
+                                                <option value="Kerala">Kerala</option>
+                                                <option value="Madhya Pradesh">Madhya Pradesh</option>
+                                                <option value="Maharashtra">Maharashtra</option>
+                                                <option value="Manipur">Manipur</option>
+                                                <option value="Meghalaya">Meghalaya</option>
+                                                <option value="Mizoram">Mizoram</option>
+                                                <option value="Nagaland">Nagaland</option>
+                                                <option value="Odisha">Odisha</option>
+                                                <option value="Punjab">Punjab</option>
+                                                <option value="Rajasthan">Rajasthan</option>
+                                                <option value="Sikkim">Sikkim</option>
+                                                <option value="Tamil Nadu">Tamil Nadu</option>
+                                                <option value="Telangana">Telangana</option>
+                                                <option value="Tripura">Tripura</option>
+                                                <option value="Uttar Pradesh">Uttar Pradesh</option>
+                                                <option value="Uttarakhand">Uttarakhand</option>
+                                                <option value="West Bengal">West Bengal</option>
+                                            </select>
+                                    </div>
+                                    </div>
+                                    
+
+                                </div>
+                                <div class="row justify-content-center" >
+                                <div class="col-md-4">
+                                        <div class="form-group">
+                                        <label>Joining Date:</label>
+                                        <div class="input-group date" id="start-time-picker" data-target-input="nearest">
+                                            <input type="date" class="form-control datetimepicker-input" data-target="#start-time-picker"/>
+                                            <div class="input-group-append" data-target="#start-time-picker" data-toggle="datetimepicker">
+                                            
+                                            </div>
+                                        </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+                                        <label>Graduation Date:</label>
+                                        <div class="input-group date" id="end-time-picker" data-target-input="nearest">
+                                            <input type="date" class="form-control datetimepicker-input" data-target="#end-time-picker"/>
+                                            <div class="input-group-append" data-target="#end-time-picker" data-toggle="datetimepicker">
+                                            
+                                            </div>
+                                        </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2">
+                                    <div class="form-group">
+                                        <label>Marks (%):</label>
+                                        <input type="text" class="form-control ">
+                                    </div>
+                                    </div>
+
+
+                                </div>
+                                <br>
+
                                 <br>
                                 <div class="form-row justify-content-center">
                                 
@@ -502,6 +846,170 @@ if(isset($POST['Logout'])){
         }, function() {
             $(this).find('a').css('color', '');
         });
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            // Add education details
+            $(document).on("click", ".add-education", function() {
+                var html =  `<div id="education-details1">
+                               <h4 class="text-center pb-3 border-bottom"></h4>
+                                <br>
+
+                                <div class="row justify-content-center" >
+                                    
+                                    <div class="col-md-3 ">
+                                        <div class="form-group">
+                                            <label for="education">Education:</label>
+                                                <select class="form-control">
+                                                    <option>Select</option>
+                                                    <option>Under-Graduate</option>
+                                                    <option>Graduate</option>
+                                                    <option>Post-Graduate</option>
+                                                </select>
+                                            </div> 
+                                    </div>
+
+                                    <div class="col-md-3">
+                                        <div class="form-group ">
+                                            <label for="degree">Degree:</label>
+                                                <select id="degree" class="form-control">
+                                                    <option>Select</option>
+                                                    <option>NA</option>
+                                                    <option>BE/BTech</option>
+                                                    <option>BCom</option>
+                                                    <option>Bsc</option>
+                                                    <option>BA</option>
+                                                    <option>LAW</option>
+                                                    <option>BBA</option>
+                                                    <option>BCA</option>
+                                                </select>
+                                            </div>
+                                    </div>
+
+                                    <div class="col-md-4 ">
+                                        <div class="form-group">
+                                                <label for="collegename">College Name:</label>
+                                                <input type="text" class="form-control" id="collegename" placeholder="Enter your College Name">
+                                        </div>
+                                    </div>
+                                    
+
+                                </div>
+                                <div class="row justify-content-center" >
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+                                                <label for="uniname">University Name:</label>
+                                                <input type="text" class="form-control" id="uniname" placeholder="Enter your University Name">
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-3 ">
+                                    <div class="form-group">
+                                        <label>Branch:</label>
+                                        <input type="text" class="form-control">
+                                    </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="form-group">
+                                            <label>State:</label>
+                                            <select class="form-control">
+                                                <option value="">Select State</option>
+                                                <option value="Andhra Pradesh">Andhra Pradesh</option>
+                                                <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                                                <option value="Assam">Assam</option>
+                                                <option value="Bihar">Bihar</option>
+                                                <option value="Chhattisgarh">Chhattisgarh</option>
+                                                <option value="Goa">Goa</option>
+                                                <option value="Gujarat">Gujarat</option>
+                                                <option value="Haryana">Haryana</option>
+                                                <option value="Himachal Pradesh">Himachal Pradesh</option>
+                                                <option value="Jharkhand">Jharkhand</option>
+                                                <option value="Karnataka">Karnataka</option>
+                                                <option value="Kerala">Kerala</option>
+                                                <option value="Madhya Pradesh">Madhya Pradesh</option>
+                                                <option value="Maharashtra">Maharashtra</option>
+                                                <option value="Manipur">Manipur</option>
+                                                <option value="Meghalaya">Meghalaya</option>
+                                                <option value="Mizoram">Mizoram</option>
+                                                <option value="Nagaland">Nagaland</option>
+                                                <option value="Odisha">Odisha</option>
+                                                <option value="Punjab">Punjab</option>
+                                                <option value="Rajasthan">Rajasthan</option>
+                                                <option value="Sikkim">Sikkim</option>
+                                                <option value="Tamil Nadu">Tamil Nadu</option>
+                                                <option value="Telangana">Telangana</option>
+                                                <option value="Tripura">Tripura</option>
+                                                <option value="Uttar Pradesh">Uttar Pradesh</option>
+                                                <option value="Uttarakhand">Uttarakhand</option>
+                                                <option value="West Bengal">West Bengal</option>
+                                            </select>
+                                    </div>
+                                    </div>
+                                   
+                                    
+
+
+                                </div>
+                                <div class="row justify-content-center" >
+                                <div class="col-md-4">
+                                        <div class="form-group">
+                                        <label>Joining Date:</label>
+                                        <div class="input-group date" id="start-time-picker" data-target-input="nearest">
+                                            <input type="date" class="form-control datetimepicker-input" data-target="#start-time-picker"/>
+                                            <div class="input-group-append" data-target="#start-time-picker" data-toggle="datetimepicker">
+                                            
+                                            </div>
+                                        </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+                                        <label>Graduation Date:</label>
+                                        <div class="input-group date" id="end-time-picker" data-target-input="nearest">
+                                            <input type="date" class="form-control datetimepicker-input" data-target="#end-time-picker"/>
+                                            <div class="input-group-append" data-target="#end-time-picker" data-toggle="datetimepicker">
+                                            
+                                            </div>
+                                        </div>
+                                        </div>
+                                    </div>
+                               
+                                <div class="col-md-2">
+                                    <div class="form-group">
+                                        <label>Marks (%):</label>
+                                        <input type="text" class="form-control ">
+                                    </div>
+                                </div>
+
+
+                                </div>
+                                <div class="form-row justify-content-center">
+                                
+                                <div class="form-group col-md-5">
+                                    
+                                </div>
+
+                                <div class="form-group col-md-5">
+                                    <button  class="btn btn-outline-primary btn-sm float-right remove-education" type="button">Remove</button> 
+                                    <button  class="btn btn-outline-primary btn-sm float-right add-education" type="button">&nbsp; &nbsp;  Add &nbsp; &nbsp;</button>
+                                </div>
+
+                                </div>
+                                <br>
+                                <br>
+                              </div>`
+                $("#education-details").append(html);
+            });
+
+            // Remove education details
+            $(document).on("click", ".remove-education", function() {
+                $(this).closest("#education-details1").remove();
+            });
+        });
+        
     </script>
 
 </body>
