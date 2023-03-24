@@ -359,6 +359,7 @@ if(isset($POST['Logout'])){
                                         </div>
                                         </div>
                                     </div>
+                                    
 
                                     <div class="form-row justify-content-center">
                                 
@@ -585,6 +586,38 @@ if(isset($POST['Logout'])){
                                         </div>
                                     </div>
                                 </div>
+
+
+                                <div class="row justify-content-center">
+                                    <div class="col-md-3">
+                                        <div class="form-group">
+                                            <label for="designation">Designation:</label>
+                                            <input type="text" class="form-control" id="designation" placeholder="Enter your Designation" value>
+                                            
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="form-group">
+                                            <label for="department">Department:</label>
+                                            <input type="text" class="form-control" id="department" placeholder="Enter your Department" value>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="col-md-2">
+                                        <div class="form-group">
+                                            <label for="monthly-salary">Monthly Salary:</label>
+                                            <input type="text" class="form-control" id="monthly-salary" placeholder="Enter your monthly salary" value>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <div class="form-group">
+                                            <label for="annual-package">Annual Package:</label>
+                                            <input type="text" class="form-control" id="annual-package" placeholder="Enter your annual package" value>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+
                                
 
 
